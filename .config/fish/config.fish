@@ -50,7 +50,8 @@ abbr t "tmux"
 # neofetch
 abbr logo "neofetch"
 # package manager related
-abbr pacsyu "pacman -Syu --noconfirm"
+abbr pacsyu "sudo pacman -Syyu --noconfirm"
+abbr yaysyu "paru -Syyu --noconfirm"
 alias yay="paru"
 # kubernetes related
 abbr k "kubectl"

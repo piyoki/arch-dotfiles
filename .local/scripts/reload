@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# kill pipewire process
-killall -9 pipewire
+# restart pipewire
+systemctl restart --user pipewire.service
 
 # reload polybar
 sleep 5 && $HOME/.config/polybar/launch.sh
