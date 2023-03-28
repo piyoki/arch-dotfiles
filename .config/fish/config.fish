@@ -68,8 +68,8 @@ abbr set-br "sudo ddcutil setvcp 10 --display"
 abbr get-br "sudo ddcutil getvcp 10 --display"
 abbr dd "sudo ddcutil"
 # audio
-abbr get-audio-vol "wpctl get-volume @DEFAULT_AUDIO_SINK@"
-abbr set-audio-vol "wpctl set-volume @DEFAULT_AUDIO_SINK@"
+abbr get-vol "wpctl get-volume @DEFAULT_AUDIO_SINK@"
+abbr set-vol "wpctl set-volume @DEFAULT_AUDIO_SINK@"
 # pb
 alias pb="curl -F 'c=@-' https://fars.ee/"
 
