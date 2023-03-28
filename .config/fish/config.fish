@@ -12,7 +12,7 @@ fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.local/scripts
 
 ### Colorscheme ###
-source $HOME/.config/fish/themes/ayu-mirage.fish
+source $HOME/.config/fish/themes/cool-beans.fish
 
 ### General Settings ###
 set fish_greeting         # Turns off the intro message when pulling up fish shell
@@ -22,8 +22,6 @@ export CLICOLOR=1
 export LS_COLORS=(vivid generate nord)
 
 ### Fish Alias ###
-
-abbr fish_config "nvim ~/.config/fish/config.fish"
 abbr unset "set --erase"
 
 ### Shortcuts ###
