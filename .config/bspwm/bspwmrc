@@ -1,0 +1,45 @@
+#!/usr/bin/sh
+
+# clean lingering programs when reloaded
+$HOME/.config/bspwm/clean.sh &
+
+#Auto-Start
+sh $HOME/.local/scripts/autostart
+
+# variable Defines
+color0=#3B4252
+color1=#555753
+
+# make sure sxhkd is always running
+while :; do
+    if pgrep -x sxhkd > /dev/null; then
+        true
+    else
+        sxhkd &
+    fi
+    sleep 5
+done &
+
+# define monitor order
+# refence: https://github.com/baskerville/bspwm/issues/1424
+bspc wm -O DisplayPort-2 DisplayPort-1 DisplayPort-3
+# assign workspaces to monitors
+bspc monitor DisplayPort-1 -d 4 5
+bspc monitor DisplayPort-2 -d 1 2 3
+bspc monitor DisplayPort-3 -d 6 7
+
+# global settings
+bspc config border_width         4
+bspc config window_gap           20
+bspc config focused_border_color "#555753"
+
+bspc config split_ratio          0.5
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+# bspc rule -a "*:microsoft-edge" desktop=^3 follow=off
+# bspc rule -a "*:Navigator" desktop=^5 follow=off
+# bspc rule -a "*:telegram-desktop" desktop=^1 follow=off
+bspc rule -a Screenkey manage=off
+

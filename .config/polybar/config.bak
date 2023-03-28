@@ -1,0 +1,300 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[colors]
+base = #1e1e2e
+mantle = #181825
+crust = #cc11111b
+
+text = #cdd6f4
+subtext0 = #a6adc8
+subtext1 = #bac2de
+
+surface0 = #313244
+surface1 = #45475a
+surface2 = #585b70
+
+overlay0 = #6c7086
+overlay1 = #7f849c
+overlay2 = #9399b2
+
+
+blue = #89b4fa
+lavender = #b4befe
+sapphire = #74c7ec
+sky = #89dceb
+teal = #94e2d5
+green = #a6e3a1
+yellow = #f9e2af
+peach = #fab387
+maroon = #eba0ac
+red = #f38ba8
+mauve = #cba6f7
+pink = #f5c2e7
+flamingo = #f2cdcd
+rosewater = #f5e0dc
+cyan = #00ffff
+light-blue = #32afff
+
+transparent = #FF00000
+
+[bar/main]
+width = 100%
+height = 60
+offset-y = 0
+top = true
+fixed-center = true
+dpi = 192
+
+;wm-restack = bspwm
+
+override-redirect = false
+
+scroll-up = next
+scroll-down = prev
+
+enable-ipc = true
+
+background = ${colors.crust}
+foreground = ${colors.text}
+
+font-0 = FiraCode Nerd Mono:style=Regular:pixelsize=10;2
+font-1 = unifont:fontformat=truetype:size=14:antialias=false;2
+font-2 = siji:style=Regular:pixelsize=24;2
+font-3 = Font Awesome 5 Free:pixelsize=12;2
+font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
+font-5 = Font Awesome 5 Brands:pixelsize=12;2
+
+modules-left = bspwm
+modules-center = date
+;modules-right = filesystem pulseaudio temperature eth session powermenu
+modules-right = filesystem pulseaudio temperature eth
+
+tray-position = right
+
+cursor-click = pointer
+
+[bar/left]
+monitor = DisplayPort-1
+modules-left = bspwm
+inherit = bar/main
+
+[bar/right]
+monitor = DisplayPort-3
+modules-left = bspwm
+inherit = bar/main
+
+[settings]
+screenchange-reload = true
+format-padding = 1
+
+[module/nowplaying]
+type = custom/script
+tail = true
+interval = 1
+format =  <label>
+exec = playerctl metadata --format "{{ artist }} - {{ title }}"
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 98
+low-at = 30
+format-full-prefix = 
+format-full = <label-charging>
+format-full-prefix-foreground = ${colors.sky}
+format-charging-prefix = 
+format-charging = <label-charging>
+label-charging = %percentage:2%%
+label-charging-padding = 1
+format-charging-prefix-foreground = ${colors.sky}
+format-discharging = <ramp-capacity><label-discharging>
+label-discharging = %percentage%%
+label-discharging-padding = 1
+ramp-capacity-0 = ""
+ramp-capacity-0-foreground = ${colors.red}
+ramp-capacity-1 = ""
+ramp-capacity-1-foreground = ${colors.sky}
+ramp-capacity-2 = ""
+ramp-capacity-2-foreground = ${colors.sky}
+ramp-capacity-3 = ""
+ramp-capacity-3-foreground = ${colors.sky}
+ramp-capacity-4 = ""
+ramp-capacity-4-foreground = ${colors.sky}
+ramp-capacity-5 = ""
+ramp-capacity-5-weight = 2
+ramp-capacity-5-foreground = ${colors.sky}
+format-low = <ramp-capacity><label-low>
+label-low-padding = 1
+label-low-foreground = ${colors.red}
+poll-interval = 5
+
+[module/bspwm]
+type = internal/bspwm
+
+format = <label-state> <label-mode>
+
+label-focused = %index%
+label-focused-foreground = ${colors.light-blue}
+label-focused-padding = 2
+
+label-occupied = %index%
+label-occupied-padding = 2
+
+label-urgent = %index%
+label-urgent-foreground = ${colors.red}
+label-urgent-padding = 2
+
+label-empty = %index%
+label-empty-foreground = ${colors.text}
+label-empty-padding = 2
+
+[module/date]
+type = internal/date
+interval = 1
+
+time = "%a, %b %d %H:%M"
+
+format = <label>
+format-padding = 1
+format-prefix = %{T5}%{T-}
+format-prefix-foreground = ${colors.green}
+label = %{T1}%time%%{T-}
+label-padding = 1
+
+[module/pulseaudio]
+type = internal/pulseaudio
+use-ui-max = false
+
+format-volume = <label-volume>
+format-volume-prefix = %{T4}%{T-}
+format-volume-prefix-foreground = ${colors.yellow}
+label-volume = %{T1}%percentage%%%{T-}
+label-volume-padding = 1
+
+format-muted = <label-muted>
+format-muted-prefix = 
+format-muted-prefix-foreground = ${colors.overlay0}
+label-muted = %{T1}%percentage%%%{T-}
+label-muted-foreground = ${colors.overlay0}
+label-muted-padding = 1
+
+click-right = pavucontrol&
+
+[module/session]
+type = custom/text
+
+click-left = powermenu
+content = %{T4}%{T-}
+content-background = ${colors.surface1}
+content-foreground = ${colors.text}
+content-padding = 1
+
+[module/eth]
+type = internal/network
+interface = enp2s0
+interval = 3.0
+
+format-connected-underline = #55aa55
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/wlan]
+type = internal/network
+interface = wlan0
+interval = 1.0
+
+format-connected-prefix = 
+format-connected-prefix-foreground = ${colors.blue}
+format-connected = <label-connected>
+label-connected = "%{A1:wifimenu:}%essid%%{A}"
+label-connected-padding = 1
+
+format-disconnected = <label-disconnected>
+format-disconnected-padding = 1
+label-disconnected = %{A1:wifimenu:}%{A}
+label-disconnected-foreground = ${colors.overlay0}
+label-disconnected-padding = 1
+
+[module/filesystem]
+type = internal/fs
+
+mount-0 = /
+interval = 30
+warn-percentage = 90
+
+format-mounted-prefix = 
+format-mounted-prefix-foreground = ${colors.mauve}
+label-mounted = %free%
+label-mounted-padding = 1
+
+format-warn-prefix = 
+format-warn = <label-warn>
+label-warn = %free%
+label-warn-padding = 1
+format-warn-foreground = ${colors.red}
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-underline = #f50a4d
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-alt}
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = 
+label-open-foreground = ${colors.secondary}
+label-close =  cancel
+label-close-foreground = ${colors.secondary}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = reboot
+menu-0-0-exec = systemctl reboot
+menu-0-1 = power off
+menu-0-1-exec = systemctl poweroff
+
+[global/wm]
+margin-top = 5
+margin-bottom = 20
