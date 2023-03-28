@@ -6,7 +6,8 @@ function fish_prompt
   set -g red (set_color -o red)
   set -g blue (set_color -o blue)
   set -l green (set_color -o green)
-  set -g pale (set_color -o afffff)
+  set -g pale (set_color -o dfe5f2)
+  set -g lightgreen (set_color -o c2ffcf)
   set -g gray (set_color -o 707070)
   set -g lightgray (set_color -o eaeaea)
   set -g darkgray (set_color -o 404040)
@@ -22,7 +23,7 @@ function fish_prompt
     set initial_indicator "$red✖ $last_status"
     set status_indicator "$red❯$red❯$red❯"
   end
-  set -l cwd $gray(basename (prompt_pwd))
+  set -l cwd $lightgreen(basename (prompt_pwd))
 
   if [ (_git_branch_name) ]
 
@@ -31,7 +32,7 @@ function fish_prompt
       set git_info "$normal git:($red$git_branch$normal)"
     else
       set -l git_branch (_git_branch_name)
-      set git_info "$normal git:($blue$git_branch$normal)"
+      set git_info "$normal git:($lightgray$git_branch$normal)"
     end
 
     if [ (_is_git_dirty) ]

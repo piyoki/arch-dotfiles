@@ -11,6 +11,9 @@ fish_add_path $HOME/.linuxbrew/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.local/scripts
 
+### Colorscheme ###
+source $HOME/.config/fish/themes/ayu-mirage.fish
+
 ### General Settings ###
 set fish_greeting         # Turns off the intro message when pulling up fish shell
 set EDITOR "vim"          # Sets the $EDITOR to vim
