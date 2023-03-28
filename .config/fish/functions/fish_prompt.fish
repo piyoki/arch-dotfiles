@@ -7,19 +7,23 @@ function fish_prompt
   set -g blue (set_color -o blue)
   set -l green (set_color -o green)
   set -g pale (set_color -o afffff)
-  set -g normal (set_color normal)
+  set -g gray (set_color -o 707070)
+  set -g lightgray (set_color -o eaeaea)
+  set -g darkgray (set_color -o 404040)
+  # set -g normal (set_color normal)
+  set -g normal (set_color -o eaeaea)
 
   set -l ahead (_git_ahead)
   set -g whitespace ' '
 
   if test $last_status = 0
-    set initial_indicator "$blue◆"
-    set status_indicator "$normal❯$cyan❯$blue❯"
+    set initial_indicator "$lightgray◆"
+    set status_indicator "$normal❯$gray❯$darkgray❯"
   else
     set initial_indicator "$red✖ $last_status"
     set status_indicator "$red❯$red❯$red❯"
   end
-  set -l cwd $pale(basename (prompt_pwd))
+  set -l cwd $lightgray(basename (prompt_pwd))
 
   if [ (_git_branch_name) ]
 
