@@ -37,6 +37,7 @@ abbr ra "ranger"
 abbr ls "ls -ltrh"
 abbr du "du -d 1 -h"
 abbr kill "killall"
+abbr rm "trash -v"
 # tmux
 abbr t "tmux"
 # kubernetes related
