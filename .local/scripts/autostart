@@ -15,6 +15,9 @@ xset r rate 200 25
 # hotkey daemon
 sxhkd &
 
+# hotkey daemon
+xfce4-power-manager &
+
 # screenshot manager
 spectacle -s &
 
