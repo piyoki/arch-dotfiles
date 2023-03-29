@@ -10,6 +10,7 @@ function fish_prompt
   set -g gray (set_color -o 707070)
   set -g lightgray (set_color -o eaeaea)
   set -g lightpale (set_color -o faffec)
+  set -g lightviolet (set_color -o ccccff)
   set -g darkgray (set_color -o 404040)
   set -g normal (set_color normal)
 
@@ -23,7 +24,7 @@ function fish_prompt
     set initial_indicator "$red✖ $last_status"
     set status_indicator "$red❯$red❯$red❯"
   end
-  set -l cwd $pale(basename (prompt_pwd))
+  set -l cwd $lightviolet(basename (prompt_pwd))
 
   if [ (_git_branch_name) ]
 
