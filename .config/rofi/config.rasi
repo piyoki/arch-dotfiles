@@ -4,13 +4,13 @@ configuration {
   display-drun: "Applications:";
   display-window: "Windows:";
   drun-display-format: "{name}";
-  font: "FiraCode Nerd Font Mono 14";
+  font: "FiraCode Nerd Font 14";
   modi: "window,run,drun,emoji";
   dpi: 144;
-  display-drun: "";
-  display-window: "";
-  display-emoji: "ﲃ";
-  display-calc: "";
+  display-drun: " ";
+  display-window: " ";
+  display-emoji: "󰞅 ";
+  display-calc: " ";
 }
 
 @theme "/dev/null"
