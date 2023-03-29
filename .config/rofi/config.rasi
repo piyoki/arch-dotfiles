@@ -21,7 +21,7 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import                          "shared/colors/lavender.rasi"
+@import                          "themes/lavender.rasi"
 
 * {
     border-colour:               var(outline);
