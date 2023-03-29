@@ -16,16 +16,17 @@ gui:
   theme:
     lightTheme: false
     activeBorderColor:
-      - cyan
+      - '#ccccff'
       - bold
     inactiveBorderColor:
-      - white
+      - '#393A3D'
+      # - white
     optionsTextColor:
-      - blue
+      - '#ccccff'
     selectedLineBgColor:
       - default
     selectedRangeBgColor:
-      - blue
+      - '#ccccff'
 reporting: "off"
 splashupdatesindex: 0
 startuppopupversion: 1
