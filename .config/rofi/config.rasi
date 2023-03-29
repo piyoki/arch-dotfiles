@@ -1,3 +1,5 @@
+@theme "/dev/null"
+
 configuration {
   show-icons: true;
   icon-theme: "Papirus";
@@ -13,16 +15,13 @@ configuration {
   display-calc: " ";
 }
 
-@theme "/dev/null"
-
 * {
   bg: #1e1e2e;
-  bg-alt: #313740;
+  bg-alt: #262626;
   bg-selected: #313244;
 
   fg: #cdd6f4;
   fg-alt: #7f849c;
-
 
   border: 0;
   margin: 0;
