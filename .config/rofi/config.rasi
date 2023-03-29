@@ -9,7 +9,6 @@ configuration {
   dpi: 144;
   display-drun: "";
   display-window: "";
-  display-combi: "";
   display-emoji: "ﲃ";
   display-calc: "";
 }

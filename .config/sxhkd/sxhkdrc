@@ -16,6 +16,9 @@ super + shift + e
 super + shift + c
 	rofi -modi calc -show calc 
 
+super + shift + w
+	rofi -modi window -show window 
+
 # reload settings
 alt + r
 	reload
