@@ -31,8 +31,12 @@ configuration {
 }
 
 window {
+  border: 3px;
+  border-color: @bg;
   width: 30%;
   background-color: @bg-alt;
+  padding: 5px;
+  transparency: "real";
 }
 
 element {
