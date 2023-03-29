@@ -10,6 +10,12 @@ super + Return
 super + r
 	rofi -show drun
 
+super + shift + e
+	rofi -modi emoji -show emoji 
+
+super + shift + c
+	rofi -modi calc -show calc 
+
 # reload settings
 alt + r
 	reload
