@@ -18,7 +18,7 @@ configuration {
 
 * {
   bg: #1e1e2e;
-  bg-alt: #585b70;
+  bg-alt: #313740;
   bg-selected: #313244;
 
   fg: #cdd6f4;
@@ -33,12 +33,12 @@ configuration {
 
 window {
   width: 30%;
-  background-color: @bg;
+  background-color: @bg-alt;
 }
 
 element {
   padding: 8 12;
-  background-color: transparent;
+  background-color: @bg;
   text-color: @fg-alt;
 }
 
@@ -73,7 +73,7 @@ inputbar {
 listview {
   background-color: @bg;
   columns: 1;
-  lines: 10;
+  lines: 12;
 }
 
 mainbox {
