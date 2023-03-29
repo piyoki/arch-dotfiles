@@ -1,10 +1,9 @@
-chosen=$(printf "  Power Off\n  Restart\n  Sleep\n  Suspend\n  Log Out\n  Lock" | rofi -dmenu -i -theme-str '@import "powermenu.rasi"')
+chosen=$(printf "  Power Off\n  Restart\n  Sleep\n  Log Out\n  Lock" | rofi -dmenu -i -theme-str '@import "powermenu.rasi"')
 
 case "$chosen" in
 	"  Power Off") poweroff ;;
 	"  Restart") reboot ;;
 	"  Sleep") xset dpms force suspend ;;
-	"  Suspend") systemctl suspend-then-hibernate ;;
 	"  Log Out") bspc quit ;;
 	"  Lock") betterlockscreen -l ;;
 	*) exit 1 ;;
