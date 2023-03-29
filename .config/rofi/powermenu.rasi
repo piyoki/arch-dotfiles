@@ -8,11 +8,10 @@
  */
 
 configuration {
-  font: "FiraCode Nerd Font Mono 12";
+  font: "FiraCode Nerd Font Mono 14";
   dpi: 144;
   show-icons: true;
   icon-theme: "Papirus-Dark";
-  display-drun:"";
   drun-display-format: "{name}";
   disable-history: false;
   fullscreen: false;
@@ -58,7 +57,7 @@ entry {
     expand:                         true;
     horizontal-align:               0;
     placeholder:                    "Search...";
-	padding: 						6px;
+	  padding: 						6px;
     blink:                          true;
 }
 
@@ -78,7 +77,7 @@ listview {
     background-color:               @al;
     padding:                        0px;
     columns:                        1;
-    lines:                          6;
+    lines:                          5;
     spacing:                        6px;
     cycle:                          true;
     dynamic:                        true;
@@ -122,7 +121,7 @@ element-text {
 element selected {
     background-color:               @se;
     text-color:                     @fga;
-	border:							0px 0px 0px 0px;
+    border:							0px 0px 0px 0px;
     border-radius:                  0px;
     border-color:                  	@ac;
 }
