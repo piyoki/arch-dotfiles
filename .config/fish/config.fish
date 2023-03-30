@@ -31,6 +31,7 @@ abbr home "cd ~"
 abbr vim "nvim"
 abbr lg "lazygit"
 abbr ra "ranger"
+abbr edit "notepadqq"
 # abbr go_async_run "when-changed -r -v -1 . go run"
 # abbr python_async_run "when-changed -r -v -1 . python"
 # # programs and system
