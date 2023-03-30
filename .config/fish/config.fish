@@ -74,6 +74,9 @@ abbr set-vol "wpctl set-volume @DEFAULT_AUDIO_SINK@"
 # pb
 alias pb="curl -F 'c=@-' https://fars.ee/"
 
+# gnupg
+source ~/.config/fish/gnupg.fish
+
 ### Dev ENV ###
 
 # Homebrew env
