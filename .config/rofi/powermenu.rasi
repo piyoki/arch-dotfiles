@@ -3,6 +3,6 @@ inputbar {
 }
 
 listview {
-	lines: 5;
+	lines: 6;
 }
 
