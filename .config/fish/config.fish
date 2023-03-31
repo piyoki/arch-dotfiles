@@ -9,6 +9,7 @@
 ### PATH ###
 fish_add_path $HOME/.linuxbrew/bin
 fish_add_path $HOME/.local/bin
+fish_add_path $HOME/.npm-global/bin
 fish_add_path $HOME/.local/scripts
 
 ### Colorscheme ###
