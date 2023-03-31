@@ -1,13 +1,14 @@
 #!/bin/bash
 
+# mouse wheel
+xinput --set-prop "Logitech USB Receiver" "libinput Natural Scrolling Enabled" 1
+
+# keyboard key repeat rate
+xset r rate 200 25
+
 # restart pipewire
 systemctl restart --user pipewire.service
 
 # reload polybar
 sleep 5 && $HOME/.config/polybar/launch.sh
 
-# mouse wheel
-xinput --set-prop "Logitech USB Receiver" "libinput Natural Scrolling Enabled" 1
-
-# keyboard key repeat rate
-xset r rate 200 25
