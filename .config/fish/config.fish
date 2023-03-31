@@ -16,7 +16,7 @@ source $HOME/.config/fish/themes/cool-beans.fish
 
 ### General Settings ###
 set fish_greeting         # Turns off the intro message when pulling up fish shell
-set EDITOR "vim"          # Sets the $EDITOR to vim
+set EDITOR "nvim"          # Sets the $EDITOR to vim
 
 export CLICOLOR=1
 export LS_COLORS=(vivid generate nord)
@@ -32,6 +32,7 @@ abbr vim "nvim"
 abbr lg "lazygit"
 abbr ra "ranger"
 abbr edit "notepadqq"
+abbr top "btm"
 # abbr go_async_run "when-changed -r -v -1 . go run"
 # abbr python_async_run "when-changed -r -v -1 . python"
 # # programs and system
