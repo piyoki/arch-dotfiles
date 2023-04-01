@@ -34,7 +34,7 @@ abbr vim "nvim"
 abbr lg "lazygit"
 abbr ra "ranger"
 abbr edit "notepadqq"
-abbr top "gotop"
+abbr top "btop"
 # abbr go_async_run "when-changed -r -v -1 . go run"
 # abbr python_async_run "when-changed -r -v -1 . python"
 # # programs and system
@@ -60,6 +60,8 @@ abbr yaysyu "paru -Syyu --noconfirm"
 alias yay="paru"
 # kubernetes related
 abbr k "kubectl"
+# program
+alias vlc "org.videolan.VLC"
 
 ### Device Control ###
 # system
