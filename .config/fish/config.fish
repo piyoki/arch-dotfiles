@@ -14,6 +14,7 @@ fish_add_path $HOME/.local/scripts
 
 ### Colorscheme ###
 source $HOME/.config/fish/themes/cool-beans.fish
+source $HOME/.config/fish/functions/bangbang.fish
 
 ### General Settings ###
 set fish_greeting         # Turns off the intro message when pulling up fish shell
