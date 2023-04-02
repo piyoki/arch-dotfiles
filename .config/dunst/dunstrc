@@ -13,7 +13,7 @@
     shrink = no
     separator_height = 2
     padding = 15
-    horizontal_padding = 15
+    horizontal_padding = 30
     text_icon_padding = 15
     frame_width = 2
     frame_color = "#9399b2"
@@ -21,7 +21,7 @@
     sort = yes
     idle_threshold = 120
     font = FiraCode Nerd Mono Font Regular 10
-    line_height = 0
+    line_height = 5
     markup = full
     format = "<span weight='bold'>%s</span>\n%b"
     alignment = left
@@ -35,7 +35,7 @@
     show_indicators = yes
     icon_position = left
     min_icon_size = 0
-    max_icon_size = 32
+    max_icon_size = 24
     icon_path = /home/eric/.local/share/icons/dunst
     sticky_history = yes
     history_length = 20
@@ -56,11 +56,13 @@
     background = "#181825AA"
     foreground = "#CDD6F4"
     timeout = 10
+    icon = /home/kev/.config/dunst/normal.png
 
 [urgency_normal]
     background = "#181825AA"
     foreground = "#CDD6F4"
     timeout = 10
+    icon = /home/kev/.config/dunst/normal.png
 
 [urgency_critical]
     background = "#181825AA"
@@ -68,3 +70,4 @@
     frame_color = "#F38BA8"
     timeout = -1
     format = "<b>%s</b>\n%b"
+    icon = /home/kev/.config/dunst/critical.png

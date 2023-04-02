@@ -4,7 +4,7 @@ chosen=$(printf "  Restart\n󰈀  Up\n󰈀  Down" | rofi -dmenu -i -theme-str
 
 case "$chosen" in
 	"  Restart") systemctl restart tailscaled;;
-	"󰈀  Up") tailscale up --accept-routes=true --accept-dns=false;;
-	"󰈀  Down") tailscale down;;
+	"󰈀  Up") notify-send 'Tailscale' 'link up.' && tailscale up --accept-routes=true --accept-dns=false;;
+	"󰈀  Down") notify-send 'Tailscale' 'link down.' && tailscale down;;
 	*) exit 1 ;;
 esac
