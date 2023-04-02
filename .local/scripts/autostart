@@ -42,9 +42,6 @@ nitrogen --restore &
 # $HOME/.local/bin/feh-blur &
 # feh --bg-fill ~/Pictures/background.jpg &
 
-# streamdeck-ui
-# streamdeck -n
-
 # extras
 # lxpolkit &
 
