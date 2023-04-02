@@ -1,0 +1,10 @@
+#!/bin/bash
+
+chosen=$(printf "  Restart\n󰈀  Up\n󰈀  Down" | rofi -dmenu -i -theme-str '@import "tailscalemenu.rasi"')
+
+case "$chosen" in
+	"  Restart") systemctl restart tailscaled;;
+	"󰈀  Up") tailscale up --accept-routes=true --accept-dns=false;;
+	"󰈀  Down") tailscale down;;
+	*) exit 1 ;;
+esac

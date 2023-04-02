@@ -38,6 +38,9 @@ super + b
 super + p 
 	powermenu
 
+super + ctrl + t 
+	tailscalemenu
+
 super + shift + p
 	flameshot gui -p /media/drive/Screenshots
 
