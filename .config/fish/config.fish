@@ -12,13 +12,14 @@ fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.npm-global/bin
 fish_add_path $HOME/.local/scripts
 
-### Colorscheme ###
+### Link Sources ###
 source $HOME/.config/fish/themes/cool-beans.fish
 source $HOME/.config/fish/functions/bangbang.fish
+source ~/.config/fish/gnupg.fish
 
 ### General Settings ###
-set fish_greeting         # Turns off the intro message when pulling up fish shell
-set EDITOR "nvim"          # Sets the $EDITOR to vim
+set fish_greeting # Turns off the intro message when pulling up fish shell
+set EDITOR "nvim" # Sets the $EDITOR to vim
 
 export CLICOLOR=1
 export LS_COLORS=(vivid generate nord)
@@ -78,9 +79,8 @@ abbr get-vol "wpctl get-volume @DEFAULT_AUDIO_SINK@"
 abbr set-vol "wpctl set-volume @DEFAULT_AUDIO_SINK@"
 # pb
 alias pb="curl -F 'c=@-' https://fars.ee/"
-
-# gnupg
-source ~/.config/fish/gnupg.fish
+# streamdeck
+alias streamdeck="$HOME/.virtualenvs/streamdeck/bin/streamdeck"
 
 ### Dev ENV ###
 
