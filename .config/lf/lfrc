@@ -1,10 +1,17 @@
-set ratios 1:2:3
-set cleaner ~/.config/lf/cleaner
-set previewer ~/.config/lf/preview
+# Helper
+# Command 'set' is used to get an option which can be boolean, integer, or string
+# Command 'cmd' is used to define a custom command
+# Command 'map' is used to bind a key to a command which can be builtin command, custom command, or shell command
+
 # Basic Settings
 set hidden true
 set ignorecase true
 set icons true
+set drawbox true
+set sortby time
+set ratios 1:2:3
+set cleaner ~/.config/lf/cleaner
+set previewer ~/.config/lf/preview
 
 # Custom Functions
 cmd mkdir ${{
@@ -83,6 +90,19 @@ cmd fzf_search ${{
 # cp-p
 cmd paste $cp-p --lf-paste $id
 
+# zoxide (z)
+cmd z %{{
+    result="$(zoxide query --exclude $PWD $@)"
+    lf -remote "send $id cd $result"
+}}
+
+cmd zi ${{
+    result="$(zoxide query -i)"
+    lf -remote "send $id cd $result"
+}}
+
+cmd usage $du -h -d1 | less
+
 # Bindings
 # Remove some defaults
 map m
@@ -95,7 +115,6 @@ map d
 map c $vscodium "$f"
 
 map au unarchive
-map ae $wine "$f"
 
 # Basic Functions
 map . set hidden!
@@ -112,12 +131,12 @@ map bg setwallpaper
 map C clear
 
 # Movement
-map gD cd ~/documents
-map gd cd ~/downloads
-map gp cd ~/pictures
+map gD cd ~/Documents
+map gd cd ~/Downloads
+map gp cd ~/Pictures
 map gc cd ~/.config
 map gr cd ~/repos
-map gv cd ~/videos
+map gw cd ~/workspace
 map gs cd ~/.local/bin
 map gt cd ~/.local/share/Trash/files
 
