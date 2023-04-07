@@ -93,3 +93,6 @@ alias streamdeck="$HOME/.virtualenvs/streamdeck/bin/streamdeck"
 
 # fzf key-remaps
 fzf_configure_bindings --git_status --history=\ch --variables=\cv --directory=\cx --git_log=\cg
+
+# lf history work-dir
+bind \co 'set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f repaint'
