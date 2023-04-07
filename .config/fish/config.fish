@@ -23,6 +23,7 @@ set EDITOR "nvim" # Sets the $EDITOR to vim
 
 export CLICOLOR=1
 export LS_COLORS=(vivid generate nord)
+export DOCKER_BUILDKIT=1
 
 ### Fish Alias ###
 abbr unset "set --erase"
@@ -36,6 +37,7 @@ abbr lg "lazygit"
 abbr ra "ranger"
 abbr edit "notepadqq"
 abbr top "btop"
+abbr weather "curl wttr.in/"
 # abbr go_async_run "when-changed -r -v -1 . go run"
 # abbr python_async_run "when-changed -r -v -1 . python"
 # # programs and system
@@ -47,6 +49,7 @@ abbr rm "trash -v"
 abbr t "tmux"
 # kubernetes related
 abbr k "kubectl"
+abbr kz "kubectl kustomize"
 # journalctl
 abbr journal "journalctl -xefu"
 # brew
