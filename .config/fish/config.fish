@@ -23,7 +23,6 @@ set EDITOR "nvim" # Sets the $EDITOR to vim
 
 export CLICOLOR=1
 export LS_COLORS=(vivid generate nord)
-export DOCKER_BUILDKIT=1
 
 ### Fish Alias ###
 abbr unset "set --erase"
