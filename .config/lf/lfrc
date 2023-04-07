@@ -92,15 +92,16 @@ cmd paste $cp-p --lf-paste $id
 
 # zoxide (z)
 cmd z %{{
-    result="$(zoxide query --exclude $PWD $@)"
-    lf -remote "send $id cd $result"
+	result="$(zoxide query --exclude $PWD $@)"
+	lf -remote "send $id cd $result"
 }}
 
 cmd zi ${{
-    result="$(zoxide query -i)"
-    lf -remote "send $id cd $result"
+	result="$(zoxide query -i)"
+	lf -remote "send $id cd $result"
 }}
 
+# du (disk usage)
 cmd usage $du -h -d1 | less
 
 # Bindings
@@ -129,6 +130,7 @@ map mf mkfile
 map md mkdir
 map bg setwallpaper
 map C clear
+map <c-c> quit
 
 # Movement
 map gD cd ~/Documents

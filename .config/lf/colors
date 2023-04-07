@@ -54,16 +54,17 @@ pi      33      # FIFO
 so      01;37   # SOCK
 bd      33;01   # BLK
 cd      33;01   # CHR
-su      01;32   # SETUID
-sg      01;32   # SETGID
-ex      01;32   # EXEC
+su      01;90   # SETUID
+sg      01;90   # SETGID
+ex      01;90   # EXEC
 fi      01;90   # FILE
 
 # custom
-*.json  01;90
-*.conf  01;90
-*.cfg   01;90
-*.ini   01;90
+*.json              01;96
+*.conf              01;90
+*.cfg               01;90
+*.ini               01;90
+*.gitconfig         01;90
 
 # archives or compressed (dircolors defaults)
 *.tar   01;31
