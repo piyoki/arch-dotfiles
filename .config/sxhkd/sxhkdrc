@@ -76,6 +76,9 @@ super + g
 
 super + e
 	thunar
+
+super + l
+	alacritty --hold -e "lf"
 #
 # state/flags
 #
