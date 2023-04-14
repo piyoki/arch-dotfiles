@@ -79,6 +79,7 @@ super + e
 
 super + l
 	alacritty --hold -e "lf"
+
 #
 # state/flags
 #

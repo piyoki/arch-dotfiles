@@ -87,9 +87,6 @@ cmd fzf_search ${{
     [ ! -z "$res" ] && lf -remote "send $id select \"$res\""
 }}
 
-# cp-p
-cmd paste $cp-p --lf-paste $id
-
 # zoxide (z)
 cmd z %{{
 	result="$(zoxide query --exclude $PWD $@)"
@@ -141,6 +138,8 @@ map gr cd ~/repos
 map gw cd ~/workspace
 map gs cd ~/.local/bin
 map gt cd ~/.local/share/Trash/files
+map gq cd /mnt/QNAP-TS873A/
+map gm cd /mnt/Media
 
 # Search
 map <c-f> :fzf_jump
