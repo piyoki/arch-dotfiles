@@ -39,7 +39,7 @@ function M.setup()
   utils.map("i", "<S-Down>", "<Esc>:m+<CR>", opts) -- (N) Move current line downward
 
   -- Spell Check
-  utils.map("", "sc", "<cmd>set spell!<CR>") -- Enable spellcheck
+  utils.map("n", "sc", "<cmd>set spell!<CR>") -- Enable spellcheck
 
   -- Highlight Search
   utils.map("n", "<LEADER><CR>", ":nohlsearch<CR>", opts) -- (N) Clear all highlight
@@ -52,7 +52,7 @@ function M.setup()
   utils.map("n", "<C-c>", "u:w<CR>", opts)
 
   --- Paste *(no delete on register)
-  utils.map("x", "<LEADER>p", '\\"_dP', opts)
+  utils.map("n", "<LEADER>p", '"_dP', opts)
 
   ----------------------------------------------
   -- Explorer
