@@ -49,7 +49,7 @@ function M.setup()
 
   --- Undo
   utils.map("i", "<C-c>", "<Esc>", opts)
-  utils.map("n", "<C-c>", "u", opts)
+  utils.map("n", "<C-c>", "u:w<CR>", opts)
 
   --- Paste *(no delete on register)
   utils.map("x", "<LEADER>p", '\\"_dP', opts)
