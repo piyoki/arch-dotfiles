@@ -174,7 +174,7 @@ function M.setup()
   )
 
   utils.map("n", "\\", "<cmd>Telescope current_buffer_fuzzy_find<CR>")
-  utils.map("n", "<C-f>", "<cmd>Telescope find_files<CR>")
+  utils.map("n", "<C-f>", "<cmd>Telescope find_files hidden=true<CR>")
   utils.map("n", "<C-e>", "<cmd>Telescope file_browser<CR>")
 
   --- Formatter
