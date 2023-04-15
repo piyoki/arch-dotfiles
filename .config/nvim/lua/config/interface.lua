@@ -76,6 +76,7 @@ function interface.setup()
     yellow = "#F2C12E",
     lightyellow = "#FFFFBA",
     purple = "#b392f0",
+    lightpurple = "#ccccff",
     darkgray = "#3D3D3D",
     lightgray = "#504945",
     none = "none"
@@ -93,9 +94,9 @@ function interface.setup()
   -- custom mod
   -- general
   vim.cmd("hi Normal guibg=none") -- enable transparent background
-  vim.cmd(string.format("hi PmenuSel guibg=%s guifg=%s gui=bold", colors.lightyellow, colors.black_2))
-  vim.cmd(string.format("hi PmenuSbar guibg=%s guifg=%s", colors.lightyellow, colors.black_2))
-  vim.cmd(string.format("hi CursorLineNr guifg=%s guibg=none gui=bold", colors.lightyellow))
+  vim.cmd(string.format("hi PmenuSel guibg=%s guifg=%s gui=bold", colors.lightpurple, colors.black_2))
+  vim.cmd(string.format("hi PmenuSbar guibg=%s guifg=%s", colors.lightpurle, colors.black_2))
+  vim.cmd(string.format("hi CursorLineNr guifg=%s guibg=none gui=bold", colors.lightpurle))
   vim.cmd(string.format("hi CursorLine guibg=%s", colors.black))
   vim.cmd(string.format("hi LineNr guifg=%s guibg=none", colors.darkgray))
   -- diagnostic

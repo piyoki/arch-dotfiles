@@ -54,11 +54,6 @@ function M.setup()
   utils.map("x", "<LEADER>p", '\\"_dP', opts)
 
   ----------------------------------------------
-  -- Explorer
-  utils.map("", "<LEADER>r", "<cmd>Lexplore<CR><cmd>vertical res -60<CR>") -- Open built-in file explorer
-  -- Usage:
-  -- Press 't' instead of pressing <cr> for a new tab, or 'v' for a new vertical split
-  -- :h netrw-v for help menu
 
   -- Tab
   utils.map("", "tt", "<cmd>tabe<CR>") -- New tab
@@ -97,6 +92,11 @@ function M.setup()
   utils.map("n", "<C-j>", "<CMD>HopWordCurrentLine<CR>") -- (N) Jump to a word in the current line
   utils.map("n", "<C-l>", "<CMD>HopLine<CR>") -- (N) Jump to the target line
   utils.map("n", "<CR>", "<CMD>HopWord<CR>") -- (N) Jump to the target line
+  --- Harpoon
+  utils.map("n", "mm", ":lua require('harpoon.mark').add_file()<CR>") -- (N) Mark current file in harpoon
+  utils.map("n", "mp", ":lua require('harpoon.ui').nav_prev()<CR>") -- (N) Navigate to previous harpoon mark
+  utils.map("n", "mn", ":lua require('harpoon.ui').nav_next()<CR>") -- (N) Navigate to next harpoon mark
+  utils.map("n", "<LEADER>m", ":lua require('harpoon.ui').toggle_quick_menu()<CR>") -- (N) Open up harpoon menu
 
   -- fugitive
   wk.register(

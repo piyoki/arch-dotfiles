@@ -25,7 +25,6 @@ return require("packer").startup(
     use({"hrsh7th/nvim-cmp"})
     use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
     use({"nvim-treesitter/nvim-treesitter-textobjects"})
-    -- use({"lewis6991/spellsitter.nvim"})
     use("famiu/bufdelete.nvim")
 
     -- git
@@ -58,6 +57,7 @@ return require("packer").startup(
 
     -- tools
     use({"phaazon/hop.nvim"})
+    use({"ThePrimeagen/harpoon"})
     use({"numtostr/FTerm.nvim"})
     use({"folke/which-key.nvim"})
     use(
