@@ -20,6 +20,7 @@ function tools.setup()
           hidden = true
         },
         file_browser = {
+          theme = "ivy",
           hidden = true
         }
       }

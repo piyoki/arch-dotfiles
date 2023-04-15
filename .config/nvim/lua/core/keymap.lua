@@ -163,7 +163,7 @@ function M.setup()
         h = {"<cmd>Telescope help_tags<CR>", "Telescope Help"},
         j = {"<cmd>Telescope jumplist<CR>", "Telescope Jump List"},
         k = {"<cmd>Telescope keymaps<CR>", "Telescope Keymaps"},
-        e = {"<cmd>Telescope file_browser<CR>", "Telescope File Browser"},
+        e = {"<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", "Telescope File Browser"},
         m = {"<cmd>Telescope man_pages<CR>", "Telescope Man Pages"},
         s = {"<cmd>Telescope live_grep<CR>", "Telescope Live Grep"}
       }
@@ -175,7 +175,7 @@ function M.setup()
 
   utils.map("n", "\\", "<cmd>Telescope current_buffer_fuzzy_find<CR>")
   utils.map("n", "<C-f>", "<cmd>Telescope find_files hidden=true<CR>")
-  utils.map("n", "<C-e>", "<cmd>Telescope file_browser<CR>")
+  utils.map("n", "<C-e>", "<cmd>Telescope file_browser path=%:p:h select_buffer=true hidden=true<CR>")
 
   --- Formatter
   wk.register(

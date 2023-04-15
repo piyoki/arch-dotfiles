@@ -3,16 +3,10 @@ local nvim_cmd = vim.api.nvim_command
 local nvim_exec = vim.api.nvim_exec
 
 function autocmd.setup()
-  -- enable autosave when exiting insert mode
-  -- nvim_cmd([[
-  --   autocmd InsertLeave * write
-  --   set buftype=nofile
-  -- ]])
-
   -- set tab display format ==> (moved to ide/indent.lua)
-  -- nvim_cmd([[
-  --   set listchars=tab:\|\ ,trail:▫
-  -- ]])
+  nvim_cmd([[
+    set listchars=tab:\|\ ,trail:▫
+  ]])
 
   -- return to the previous edit position
   nvim_cmd(
@@ -37,6 +31,7 @@ function autocmd.setup()
     autocmd FileType apache setlocal commentstring=#\ %s
   ]])
 
+  -- TelescopePrompt setup
   vim.cmd(
     [[
     augroup cmp
@@ -45,6 +40,14 @@ function autocmd.setup()
     augroup end
   ]]
   )
+
+  -- set current working directory when opening vim
+  vim.cmd([[
+    augroup cdpwd
+      autocmd!
+      autocmd VimEnter * cd $PWD
+    augroup end
+  ]])
 end
 
 return autocmd
