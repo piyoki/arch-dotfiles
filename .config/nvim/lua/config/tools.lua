@@ -2,24 +2,29 @@ local tools = {}
 
 function tools.setup()
   require("hop").setup()
-  require("nvim-autopairs").setup({
-    check_ts = true,
-    disable_filetype = { "TelescopePrompt" },
-  })
+  require("nvim-autopairs").setup(
+    {
+      check_ts = true,
+      disable_filetype = {"TelescopePrompt"}
+    }
+  )
 
-  require("telescope").setup({
-    defaults = {
-      layout_strategy = "vertical",
-    },
-    pickers = {
-      find_files = {
-        hidden = false,
+  require("telescope").setup(
+    {
+      defaults = {
+        defaults = require("telescope.themes").get_ivy()
       },
-      file_browser = {
-        hidden = false,
-      },
-    },
-  })
+      pickers = {
+        find_files = {
+          find_command = {"fd", "--type", "f", "--strip-cwd-prefix"},
+          hidden = true
+        },
+        file_browser = {
+          hidden = true
+        }
+      }
+    }
+  )
   require("telescope").load_extension("fzf")
   require("telescope").load_extension("file_browser")
   require("plenary.filetype").add_file("json")
@@ -56,7 +61,7 @@ function tools.setup()
     sequence_diagrams = {},
     flowchart_diagrams = {},
     content_editable = "v:false",
-    disable_filename = 0,
+    disable_filename = 0
   }
   vim.g.mkdp_markdown_css = ""
   vim.g.mkdp_highlight_css = ""
