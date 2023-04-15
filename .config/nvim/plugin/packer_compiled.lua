@@ -256,11 +256,6 @@ _G.packer_plugins = {
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/schemastore.nvim",
     url = "https://github.com/b0o/schemastore.nvim"
   },
-  ["spellsitter.nvim"] = {
-    loaded = true,
-    path = "/home/kev/.local/share/nvim/site/pack/packer/start/spellsitter.nvim",
-    url = "https://github.com/lewis6991/spellsitter.nvim"
-  },
   tabular = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/tabular",
