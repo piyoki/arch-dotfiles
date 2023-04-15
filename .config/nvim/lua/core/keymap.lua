@@ -21,6 +21,7 @@ function M.setup()
   utils.map("", "s", "<nop>", opts)
   utils.map("n", "S", ":w<CR>", opts) -- (N) Save
   utils.map("n", "Q", ":q<CR>", opts) -- (N) Quit
+  utils.map("n", "<A-w>", ":BufferClose<CR>", opts) -- (N) Close current buffer
   utils.map("n", "R", ":source%<CR>", opts) -- (N) Reload
 
   -- Navigation
@@ -54,6 +55,11 @@ function M.setup()
   utils.map("x", "<LEADER>p", '\\"_dP', opts)
 
   ----------------------------------------------
+  -- Explorer
+  utils.map("", "<LEADER>r", "<cmd>Lexplore %:p:h<CR><cmd>vertical res -60<CR>") -- Open built-in file explorer
+  -- Usage:
+  -- Press 't' instead of pressing <cr> for a new tab, or 'v' for a new vertical split
+  -- :h netrw-v for help menu
 
   -- Tab
   utils.map("", "tt", "<cmd>tabe<CR>") -- New tab
@@ -173,9 +179,10 @@ function M.setup()
     }
   )
 
-  utils.map("n", "\\", "<cmd>Telescope current_buffer_fuzzy_find<CR>")
+  utils.map("n", "\\", "<cmd>Telescope current_buffer_fuzzy_find fuzzy=false case_mode=ignore_case<CR>")
   utils.map("n", "<C-f>", "<cmd>Telescope find_files hidden=true<CR>")
   utils.map("n", "<C-e>", "<cmd>Telescope file_browser path=%:p:h select_buffer=true hidden=true<CR>")
+  utils.map("n", "<C-k>", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
 
   --- Formatter
   wk.register(

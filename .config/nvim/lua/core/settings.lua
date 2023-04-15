@@ -26,7 +26,7 @@ function settings.setup()
   utils.opt("o", "autoindent", true) -- enable auto indent
   utils.opt("o", "wrap", true) -- wrap text
   utils.opt("o", "signcolumn", "yes") -- always show the signcolumn, or it would shift the text each time
-  utils.opt("o", "hidden", true) -- when off a buffer is unloaded when it is abandoned
+  -- utils.opt("o", "hidden", true) -- when off a buffer is unloaded when it is abandoned
   utils.opt("o", "scrolloff", indent) -- minimal number of screen lines to keep above and below the cursor
   utils.opt("o", "shiftround", true) -- round indent to multiple of 'shiftwidth', apply to >, <
   utils.opt("o", "smartcase", true) -- enable smarcase

@@ -6,6 +6,7 @@ return require("packer").startup(
     use({"wbthomason/packer.nvim"})
     use({"nvim-lua/popup.nvim"})
     use({"nvim-lua/plenary.nvim"})
+    use({"airblade/vim-rooter"})
 
     -- colorscheme
     use({"lourenci/github-colors"})
@@ -73,6 +74,7 @@ return require("packer").startup(
     use({"nvim-telescope/telescope.nvim"})
     use({"nvim-telescope/telescope-fzf-native.nvim", run = "make"})
     use({"nvim-telescope/telescope-file-browser.nvim"})
+    use({"nvim-telescope/telescope-live-grep-args.nvim"})
     use({"haya14busa/incsearch.vim"})
 
     -- markdown support

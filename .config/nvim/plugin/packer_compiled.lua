@@ -276,6 +276,11 @@ _G.packer_plugins = {
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
     url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
+  ["telescope-live-grep-args.nvim"] = {
+    loaded = true,
+    path = "/home/kev/.local/share/nvim/site/pack/packer/start/telescope-live-grep-args.nvim",
+    url = "https://github.com/nvim-telescope/telescope-live-grep-args.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -300,6 +305,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-rooter"] = {
+    loaded = true,
+    path = "/home/kev/.local/share/nvim/site/pack/packer/start/vim-rooter",
+    url = "https://github.com/airblade/vim-rooter"
   },
   ["vim-sleuth"] = {
     loaded = true,

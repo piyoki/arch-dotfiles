@@ -21,6 +21,7 @@ function tools.setup()
         },
         file_browser = {
           theme = "ivy",
+          hijack_netrw = true,
           hidden = true
         }
       }
@@ -28,6 +29,8 @@ function tools.setup()
   )
   require("telescope").load_extension("fzf")
   require("telescope").load_extension("file_browser")
+  require("telescope").load_extension("harpoon")
+  require("telescope").load_extension("live_grep_args")
   require("plenary.filetype").add_file("json")
 
   -- emmet
