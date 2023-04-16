@@ -113,6 +113,7 @@ map d
 map c $vscodium "$f"
 
 map au unarchive
+map n $nvim .
 
 # Basic Functions
 map . set hidden!
