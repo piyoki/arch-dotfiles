@@ -48,11 +48,13 @@ function M.setup()
   utils.map("n", "<C-z>", "za", opts) -- (N) Fold current function
 
   --- Undo
-  utils.map("i", "<C-c>", "<Esc>", opts)
+  utils.map("i", "<C-c>", "<Esc>:w<CR>", opts)
   utils.map("n", "<C-c>", "u:w<CR>", opts)
 
   --- Paste *(no delete on register)
-  utils.map("n", "<LEADER>p", '"_dP', opts)
+  utils.map("v", "<C-c>", '"*y :let @+=@*<CR>', opts)
+  utils.map("v", "<LEADER>p", '"*P', opts)
+  utils.map("n", "<LEADER>p", '"*P', opts)
 
   ----------------------------------------------
   -- Explorer

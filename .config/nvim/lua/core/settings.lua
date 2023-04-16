@@ -66,7 +66,7 @@ function settings.setup()
   cmd("au TextYankPost * lua vim.highlight.on_yank {on_visual = false}")
 
   -- Clipboard & Mouse
-  utils.opt("o", "clipboard", "unnamed,unnamedplus")
+  utils.opt("o", "clipboard", "unnamedplus")
   utils.opt("o", "mouse", "a")
 end
 

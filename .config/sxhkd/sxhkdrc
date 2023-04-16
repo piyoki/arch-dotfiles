@@ -77,7 +77,7 @@ super + g
 super + e
 	thunar
 
-super + l
+alt + l
 	alacritty --hold -e "lf"
 
 #
