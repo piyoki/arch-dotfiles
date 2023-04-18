@@ -20,7 +20,7 @@ function M.setup()
   -- Save, Quit, and Reload
   utils.map("", "s", "<nop>", opts)
   utils.map("n", "S", ":w<CR>", opts) -- (N) Save
-  utils.map("n", "Q", ":q<CR>", opts) -- (N) Quit
+  utils.map("n", "Q", "<nop>", opts) -- (N) Unbind quit
   utils.map("n", "<A-w>", ":BufferClose<CR>", opts) -- (N) Close current buffer
   utils.map("n", "R", ":source%<CR>", opts) -- (N) Reload
 
@@ -31,6 +31,8 @@ function M.setup()
   utils.map("i", "<C-a>", "<C-o>0", opts) -- (I) Move current cursor to the beginning of line
   utils.map("n", "<C-d>", "<C-d>zz", opts) -- (N) Move to next page
   utils.map("n", "<C-u>", "<C-u>zz", opts) -- (N) Move to previous page
+  utils.map("n", "n", "nzzzv", opts) -- (N) Move to next keyword
+  utils.map("n", "N", "Nzzzv", opts) -- (N) Move to previous keyword
 
   -- Move lines around
   utils.map("n", "<S-Up>", ":m-2<CR>", opts) -- (N) Move current line upward
@@ -49,12 +51,13 @@ function M.setup()
 
   --- Undo
   utils.map("i", "<C-c>", "<Esc>:w<CR>", opts)
-  utils.map("n", "<C-c>", "u:w<CR>", opts)
+  utils.map("n", "<C-c>", ":q<Esc>", opts)
 
   --- Paste *(no delete on register)
-  utils.map("v", "y", '"*y :let @+=@*<CR>', opts)
-  utils.map("v", "p", '"*P', opts)
-  utils.map("n", "p", '"*P', opts)
+  utils.map("n", "<LEADER>p", '"_dP', opts)
+  utils.map("v", "<LEADER>p", '"_dP', opts)
+  utils.map("n", "<LEADER>y", '"*y :let @+=@*<CR>', opts)
+  utils.map("v", "<LEADER>y", '"*y :let @+=@*<CR>', opts)
 
   ----------------------------------------------
   -- Explorer
@@ -65,8 +68,8 @@ function M.setup()
 
   -- Tab
   utils.map("", "tt", "<cmd>tabe<CR>") -- New tab
-  utils.map("", "<LEADER>-", ":BufferPrevious<CR>") -- Jump to the tab on the left
-  utils.map("", "<LEADER>=", ":BufferNext<CR>") -- Jump to the tab on the right
+  utils.map("", "<LEADER>-", ":BufferPrevious<CR>") -- Jump to previous buffer
+  utils.map("", "<LEADER>=", ":BufferNext<CR>") -- Jump to the next buffer
 
   -- Window
   utils.map("", "s|", ":set splitright<CR>:vsplit<CR>") -- Split window horizontally
@@ -97,9 +100,8 @@ function M.setup()
   utils.map("v", "<LEADER>/", ":Commentary<CR>") -- (V) Toggle Comment
 
   -- Hop
-  utils.map("n", "<C-j>", "<CMD>HopWordCurrentLine<CR>") -- (N) Jump to a word in the current line
-  utils.map("n", "<C-l>", "<CMD>HopLine<CR>") -- (N) Jump to the target line
   utils.map("n", "<CR>", "<CMD>HopWord<CR>") -- (N) Jump to the target line
+
   --- Harpoon
   utils.map("n", "mm", ":lua require('harpoon.mark').add_file()<CR>") -- (N) Mark current file in harpoon
   utils.map("n", "<A-p>", ":lua require('harpoon.ui').nav_prev()<CR>") -- (N) Navigate to previous harpoon mark
@@ -144,20 +146,6 @@ function M.setup()
   )
 
   ----------------------------------------------
-  -- Zen Mode
-  wk.register(
-    {
-      z = {
-        name = "Zen-mode",
-        z = {"<cmd>ZenMode<CR>", "Toggle ZenMode"},
-        t = {"<cmd>Twilight<CR>", "Toggle Twilgiht"}
-      }
-    },
-    {
-      prefix = "<Leader>"
-    }
-  )
-
   --- Telescope
   wk.register(
     {
