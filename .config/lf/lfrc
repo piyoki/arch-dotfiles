@@ -133,7 +133,7 @@ map <c-c> quit
 # Movement
 map gD cd ~/Documents
 map gd cd ~/Downloads
-map gp cd ~/Pictures
+map gP cd ~/Pictures
 map gc cd ~/.config
 map gr cd ~/repos
 map gw cd ~/workspace
@@ -141,6 +141,7 @@ map gs cd ~/.local/bin
 map gt cd ~/.local/share/Trash/files
 map gq cd /mnt/QNAP-TS873A/
 map gm cd /mnt/Media
+map gp cd /mnt/Pikpak
 
 # Search
 map <c-f> :fzf_jump
