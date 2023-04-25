@@ -77,9 +77,12 @@ abbr set-audio-out "pactl set-default-sink"
 abbr set-br "sudo ddcutil setvcp 10 --display"
 abbr get-br "sudo ddcutil getvcp 10 --display"
 abbr dd "sudo ddcutil"
-# audio
+# audio (wirepulmer)
 abbr get-vol "wpctl get-volume @DEFAULT_AUDIO_SINK@"
 abbr set-vol "wpctl set-volume @DEFAULT_AUDIO_SINK@"
+# audio (pamixer)
+# abbr get-vol "pamixer --get-volume"
+# abbr set-vol "pamixer --set-volume"
 # pb
 alias pb="curl -F 'c=@-' https://fars.ee/"
 # streamdeck

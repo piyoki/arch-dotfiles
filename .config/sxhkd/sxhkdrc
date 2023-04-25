@@ -164,8 +164,8 @@ super + {Left,Down,Up,Right}
 	
 # volume control
 XF86AudioLowerVolume
-	notify-send 'Audio' 'volume down by 5%'; pamixer --decrease 5
+	notify-send 'Audio' 'volume down by 5%'; wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 XF86AudioRaiseVolume
-	notify-send 'Audio' 'volume up by 5%'; pamixer --increase 5 
+	notify-send 'Audio' 'volume up by 5%'; wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
 XF86AudioMute
-	notify-send 'Audio' 'toggle mute'; pamixer --toggle-mute
+	notify-send 'Audio' 'toggle mute'; wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
