@@ -60,8 +60,7 @@ function M.setup()
           function()
             return {
               exe = "gofmt",
-              args = {"-w"},
-              stdin = false
+              stdin = true
             }
           end
         },
@@ -90,7 +89,7 @@ function M.setup()
           function()
             return {
               exe = "prettier",
-              args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), "--single-quote"},
+              args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), "--double-quote"},
               stdin = true
             }
           end
@@ -99,12 +98,9 @@ function M.setup()
         python = {
           function()
             return {
-              exe = "python3 -m autopep8",
-              args = {
-                "--in-place --aggressive --aggressive",
-                vim.fn.fnameescape(vim.api.nvim_buf_get_name(0))
-              },
-              stdin = false
+              exe = "black",
+              args = {"-q", "-"},
+              stdin = true
             }
           end
         },
@@ -112,8 +108,15 @@ function M.setup()
         ruby = {
           function()
             return {
-              exe = "rubocop", -- might prepend `bundle exec `
-              args = {"--auto-correct", "--stdin", "%:p", "2>/dev/null", "|", "awk 'f; /^====================$/{f=1}'"},
+              exe = "rubocop",
+              args = {
+                "--fix-layout",
+                "--stdin",
+                util.escape_path(util.get_current_buffer_file_name()),
+                "--format",
+                "files",
+                "--stderr"
+              },
               stdin = true
             }
           end
