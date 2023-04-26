@@ -11,6 +11,7 @@ mc cp ~/.Xresources minio/server-configurations/arch-desktop/
 mc cp ~/.xprofile minio/server-configurations/arch-desktop/
 mc cp ~/.profile minio/server-configurations/arch-desktop/
 mc cp ~/.streamdeck_ui_export.json minio/server-configurations/arch-desktop/
+mc cp ~/.qnap_credentials minio/server-configurations/arch-desktop/
 mc mirror --overwrite ~/.ssh/ minio/server-configurations/arch-desktop/.ssh/
 mc mirror --overwrite ~/.screenlayout/ minio/server-configurations/arch-desktop/.screenlayout/
 mc mirror --overwrite ~/.assets/ minio/server-configurations/arch-desktop/.assets/
