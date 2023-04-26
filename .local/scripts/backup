@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Backup on $(date)" > $HOME/backup_log.txt
+
 # system
 sudo mc cp /usr/local/bin/restart-scdaemon minio/server-configurations/arch-desktop/restart-scdaemon
 sudo mc cp /etc/crontab minio/server-configurations/arch-desktop/crontab

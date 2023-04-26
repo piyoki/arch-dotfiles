@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo "Create snapshot on $(date)" > snap_log.txt
-sudo timeshift --create --comments "$(date)" --btrfs --verbose >> snap_log.txt
-sudo timeshift --list >> snap_log.txt
+echo "Create snapshot on $(date)" > $HOME/snap_log.txt
+sudo timeshift --create --comments "$(date)" --btrfs --verbose >> $HOME/snap_log.txt
+sudo timeshift --list >> $HOME/snap_log.txt
