@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo timeshift --create --comments "$(date)" --btrfs --verbose
+sudo timeshift --list
