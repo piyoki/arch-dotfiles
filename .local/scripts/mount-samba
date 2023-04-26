@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
-sudo mount -t cifs -o credentials=/etc/.qnap_credentials,uid=$USER,gid=$USER,iocharset=utf8, //10.178.0.81/Tank /mnt/Tank
-sudo mount -t cifs -o credentials=/etc/.qnap_credentials,uid=$USER,gid=$USER,iocharset=utf8, //10.178.0.81/Media /mnt/Media
+sudo mount -t cifs -o credentials=$HOME/.qnap_credentials,uid=$USER,gid=$USER,iocharset=utf8, //10.178.0.81/Tank /mnt/Tank
+sudo mount -t cifs -o credentials=$HOME/.qnap_credentials,uid=$USER,gid=$USER,iocharset=utf8, //10.178.0.81/Media /mnt/Media
