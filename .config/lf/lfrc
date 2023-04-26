@@ -139,8 +139,9 @@ map gr cd ~/repos
 map gw cd ~/workspace
 map gs cd ~/.local/bin
 map gt cd ~/.local/share/Trash/files
-map gq cd /mnt/QNAP-TS873A/
+map gq cd /mnt/Tank
 map gm cd /mnt/Media
+map gM cd ~/Minio
 map gp cd /mnt/Pikpak
 
 # Search

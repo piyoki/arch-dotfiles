@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # system
+sudo mc cp /usr/local/bin/restart-scdaemon minio/server-configurations/arch-desktop/restart-scdaemon
+sudo mc cp /etc/crontab minio/server-configurations/arch-desktop/crontab
 mc cp ~/.wakatime.cfg minio/server-configurations/arch-desktop/
 mc cp ~/.gitconfig minio/server-configurations/arch-desktop/
 mc cp ~/.git-credentials minio/server-configurations/arch-desktop/
@@ -14,6 +16,8 @@ mc mirror --overwrite ~/.screenlayout/ minio/server-configurations/arch-desktop/
 mc mirror --overwrite ~/.assets/ minio/server-configurations/arch-desktop/.assets/
 mc mirror --overwrite ~/.docker/ minio/server-configurations/arch-desktop/.docker/
 mc mirror --overwrite ~/.gnupg/ minio/server-configurations/arch-desktop/.gnupg/
+mc mirror --overwrite ~/.mc/ minio/server-configurations/arch-desktop/.mc/
+mc mirror --overwrite ~/.aws/ minio/server-configurations/arch-desktop/.aws/
 
 # icons/themes
 mc mirror --overwrite ~/.icons/ minio/server-configurations/arch-desktop/.icons/
