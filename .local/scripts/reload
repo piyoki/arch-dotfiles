@@ -15,3 +15,6 @@ xset r rate 200 25
 # reload polybar
 # sleep 5 && $HOME/.config/polybar/launch.sh
 
+# mount drives
+$HOME/.local/scripts/mount-s3
+$HOME/.local/scripts/mount-samba

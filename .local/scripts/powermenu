@@ -2,7 +2,7 @@ chosen=$(printf "  Reload\n  Sleep\n  Lock\n  Log Out\n  Power Of
 
 case "$chosen" in
 	"  Reload") $HOME/.local/scripts/reload ;;
-	"  Sleep") xset dpms force suspend ;;
+	"  Sleep") $HOME/.local/scripts/sleep ;;
 	"  Lock") betterlockscreen -l ;;
 	"  Log Out") bspc quit ;;
 	"  Power Off") poweroff ;;
