@@ -69,7 +69,7 @@ alias vlc "org.videolan.VLC"
 
 ### Device Control ###
 # system
-abbr sleep "xset dpms force suspend"
+abbr sleep "$HOME/.local/scripts/sleep"
 # audio
 abbr get-audio-out "$HOME/.local/scripts/get-audio-out"
 abbr set-audio-out "pactl set-default-sink"
