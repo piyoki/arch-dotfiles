@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo umount /mnt/Media
-sudo umount /mnt/Tank
+sudo umount $HOME/Media
+sudo umount $HOME/Tank

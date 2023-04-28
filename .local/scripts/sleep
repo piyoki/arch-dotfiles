@@ -5,4 +5,4 @@ $HOME/.local/scripts/unmount-s3
 $HOME/.local/scripts/unmount-samba
 
 # sleep
-xset dpms force suspend
+# xset dpms force suspend
