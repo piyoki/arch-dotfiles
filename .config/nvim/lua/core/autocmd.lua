@@ -19,7 +19,7 @@ function autocmd.setup()
     [[
     augroup FormatAutogroup
       autocmd!
-      autocmd BufWritePost *.md,*.json,*.go,*.lua,*.sh,*.js,*.ts,*.py,*.rb,*.hcl,*.tf FormatWrite
+      autocmd BufWritePost *.md,*.yaml,*.json,*.go,*.lua,*.sh,*.js,*.ts,*.py,*.rb,*.hcl,*.tf FormatWrite
       autocmd BufNewFile,BufRead *.hcl set filetype=terraform syntax=terraform
     augroup END
   ]],

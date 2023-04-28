@@ -50,7 +50,6 @@ function M.setup()
   utils.map("n", "<C-z>", "za", opts) -- (N) Fold current function
 
   --- Undo
-  utils.map("i", "<C-c>", "<Esc>:w<CR>", opts)
   utils.map("n", "<C-c>", ":q<Esc>", opts)
 
   --- Paste *(no delete on register)
@@ -104,8 +103,8 @@ function M.setup()
 
   --- Harpoon
   utils.map("n", "mm", ":lua require('harpoon.mark').add_file()<CR>") -- (N) Mark current file in harpoon
-  utils.map("n", "<A-p>", ":lua require('harpoon.ui').nav_prev()<CR>") -- (N) Navigate to previous harpoon mark
-  utils.map("n", "<A-n>", ":lua require('harpoon.ui').nav_next()<CR>") -- (N) Navigate to next harpoon mark
+  utils.map("n", "mp", ":lua require('harpoon.ui').nav_prev()<CR>") -- (N) Navigate to previous harpoon mark
+  utils.map("n", "ma", ":lua require('harpoon.ui').nav_next()<CR>") -- (N) Navigate to next harpoon mark
   utils.map("n", "<LEADER>m", ":lua require('harpoon.ui').toggle_quick_menu()<CR>") -- (N) Open up harpoon menu
 
   -- fugitive
@@ -169,9 +168,13 @@ function M.setup()
     }
   )
 
-  utils.map("n", "\\", "<cmd>Telescope current_buffer_fuzzy_find fuzzy=false case_mode=ignore_case<CR>")
-  utils.map("n", "<C-f>", "<cmd>Telescope find_files hidden=true<CR>")
-  utils.map("n", "<C-e>", "<cmd>Telescope file_browser path=%:p:h select_buffer=true hidden=true<CR>")
+  utils.map(
+    "n",
+    "\\",
+    "<cmd>Telescope current_buffer_fuzzy_find fuzzy=false case_mode=ignore_case prompt_prefix=🔍<CR>"
+  )
+  utils.map("n", "<C-f>", "<cmd>Telescope find_files hidden=true prompt_prefix=🔍<CR>")
+  utils.map("n", "<C-e>", "<cmd>Telescope file_browser path=%:p:h select_buffer=true hidden=true prompt_prefix=🔍<CR>")
   utils.map("n", "<C-k>", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
 
   --- Formatter

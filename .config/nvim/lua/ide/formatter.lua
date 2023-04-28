@@ -120,6 +120,16 @@ function M.setup()
               stdin = true
             }
           end
+        },
+        -- yaml formatter
+        yaml = {
+          function()
+            return {
+              exe = "python3",
+              args = {"-m", "pyaml"},
+              stdin = true
+            }
+          end
         }
       }
     }
