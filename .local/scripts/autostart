@@ -19,7 +19,8 @@ sxhkd &
 xfce4-power-manager &
 
 # screenshot manager
-spectacle -s &
+# spectacle -s &
+flameshot &
 
 # layouts and polybar
 $HOME/.screenlayout/default.sh

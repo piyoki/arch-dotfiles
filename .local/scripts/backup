@@ -55,3 +55,4 @@ mc mirror --overwrite ~/.config/polybar/ minio/server-configurations/arch-deskto
 mc mirror --overwrite ~/.config/rofi/ minio/server-configurations/arch-desktop/.config/rofi/
 mc mirror --overwrite ~/.config/sxhkd/ minio/server-configurations/arch-desktop/.config/sxhkd/
 mc mirror --overwrite ~/.config/tmux/ minio/server-configurations/arch-desktop/.config/tmux/
+mc mirror --overwrite ~/.config/flameshot/ minio/server-configurations/arch-desktop/.config/flameshot/

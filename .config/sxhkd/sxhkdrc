@@ -19,6 +19,9 @@ super + ctrl + c
 super + ctrl + w
 	rofi -modi window -show window 
 
+alt + s
+	flameshot gui
+
 # reload settings
 alt + r
 	reload
