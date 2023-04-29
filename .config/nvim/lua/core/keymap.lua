@@ -115,6 +115,9 @@ function M.setup()
         o = {"<cmd>DiffviewOpen<CR>", "DiffviewOpen"},
         c = {"<cmd>DiffviewClose<CR>", "DiffviewClose"},
         f = {"<cmd>DiffviewFileHistory<CR>", "DiffviewFileHistory"}
+      },
+      g = {
+        b = {"<cmd>GitBlameToggle<CR>", "GitBlameToggle"}
       }
     },
     {
