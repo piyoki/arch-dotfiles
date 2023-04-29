@@ -107,15 +107,14 @@ function M.setup()
   utils.map("n", "ma", ":lua require('harpoon.ui').nav_next()<CR>") -- (N) Navigate to next harpoon mark
   utils.map("n", "<LEADER>m", ":lua require('harpoon.ui').toggle_quick_menu()<CR>") -- (N) Open up harpoon menu
 
-  -- fugitive
+  -- Git
   wk.register(
     {
-      g = {
-        name = "Git",
-        g = {"<cmd>Git<CR>", "Git Status"},
-        d = {"<cmd>Gvdiffsplit!<CR>", "Git Diff"},
-        p = {"<cmd>Git pull<CR>", "Git Pull"},
-        P = {"<cmd>Git push<CR>", "Git Push"}
+      gh = {
+        name = "GitDiff",
+        o = {"<cmd>DiffviewOpen<CR>", "DiffviewOpen"},
+        c = {"<cmd>DiffviewClose<CR>", "DiffviewClose"},
+        f = {"<cmd>DiffviewFileHistory<CR>", "DiffviewFileHistory"}
       }
     },
     {

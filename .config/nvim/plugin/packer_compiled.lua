@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["diffview.nvim"] = {
+    loaded = true,
+    path = "/home/kev/.local/share/nvim/site/pack/packer/start/diffview.nvim",
+    url = "https://github.com/sindrets/diffview.nvim"
+  },
   ["emmet-vim"] = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/emmet-vim",
@@ -128,6 +133,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["git-blame.nvim"] = {
+    loaded = true,
+    path = "/home/kev/.local/share/nvim/site/pack/packer/start/git-blame.nvim",
+    url = "https://github.com/f-person/git-blame.nvim"
   },
   ["github-colors"] = {
     loaded = true,
@@ -300,11 +310,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
-  },
-  ["vim-fugitive"] = {
-    loaded = true,
-    path = "/home/kev/.local/share/nvim/site/pack/packer/start/vim-fugitive",
-    url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-rooter"] = {
     loaded = true,
