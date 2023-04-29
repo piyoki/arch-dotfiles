@@ -88,12 +88,16 @@ function interface.setup()
   -- colorscheme
   require("utils").opt("o", "termguicolors", true)
 
+  -- theme specific mod
+
   -- activate theme
-  vim.cmd("colorscheme github-colors")
+  -- vim.cmd("colorscheme github-colors")
+  vim.cmd("colorscheme github_dark")
 
   -- custom mod
+  require("github-theme").setup({transparent = true})
   -- general
-  vim.cmd("hi Normal guibg=none") -- enable transparent background
+  -- vim.cmd("hi Normal guibg=none") -- enable transparent background
   vim.cmd(string.format("hi PmenuSel guibg=%s guifg=%s gui=bold", colors.lightpurple, colors.black_2))
   vim.cmd(string.format("hi PmenuSbar guibg=%s guifg=%s", colors.lightpurle, colors.black_2))
   vim.cmd(string.format("hi CursorLineNr guifg=%s guibg=none gui=bold", colors.lightpurle))

@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/github-colors",
     url = "https://github.com/lourenci/github-colors"
   },
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/home/kev/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
