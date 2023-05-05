@@ -14,7 +14,7 @@ configuration {
   font: "FiraCode Nerd Font 14";
   modi: "window,run,drun,emoji";
   dpi: 144;
-  display-drun: " ";
+  display-drun: " ";
   display-window: " ";
   display-emoji: "󰞅 ";
   display-calc: " ";
