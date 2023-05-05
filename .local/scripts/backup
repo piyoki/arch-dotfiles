@@ -26,11 +26,10 @@ mc mirror --overwrite ~/.aws/ minio/server-configurations/arch-desktop/.aws/
 mc mirror --overwrite ~/.icons/ minio/server-configurations/arch-desktop/.icons/
 mc mirror --overwrite ~/.themes/ minio/server-configurations/arch-desktop/.themes/
 
-# workspace
+# home
 mc mirror --overwrite ~/Pictures/ minio/server-configurations/arch-desktop/Pictures/
 mc mirror --overwrite ~/Desktop/ minio/server-configurations/arch-desktop/Desktop/
 mc mirror --overwrite ~/Documents/ minio/server-configurations/arch-desktop/Documents/
-mc mirror --overwrite ~/Workspace/ minio/server-configurations/arch-desktop/Workspace/
 
 # scripts
 mc mirror --overwrite ~/.local/scripts/ minio/server-configurations/arch-desktop/.local/scripts/
@@ -56,3 +55,4 @@ mc mirror --overwrite ~/.config/rofi/ minio/server-configurations/arch-desktop/.
 mc mirror --overwrite ~/.config/sxhkd/ minio/server-configurations/arch-desktop/.config/sxhkd/
 mc mirror --overwrite ~/.config/tmux/ minio/server-configurations/arch-desktop/.config/tmux/
 mc mirror --overwrite ~/.config/flameshot/ minio/server-configurations/arch-desktop/.config/flameshot/
+mc mirror --overwrite ~/.config/rclone/ minio/server-configurations/arch-desktop/.config/rclone/
