@@ -139,6 +139,8 @@ sudo pacman -S go
 sudo npm install -g lua-fmt
 # shell script formatter
 sudo pacman -S shfmt
+# ctags
+sudo pacman -S ctags
 # typescript, javascript, markdown, JSON formatter
 sudo npm install -g prettier
 # python formatter
