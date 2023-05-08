@@ -176,8 +176,12 @@ function M.setup()
     "<cmd>Telescope current_buffer_fuzzy_find fuzzy=false case_mode=ignore_case prompt_prefix=🔍<CR>"
   )
   utils.map("n", "<C-f>", "<cmd>Telescope find_files hidden=true prompt_prefix=🔍<CR>")
-  utils.map("n", "<C-e>", "<cmd>Telescope file_browser path=%:p:h select_buffer=true hidden=true prompt_prefix=🔍<CR>")
-  utils.map("n", "<C-k>", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
+  utils.map(
+    "n",
+    "<LEADER>e",
+    "<cmd>Telescope file_browser path=%:p:h select_buffer=true hidden=true prompt_prefix=🔍<CR>"
+  )
+  utils.map("n", "<LEADER>k", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
 
   --- Formatter
   wk.register(
