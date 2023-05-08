@@ -21,6 +21,7 @@ mc mirror --overwrite ~/.docker/ minio/server-configurations/arch-desktop/.docke
 mc mirror --overwrite ~/.gnupg/ minio/server-configurations/arch-desktop/.gnupg/
 mc mirror --overwrite ~/.mc/ minio/server-configurations/arch-desktop/.mc/
 mc mirror --overwrite ~/.aws/ minio/server-configurations/arch-desktop/.aws/
+mc mirror --overwrite ~/.sops/ minio/server-configurations/arch-desktop/.sops/
 
 # icons/themes
 mc mirror --overwrite ~/.icons/ minio/server-configurations/arch-desktop/.icons/
@@ -56,3 +57,6 @@ mc mirror --overwrite ~/.config/sxhkd/ minio/server-configurations/arch-desktop/
 mc mirror --overwrite ~/.config/tmux/ minio/server-configurations/arch-desktop/.config/tmux/
 mc mirror --overwrite ~/.config/flameshot/ minio/server-configurations/arch-desktop/.config/flameshot/
 mc mirror --overwrite ~/.config/rclone/ minio/server-configurations/arch-desktop/.config/rclone/
+
+# systemd
+sudo mc cp /etc/systemd/system/rclone.service minio/server-configurations/arch-desktop/systemd/rclone.service
