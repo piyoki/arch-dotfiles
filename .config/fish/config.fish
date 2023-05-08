@@ -64,6 +64,11 @@ abbr yaysyu "paru -Syyu --noconfirm"
 alias yay="paru"
 # kubernetes related
 abbr k "kubectl"
+# git related
+abbr gp "git pull"
+abbr gl "git log --oneline"
+abbr gs "git status"
+abbr gf "git fetch origin --prune"
 # program
 alias vlc "org.videolan.VLC"
 
