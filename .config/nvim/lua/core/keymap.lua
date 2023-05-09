@@ -60,7 +60,7 @@ function M.setup()
 
   ----------------------------------------------
   -- Explorer
-  utils.map("", "<LEADER>r", "<cmd>Lexplore %:p:h<CR><cmd>vertical res -60<CR>") -- Open built-in file explorer
+  utils.map("", "<LEADER>b", "<cmd>Lexplore %:p:h<CR><cmd>vertical res -60<CR>") -- Open built-in file explorer
   -- Usage:
   -- Press 't' instead of pressing <cr> for a new tab, or 'v' for a new vertical split
   -- :h netrw-v for help menu
@@ -101,7 +101,7 @@ function M.setup()
   -- Hop
   utils.map("n", "<CR>", "<CMD>HopWord<CR>") -- (N) Jump to the target line
 
-  --- Harpoon
+  -- Harpoon
   utils.map("n", "mm", ":lua require('harpoon.mark').add_file()<CR>") -- (N) Mark current file in harpoon
   utils.map("n", "mp", ":lua require('harpoon.ui').nav_prev()<CR>") -- (N) Navigate to previous harpoon mark
   utils.map("n", "ma", ":lua require('harpoon.ui').nav_next()<CR>") -- (N) Navigate to next harpoon mark
@@ -118,6 +118,21 @@ function M.setup()
       },
       g = {
         b = {"<cmd>GitBlameToggle<CR>", "GitBlameToggle"}
+      }
+    },
+    {
+      prefix = "<Leader>"
+    }
+  )
+
+  -- CodeRunner
+  wk.register(
+    {
+      r = {
+        name = "CodeRunner",
+        c = {"<cmd>RunCode<CR>", "Run based on file type"},
+        x = {"<cmd>RunClose<CR>", "Close runner"},
+        f = {"<cmd>RunFile<CR>", "Run currrent file"}
       }
     },
     {
@@ -147,7 +162,7 @@ function M.setup()
   )
 
   ----------------------------------------------
-  --- Telescope
+  -- Telescope
   wk.register(
     {
       f = {
@@ -170,20 +185,18 @@ function M.setup()
     }
   )
 
+  -- File Explorer & Tagbar
   utils.map(
     "n",
     "\\",
     "<cmd>Telescope current_buffer_fuzzy_find fuzzy=false case_mode=ignore_case prompt_prefix=🔍<CR>"
   )
   utils.map("n", "<C-f>", "<cmd>Telescope find_files hidden=true prompt_prefix=🔍<CR>")
-  utils.map(
-    "n",
-    "<LEADER>e",
-    "<cmd>Telescope file_browser path=%:p:h select_buffer=true hidden=true prompt_prefix=🔍<CR>"
-  )
+  utils.map("n", "<C-e>", "<cmd>Telescope file_browser path=%:p:h select_buffer=true hidden=true prompt_prefix=🔍<CR>")
   utils.map("n", "<LEADER>k", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
+  utils.map("n", "<LEADER>t", "<cmd>TagbarToggle<CR>")
 
-  --- Formatter
+  -- Formatter
   wk.register(
     {
       ff = {"<cmd>Format<CR>", "Format"}
@@ -231,6 +244,7 @@ function M.lsp_buf_register(bufnr)
     }
   )
 
+  -- LSP
   wk.register(
     {
       gd = {

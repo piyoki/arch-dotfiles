@@ -7,6 +7,7 @@ function M.setup()
   require("ide.formatter").setup()
   require("ide.indent").setup()
   require("ide.git").setup()
+  require("ide.runner").setup()
 end
 
 return M

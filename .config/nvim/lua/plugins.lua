@@ -58,6 +58,7 @@ return require("packer").startup(
     use({"folke/twilight.nvim"})
     use({"lukas-reineke/indent-blankline.nvim"})
     use({"preservim/tagbar"})
+    use({"CRAG666/code_runner.nvim"})
 
     -- tools
     use({"phaazon/hop.nvim"})
