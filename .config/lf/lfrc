@@ -139,8 +139,8 @@ map gc cd ~/.config
 map gr cd ~/repos
 map gw cd ~/workspace
 map gs cd ~/.local/bin
-map gt cd ~/.local/share/Trash/files
-map gq cd ~/Tank
+map gT cd ~/.local/share/Trash/files
+map gt cd ~/Tank
 map gm cd ~/Media
 map gM cd ~/Minio
 map gp cd ~/Pikpak
