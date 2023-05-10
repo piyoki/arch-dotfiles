@@ -122,6 +122,7 @@ map dr restore_trash
 map p paste
 map x cut
 map y copy
+map r :rename; cmd-home
 map <enter> open
 map R reload
 map mf mkfile
