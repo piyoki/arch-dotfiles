@@ -46,6 +46,7 @@ mc mirror --overwrite ~/.config/fish/ minio/server-configurations/arch-desktop/.
 mc mirror --overwrite ~/.config/gtk-2.0/ minio/server-configurations/arch-desktop/.config/gtk-2.0/
 mc mirror --overwrite ~/.config/gtk-3.0/ minio/server-configurations/arch-desktop/.config/gtk-3.0/
 mc mirror --overwrite ~/.config/lazygit/ minio/server-configurations/arch-desktop/.config/lazygit/
+mc mirror --overwrite ~/.config/lazydocker/ minio/server-configurations/arch-desktop/.config/lazydocker/
 mc mirror --overwrite ~/.config/lf/ minio/server-configurations/arch-desktop/.config/lf/
 mc mirror --overwrite ~/.config/lightdm/ minio/server-configurations/arch-desktop/.config/lightdm/
 mc mirror --overwrite ~/.config/neofetch/ minio/server-configurations/arch-desktop/.config/neofetch/
@@ -60,3 +61,9 @@ mc mirror --overwrite ~/.config/rclone/ minio/server-configurations/arch-desktop
 
 # systemd
 sudo mc cp /etc/systemd/system/rclone.service minio/server-configurations/arch-desktop/systemd/rclone.service
+
+# dns-related
+sudo mc cp /etc/resolv.conf minio/server-configurations/arch-desktop/dns-config/resolv.conf
+sudo mc cp /etc/dnsmasq.conf minio/server-configurations/arch-desktop/dns-config/dnsmasq.conf
+sudo mc cp /etc/dnsmasq-conf.conf minio/server-configurations/arch-desktop/dns-config/dnsmasq-conf.conf
+sudo mc cp /etc/dnsmasq-resolv.conf minio/server-configurations/arch-desktop/dns-config/dnsmasq-resolv.conf
