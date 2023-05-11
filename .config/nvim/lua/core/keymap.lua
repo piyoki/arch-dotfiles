@@ -60,7 +60,7 @@ function M.setup()
 
   ----------------------------------------------
   -- Explorer
-  utils.map("", "<LEADER>b", "<cmd>Lexplore %:p:h<CR><cmd>vertical res -60<CR>") -- Open built-in file explorer
+  utils.map("", "<LEADER>b", "<cmd>Lexplore %:p:h<CR><cmd>vertical res -30<CR>") -- Open built-in file explorer
   -- Usage:
   -- Press 't' instead of pressing <cr> for a new tab, or 'v' for a new vertical split
   -- :h netrw-v for help menu
