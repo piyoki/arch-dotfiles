@@ -136,7 +136,7 @@ map <enter> shell
 
 # Search
 map <c-f> :fzf_jump
-map gs :fzf_search
+map <c-k> :fzf_search
 
 # Movement
 map gD cd ~/Documents
@@ -145,7 +145,6 @@ map gP cd ~/Pictures
 map gc cd ~/.config
 map gr cd ~/repos
 map gw cd ~/workspace
-map gs cd ~/.local/bin
 map gT cd ~/.local/share/Trash/files
 map gt cd ~/Tank
 map gm cd ~/Media
