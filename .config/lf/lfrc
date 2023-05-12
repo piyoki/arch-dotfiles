@@ -110,6 +110,7 @@ map n
 map "'"
 map '"'
 map d
+map <enter>
 
 # map c $vscodium "$f"
 
