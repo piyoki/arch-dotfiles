@@ -110,7 +110,7 @@ map "'"
 map '"'
 map d
 
-map c $vscodium "$f"
+# map c $vscodium "$f"
 
 map au unarchive
 map n $nvim .
@@ -128,7 +128,7 @@ map R reload
 map mf mkfile
 map md mkdir
 map bg setwallpaper
-map c clear
+map C clear
 map <c-c> quit
 
 # Movement
