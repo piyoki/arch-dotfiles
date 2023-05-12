@@ -12,6 +12,7 @@ set sortby time
 set ratios 1:2:3
 set cleaner ~/.config/lf/cleaner
 set previewer ~/.config/lf/preview
+set autoquit true
 
 # Custom Functions
 cmd mkdir ${{
@@ -130,6 +131,11 @@ map md mkdir
 map bg setwallpaper
 map C clear
 map <c-c> quit
+map <enter> shell
+
+# Search
+map <c-f> :fzf_jump
+map gs :fzf_search
 
 # Movement
 map gD cd ~/Documents
@@ -145,6 +151,3 @@ map gm cd ~/Media
 map gM cd ~/Minio
 map gp cd ~/Pikpak
 
-# Search
-map <c-f> :fzf_jump
-map gs :fzf_search
