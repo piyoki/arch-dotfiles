@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/barbar.nvim",
     url = "https://github.com/romgrk/barbar.nvim"
   },
-  ["bufdelete.nvim"] = {
-    loaded = true,
-    path = "/home/kev/.local/share/nvim/site/pack/packer/start/bufdelete.nvim",
-    url = "https://github.com/famiu/bufdelete.nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -271,11 +266,6 @@ _G.packer_plugins = {
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["popup.nvim"] = {
-    loaded = true,
-    path = "/home/kev/.local/share/nvim/site/pack/packer/start/popup.nvim",
-    url = "https://github.com/nvim-lua/popup.nvim"
-  },
   ["schemastore.nvim"] = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/schemastore.nvim",
@@ -315,11 +305,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
-  },
-  ["twilight.nvim"] = {
-    loaded = true,
-    path = "/home/kev/.local/share/nvim/site/pack/packer/start/twilight.nvim",
-    url = "https://github.com/folke/twilight.nvim"
   },
   ["vim-commentary"] = {
     loaded = true,

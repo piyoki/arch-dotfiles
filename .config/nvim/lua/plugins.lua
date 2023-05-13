@@ -4,7 +4,6 @@ return require("packer").startup(
   function()
     -- core
     use({"wbthomason/packer.nvim"})
-    use({"nvim-lua/popup.nvim"})
     use({"nvim-lua/plenary.nvim"})
     use({"airblade/vim-rooter"})
 
@@ -27,7 +26,6 @@ return require("packer").startup(
     use({"hrsh7th/nvim-cmp"})
     use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
     use({"nvim-treesitter/nvim-treesitter-textobjects"})
-    use("famiu/bufdelete.nvim")
 
     -- git
     use({"lewis6991/gitsigns.nvim"})
@@ -55,7 +53,6 @@ return require("packer").startup(
     use({"norcalli/nvim-colorizer.lua"})
     use({"mhartington/formatter.nvim"})
     use({"godlygeek/tabular"})
-    use({"folke/twilight.nvim"})
     use({"lukas-reineke/indent-blankline.nvim"})
     use({"preservim/tagbar"})
     use({"CRAG666/code_runner.nvim"})
