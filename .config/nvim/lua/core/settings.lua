@@ -45,7 +45,7 @@ function settings.setup()
   utils.opt("w", "number", true)
   utils.opt("w", "relativenumber", true) -- enable relative linenumber
   utils.opt("w", "cursorline", true) -- enable highlighting of the current line
-  utils.opt("w", "foldmethod", "indent") -- The kind of folding used for the current window.
+  utils.opt("w", "foldmethod", "marker") -- The kind of folding used for the current window.
   utils.opt("w", "foldlevel", 99) -- the foldlevel of line
   utils.opt("w", "foldenable", false) -- disable open all fold
   utils.opt("w", "fillchars", "eob: ") -- characters to fill the statuslines and vertical separators. eob: ~

@@ -59,19 +59,13 @@ return require("packer").startup(
     use({"lukas-reineke/indent-blankline.nvim"})
     use({"preservim/tagbar"})
     use({"CRAG666/code_runner.nvim"})
+    use({"kshenoy/vim-signature"})
 
     -- tools
     use({"phaazon/hop.nvim"})
     use({"ThePrimeagen/harpoon"})
     use({"numtostr/FTerm.nvim"})
     use({"folke/which-key.nvim"})
-    use(
-      {
-        "dstein64/vim-startuptime",
-        cmd = "StartupTime",
-        config = [[vim.g.startuptime_tries = 10]]
-      }
-    )
     use({"wakatime/vim-wakatime"})
 
     -- searching & filtering

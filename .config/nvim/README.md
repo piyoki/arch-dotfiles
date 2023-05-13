@@ -3,9 +3,9 @@
 ## Neovim 0.5.0+ New Features
 
 - all the IDE-like goodies:
-  - LSP completion, go to def, hover and rename
-  - treesitter syntax highlighting
-  - ctrlp-like fuzzy finding
+- LSP completion, go to def, hover and rename
+- treesitter syntax highlighting
+- ctrlp-like fuzzy finding
 - embedded terminals
 
 ## Reference
