@@ -144,7 +144,7 @@ sudo pacman -S ctags
 # typescript, javascript, markdown, JSON formatter
 sudo npm install -g prettier
 # python formatter
-pip3 install autopep8
+pip3 install black
 # ruby formatter (required PATH setup)
 gem install rubocop
 # terragrunt(terraform) formatter (comes with terragrunt/terraform)
