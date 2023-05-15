@@ -11,6 +11,7 @@ fish_add_path $HOME/.linuxbrew/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.npm-global/bin
 fish_add_path $HOME/.local/scripts
+fish_add_path $HOME/go/bin
 
 ### Link Sources ###
 source $HOME/.config/fish/themes/cool-beans.fish
@@ -66,10 +67,13 @@ alias yay="paru"
 # kubernetes related
 abbr k "kubectl"
 # git related
-abbr gp "git pull"
-abbr gl "git log --oneline"
+abbr g  "git"
 abbr gs "git status"
+abbr gc "git checkout"
+abbr gp "git pull"
 abbr gf "git fetch origin --prune"
+abbr gl "git log --all --decorate --oneline --graph"
+abbr gcc "git fetch -p && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D"
 # program
 alias vlc "org.videolan.VLC"
 

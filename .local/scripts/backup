@@ -4,6 +4,8 @@ echo "Backup on $(date)" > $HOME/backup_log.txt
 
 # system
 sudo mc cp /usr/local/bin/restart-scdaemon minio/server-configurations/arch-desktop/restart-scdaemon
+sudo mc cp /etc/pacman.conf minio/server-configurations/arch-desktop/pacman.conf
+sudo mc mirror --overwrite /etc/pacman.d/ minio/server-configurations/arch-desktop/pacman.d/
 sudo mc cp /etc/crontab minio/server-configurations/arch-desktop/crontab
 mc cp ~/.wakatime.cfg minio/server-configurations/arch-desktop/
 mc cp ~/.gitconfig minio/server-configurations/arch-desktop/
