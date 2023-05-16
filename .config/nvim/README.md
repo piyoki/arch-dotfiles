@@ -143,6 +143,8 @@ sudo pacman -S shfmt
 sudo pacman -S ctags
 # typescript, javascript, markdown, JSON formatter
 sudo npm install -g prettier
+# yamlfmt
+pip3 install yamlfmt
 # python formatter
 pip3 install black
 # ruby formatter (required PATH setup)
