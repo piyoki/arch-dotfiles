@@ -121,12 +121,12 @@ function M.setup()
             }
           end
         },
-        -- yaml formatter
+        -- yaml
         yaml = {
           function()
             return {
-              exe = "python3",
-              args = {"-m", "pyaml"},
+              exe = "yamlfmt",
+              args = {},
               stdin = true
             }
           end
