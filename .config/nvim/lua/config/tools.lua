@@ -14,7 +14,19 @@ function tools.setup()
 
   -- sfm
   local sfm_explorer = require("sfm").setup {}
-  sfm_explorer:load_extension "sfm-fs"
+  sfm_explorer:load_extension(
+    "sfm-fs",
+    {
+      mappings = {
+        list = {
+          {
+            key = "y",
+            action = "copy"
+          }
+        }
+      }
+    }
+  )
   sfm_explorer:load_extension "sfm-git"
   sfm_explorer:load_extension "sfm-telescope"
 
