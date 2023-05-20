@@ -63,24 +63,26 @@ function M.setup()
   utils.map("n", "<C-b>", "<cmd>Explore<CR>") -- Open built-in file explorer
 
   -- Tab
-  utils.map("", "tt", "<cmd>tabe<CR>") -- New tab
+  utils.map("", "mT", ":tabe<CR>") -- New tab
   utils.map("", "<LEADER>-", ":BufferPrevious<CR>") -- Jump to previous buffer
   utils.map("", "<LEADER>=", ":BufferNext<CR>") -- Jump to the next buffer
+  utils.map("", "gtp", ":BufferPick<CR>") -- Pick a buffer from the current list
+  utils.map("", "gb", "<cmd>Telescope buffers prompt_prefix=🔍<CR>") -- Explore current buffer list
 
   -- Window
   utils.map("", "s|", ":set splitright<CR>:vsplit<CR>") -- Split window horizontally
   utils.map("", "s-", ":set splitbelow<CR>:split<CR>") -- Split window vertically
   utils.map("n", "<S-Left>", ":vertical resize +2<CR>") -- (N) Resize vertical split window -2 to the right
   utils.map("n", "<S-Right>", ":vertical resize -2<CR>") -- (N) Resize vertical split window +2 to the left
-  utils.map("n", "<S-Down>", ":horizontal resize -2<CR>") -- (N) Resize horizontal split window +2 to the bottom
-  utils.map("n", "<S-Up>", ":horizontal resize +2<CR>") -- (N) Resize horizontal split window -2 to the top
+  utils.map("n", "<S-Down>", ":horizontal resize -2<CR>") -- (N) Resize horizontal split window +2 to the below
+  utils.map("n", "<S-Up>", ":horizontal resize +2<CR>") -- (N) Resize horizontal split window -2 to the above
   wk.register(
     {
       w = {
         name = "Window",
         h = {"<C-w>h", "FocusLeftWindow"}, -- (N) Move cursor to the left window
-        j = {"<C-w>j", "FocusBottomWindow"}, -- (N) Move cursor to the bottom window
-        k = {"<C-w>k", "FocusTopWindow"}, -- (N) Move cursor to the top window
+        j = {"<C-w>j", "FocusBelowWindow"}, -- (N) Move cursor to the below window
+        k = {"<C-w>k", "FocusAboveWindow"}, -- (N) Move cursor to the above window
         l = {"<C-w>l", "FocusRightWindow"} -- (N) Move cursor to the righ window
       }
     },
@@ -107,8 +109,8 @@ function M.setup()
 
   -- Harpoon
   utils.map("n", "mm", ":lua require('harpoon.mark').add_file()<CR>") -- (N) Mark current file in harpoon
-  utils.map("n", "<C-i>", ":lua require('harpoon.ui').nav_prev()<CR>") -- (N) Navigate to previous harpoon mark
-  utils.map("n", "<C-o>", ":lua require('harpoon.ui').nav_next()<CR>") -- (N) Navigate to next harpoon mark
+  utils.map("n", "mp", ":lua require('harpoon.ui').nav_prev()<CR>") -- (N) Navigate to previous harpoon mark
+  utils.map("n", "mn", ":lua require('harpoon.ui').nav_next()<CR>") -- (N) Navigate to next harpoon mark
   utils.map("n", "<LEADER>m", ":lua require('harpoon.ui').toggle_quick_menu()<CR>") -- (N) Open up harpoon menu
 
   -- TeleScope (Short)
@@ -168,14 +170,16 @@ function M.setup()
     {
       b = {
         name = "Buffer",
-        b = {"<cmd>BufferPick<CR>", "BufferPick"},
+        p = {"<cmd>BufferPick<CR>", "BufferPick"},
         q = {"<cmd>BufferClose<CR>", "BufferClose"},
         o = {"<cmd>BufferOrderByBufferNumber<CR>", "BufferOrder ByNumber"},
         O = {"<cmd>BufferCloseAllButCurrent<CR>", "BufferCloseAll ButCurrent"},
         h = {"<cmd>BufferMovePrevious<CR>", "BufferMove Previous"},
         l = {"<cmd>BufferMoveNext<CR>", "BufferMove Next"},
         H = {"<cmd>BufferCloseBuffersLeft<CR>", "BufferClose Left"},
-        L = {"<cmd>BufferCloseBuffersRight<CR>", "BufferClose Right"}
+        L = {"<cmd>BufferCloseBuffersRight<CR>", "BufferClose Right"},
+        P = {"<cmd>BufferPrevious<CR>", "BufferPrevious"},
+        N = {"<cmd>BufferNext<CR>", "BufferNext"}
       },
       q = {"<cmd>BufferClose<CR>", "BufferClose"}
     },
