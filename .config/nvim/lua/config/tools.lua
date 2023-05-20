@@ -16,6 +16,7 @@ function tools.setup()
   local sfm_explorer = require("sfm").setup {}
   sfm_explorer:load_extension "sfm-fs"
   sfm_explorer:load_extension "sfm-git"
+  sfm_explorer:load_extension "sfm-telescope"
 
   -- telescope
   require("telescope").setup(
@@ -42,6 +43,7 @@ function tools.setup()
   require("telescope").load_extension("harpoon")
   require("telescope").load_extension("live_grep_args")
   require("plenary.filetype").add_file("json")
+  require("telescope").load_extension("sfm-telescope")
 
   -- emmet
   vim.g.user_emmet_leader_key = "<C-z>"

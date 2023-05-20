@@ -70,7 +70,8 @@ return require("packer").startup(
         "dinhhuy258/sfm.nvim",
         requires = {
           "dinhhuy258/sfm-git.nvim",
-          "dinhhuy258/sfm-fs.nvim"
+          "dinhhuy258/sfm-fs.nvim",
+          "dinhhuy258/sfm-telescope.nvim"
         }
       }
     )

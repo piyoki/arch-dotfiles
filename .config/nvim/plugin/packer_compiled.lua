@@ -286,6 +286,11 @@ _G.packer_plugins = {
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/sfm-git.nvim",
     url = "https://github.com/dinhhuy258/sfm-git.nvim"
   },
+  ["sfm-telescope.nvim"] = {
+    loaded = true,
+    path = "/home/kev/.local/share/nvim/site/pack/packer/start/sfm-telescope.nvim",
+    url = "https://github.com/dinhhuy258/sfm-telescope.nvim"
+  },
   ["sfm.nvim"] = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/sfm.nvim",
