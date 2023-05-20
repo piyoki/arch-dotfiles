@@ -179,6 +179,11 @@ _G.packer_plugins = {
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  ["lazygit.nvim"] = {
+    loaded = true,
+    path = "/home/kev/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
+  },
   ["lsp-colors.nvim"] = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
@@ -270,6 +275,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/schemastore.nvim",
     url = "https://github.com/b0o/schemastore.nvim"
+  },
+  ["sfm.nvim"] = {
+    loaded = true,
+    path = "/home/kev/.local/share/nvim/site/pack/packer/start/sfm.nvim",
+    url = "https://github.com/dinhhuy258/sfm.nvim"
   },
   tabular = {
     loaded = true,

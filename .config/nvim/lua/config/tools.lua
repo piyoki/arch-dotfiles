@@ -1,7 +1,10 @@
 local tools = {}
 
 function tools.setup()
+  -- hop
   require("hop").setup()
+
+  -- autopairs
   require("nvim-autopairs").setup(
     {
       check_ts = true,
@@ -9,6 +12,10 @@ function tools.setup()
     }
   )
 
+  -- sfm
+  require("sfm").setup()
+
+  -- telescope
   require("telescope").setup(
     {
       defaults = {

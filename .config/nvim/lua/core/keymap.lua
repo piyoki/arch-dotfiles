@@ -84,15 +84,13 @@ function M.setup()
 
   -- Terminal
   utils.map("n", "<LEADER>,", ":terminal<CR>") -- (N) Instiatiate a new terminal window
-  utils.map("t", "<Esc>", [['<C-\><C-n>']]) -- (T) Move cursor to the righ window
 
   -- FloatTerm
-  utils.map("n", "<C-x>", ":lua require('FTerm').toggle()<CR>", opts) -- (N) Move cursor to the righ window
-  utils.map("t", "<C-x>", "<C-\\><C-n><CMD>lua require('FTerm').toggle()<CR>") -- (T) Move cursor to the righ window
+  utils.map("n", "<C-x>", ":lua require('FTerm').toggle()<CR>", opts) -- (N) toggle Fterm
+  utils.map("t", "<C-x>", "<C-\\><C-n><CMD>lua require('FTerm').toggle()<CR>") -- (T) Close out Fterm
 
   -- Lazygit
-  utils.map("n", "<C-g>", ":lua require('FTerm').toggle()<CR>lazygit<CR>", opts) -- (N) Move cursor to the righ window
-  utils.map("t", "<C-g>", "q<C-\\><C-n><CMD>lua require('FTerm').toggle()<CR>") -- (T) Move cursor to the righ window
+  utils.map("n", "<LEADER>gg", "<cmd>LazyGit<CR>", opts) -- (N) Move cursor to the righ window
 
   -- Commentary
   utils.map("n", "<LEADER>/", ":Commentary<CR>") -- (N) Toggle Comment
@@ -106,6 +104,25 @@ function M.setup()
   utils.map("n", "mp", ":lua require('harpoon.ui').nav_prev()<CR>") -- (N) Navigate to previous harpoon mark
   utils.map("n", "ma", ":lua require('harpoon.ui').nav_next()<CR>") -- (N) Navigate to next harpoon mark
   utils.map("n", "<LEADER>m", ":lua require('harpoon.ui').toggle_quick_menu()<CR>") -- (N) Open up harpoon menu
+
+  -- TeleScope (Short)
+  utils.map(
+    "n",
+    "\\",
+    "<cmd>Telescope current_buffer_fuzzy_find fuzzy=false case_mode=ignore_case prompt_prefix=🔍<CR>"
+  )
+  utils.map("n", "<C-f>", "<cmd>Telescope find_files hidden=true prompt_prefix=🔍<CR>")
+  utils.map("n", "<C-e>", "<cmd>Telescope file_browser path=%:p:h select_buffer=true hidden=true prompt_prefix=🔍<CR>")
+  utils.map("n", "<LEADER>k", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
+
+  -- Tagbar
+  utils.map("n", "<LEADER>t", "<cmd>TagbarToggle<CR>")
+
+  -- SFM (Simple File Manager)
+  utils.map("n", "<C-b>", "<cmd>SFMToggle<CR>")
+
+  -- LSP (Short)
+  vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
 
   -- Git
   wk.register(
@@ -177,24 +194,14 @@ function M.setup()
         k = {"<cmd>Telescope keymaps<CR>", "Telescope Keymaps"},
         e = {"<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", "Telescope File Browser"},
         m = {"<cmd>Telescope man_pages<CR>", "Telescope Man Pages"},
-        s = {"<cmd>Telescope live_grep<CR>", "Telescope Live Grep"}
+        s = {"<cmd>Telescope live_grep<CR>", "Telescope Live Grep"},
+        d = {"<cmd>Telescope diagnostics<CR>", "Telescope Diagonostics"}
       }
     },
     {
       prefix = "<Leader>"
     }
   )
-
-  -- File Explorer & Tagbar
-  utils.map(
-    "n",
-    "\\",
-    "<cmd>Telescope current_buffer_fuzzy_find fuzzy=false case_mode=ignore_case prompt_prefix=🔍<CR>"
-  )
-  utils.map("n", "<C-f>", "<cmd>Telescope find_files hidden=true prompt_prefix=🔍<CR>")
-  utils.map("n", "<C-e>", "<cmd>Telescope file_browser path=%:p:h select_buffer=true hidden=true prompt_prefix=🔍<CR>")
-  utils.map("n", "<LEADER>k", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
-  utils.map("n", "<LEADER>t", "<cmd>TagbarToggle<CR>")
 
   -- Formatter
   wk.register(
@@ -203,10 +210,10 @@ function M.setup()
     },
     {prefix = "<Leader>"}
   )
-
-  ----------------------------------------------
 end
 
+----------------------------------------------
+-- LSP
 function M.lsp_buf_register(bufnr)
   wk.register(
     {
@@ -216,25 +223,13 @@ function M.lsp_buf_register(bufnr)
           vim.lsp.buf.code_action,
           "LSP Code Actions"
         },
-        r = {
-          vim.lsp.buf.rename,
-          "LSP Rename"
-        },
         s = {
           telescope_builtin.lsp_document_symbols,
           "LSP Document Symbols"
         },
-        S = {
-          telescope_builtin.lsp_workspace_symbols,
-          "LSP Workspace Symbols"
-        },
-        f = {
-          vim.lsp.buf.formatting,
-          "LSP Format"
-        },
-        F = {
-          vim.lsp.buf.formatting_seq_sync,
-          "LSP Format"
+        e = {
+          vim.diagnostic.open_float,
+          "LSP Diagonostic"
         }
       }
     },
