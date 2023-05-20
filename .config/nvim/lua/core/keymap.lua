@@ -89,9 +89,6 @@ function M.setup()
   utils.map("n", "<C-x>", ":lua require('FTerm').toggle()<CR>", opts) -- (N) toggle Fterm
   utils.map("t", "<C-x>", "<C-\\><C-n><CMD>lua require('FTerm').toggle()<CR>") -- (T) Close out Fterm
 
-  -- Lazygit
-  utils.map("n", "<LEADER>gg", "<cmd>LazyGit<CR>", opts) -- (N) Move cursor to the righ window
-
   -- Commentary
   utils.map("n", "<LEADER>/", ":Commentary<CR>") -- (N) Toggle Comment
   utils.map("v", "<LEADER>/", ":Commentary<CR>") -- (V) Toggle Comment
@@ -134,7 +131,8 @@ function M.setup()
         f = {"<cmd>DiffviewFileHistory<CR>", "DiffviewFileHistory"}
       },
       g = {
-        b = {"<cmd>GitBlameToggle<CR>", "GitBlameToggle"}
+        b = {"<cmd>GitBlameToggle<CR>", "GitBlameToggle"},
+        g = {"<cmd>LazyGit<CR>", "LazyGit"}
       }
     },
     {
