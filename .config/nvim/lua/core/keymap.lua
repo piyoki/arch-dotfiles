@@ -134,7 +134,7 @@ function M.setup()
   -- Git
   wk.register(
     {
-      gh = {
+      gd = {
         name = "GitDiff",
         o = {"<cmd>DiffviewOpen<CR>", "DiffviewOpen"},
         c = {"<cmd>DiffviewClose<CR>", "DiffviewClose"},
@@ -205,7 +205,8 @@ function M.setup()
         e = {"<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", "Telescope File Browser"},
         s = {"<cmd>Telescope live_grep prompt_prefix=🔍<CR>", "Telescope Live Grep"},
         d = {"<cmd>Telescope diagnostics prompt_prefix=🔍<CR>", "Telescope Diagonostics"},
-        m = {"<cmd>Telescope harpoon marks prompt_prefix=🔍<CR>", "Telescope Diagonostics"}
+        h = {"<cmd>Telescope harpoon marks prompt_prefix=🔍<CR>", "Telescope Diagonostics"},
+        m = {"<cmd>Telescope marks prompt_prefix=🔍<CR>", "Telescope Diagonostics"}
       }
     },
     {
