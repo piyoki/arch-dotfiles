@@ -65,6 +65,7 @@ return require("packer").startup(
     use({"numtostr/FTerm.nvim"})
     use({"folke/which-key.nvim"})
     use({"wakatime/vim-wakatime"})
+    use({"ahmedkhalf/project.nvim"})
     use(
       {
         "dinhhuy258/sfm.nvim",

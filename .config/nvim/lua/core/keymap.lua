@@ -121,6 +121,7 @@ function M.setup()
   )
   utils.map("n", "<C-f>", "<cmd>Telescope find_files hidden=true prompt_prefix=🔍<CR>")
   utils.map("n", "gr", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
+  utils.map("n", "gp", "<cmd>Telescope projects<CR>")
 
   -- Tagbar
   utils.map("n", "<LEADER>t", "<cmd>TagbarToggle<CR>")
@@ -206,7 +207,8 @@ function M.setup()
         s = {"<cmd>Telescope live_grep prompt_prefix=🔍<CR>", "Telescope Live Grep"},
         d = {"<cmd>Telescope diagnostics prompt_prefix=🔍<CR>", "Telescope Diagonostics"},
         h = {"<cmd>Telescope harpoon marks prompt_prefix=🔍<CR>", "Telescope Diagonostics"},
-        m = {"<cmd>Telescope marks prompt_prefix=🔍<CR>", "Telescope Diagonostics"}
+        m = {"<cmd>Telescope marks prompt_prefix=🔍<CR>", "Telescope Diagonostics"},
+        p = {"<cmd>Telescope projects prompt_prefix=🔍<CR>", "Telescope Diagonostics"}
       }
     },
     {
