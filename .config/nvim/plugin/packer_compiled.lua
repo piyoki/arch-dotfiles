@@ -182,7 +182,7 @@ _G.packer_plugins = {
   ["lazygit.nvim"] = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
-    url = "https://github.com/kdheepak/lazygit.nvim"
+    url = "https://github.com/yorik1984/lazygit.nvim"
   },
   ["lsp-colors.nvim"] = {
     loaded = true,

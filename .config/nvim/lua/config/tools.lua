@@ -61,6 +61,17 @@ function tools.setup()
   require("telescope").load_extension("sfm-telescope")
   require("telescope").load_extension("projects")
 
+  -- Fterm
+  require "FTerm".setup(
+    {
+      cmd = "/usr/bin/fish",
+      dimensions = {
+        height = 0.9,
+        width = 0.9
+      }
+    }
+  )
+
   -- emmet
   vim.g.user_emmet_leader_key = "<C-z>"
 
