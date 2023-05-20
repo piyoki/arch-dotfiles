@@ -74,6 +74,7 @@ abbr gp "git pull"
 abbr gf "git fetch origin --prune"
 abbr gl "git log --all --decorate --oneline --graph"
 abbr gcc "git fetch -p && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D"
+abbr yp "yadm pull"
 # program
 alias vlc "org.videolan.VLC"
 
