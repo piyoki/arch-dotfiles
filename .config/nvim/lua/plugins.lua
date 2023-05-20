@@ -65,7 +65,15 @@ return require("packer").startup(
     use({"numtostr/FTerm.nvim"})
     use({"folke/which-key.nvim"})
     use({"wakatime/vim-wakatime"})
-    use({"dinhhuy258/sfm.nvim"})
+    use(
+      {
+        "dinhhuy258/sfm.nvim",
+        requires = {
+          "dinhhuy258/sfm-git.nvim",
+          "dinhhuy258/sfm-fs.nvim"
+        }
+      }
+    )
 
     -- searching & filtering
     use({"nvim-telescope/telescope.nvim"})

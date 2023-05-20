@@ -276,6 +276,16 @@ _G.packer_plugins = {
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/schemastore.nvim",
     url = "https://github.com/b0o/schemastore.nvim"
   },
+  ["sfm-fs.nvim"] = {
+    loaded = true,
+    path = "/home/kev/.local/share/nvim/site/pack/packer/start/sfm-fs.nvim",
+    url = "https://github.com/dinhhuy258/sfm-fs.nvim"
+  },
+  ["sfm-git.nvim"] = {
+    loaded = true,
+    path = "/home/kev/.local/share/nvim/site/pack/packer/start/sfm-git.nvim",
+    url = "https://github.com/dinhhuy258/sfm-git.nvim"
+  },
   ["sfm.nvim"] = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/sfm.nvim",

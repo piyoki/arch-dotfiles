@@ -13,7 +13,9 @@ function tools.setup()
   )
 
   -- sfm
-  require("sfm").setup()
+  local sfm_explorer = require("sfm").setup {}
+  sfm_explorer:load_extension "sfm-fs"
+  sfm_explorer:load_extension "sfm-git"
 
   -- telescope
   require("telescope").setup(

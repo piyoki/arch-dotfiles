@@ -61,9 +61,6 @@ function M.setup()
   ----------------------------------------------
   -- Explorer
   utils.map("n", "<C-b>", "<cmd>Explore<CR>") -- Open built-in file explorer
-  -- Usage:
-  -- Press 't' instead of pressing <cr> for a new tab, or 'v' for a new vertical split
-  -- :h netrw-v for help menu
 
   -- Tab
   utils.map("", "tt", "<cmd>tabe<CR>") -- New tab
@@ -182,18 +179,18 @@ function M.setup()
     {
       f = {
         name = "Find",
-        a = {"<cmd>Telescope builtin<CR>", "Telescope Builtin"},
-        b = {"<cmd>Telescope buffers<CR>", "Telescope Buffers"},
-        l = {"<cmd>Telescope current_buffer_fuzzy_find<CR>", "Telescope Buffer Search"},
-        f = {"<cmd>Telescope find_files<CR>", "Telescope Find Files"},
-        g = {"<cmd>Telescope git_commits<CR>", "Telescope Git Commits"},
-        h = {"<cmd>Telescope help_tags<CR>", "Telescope Help"},
-        j = {"<cmd>Telescope jumplist<CR>", "Telescope Jump List"},
-        k = {"<cmd>Telescope keymaps<CR>", "Telescope Keymaps"},
+        a = {"<cmd>Telescope builtin prompt_prefix=🔍<CR>", "Telescope Builtin"},
+        b = {"<cmd>Telescope buffers prompt_prefix=🔍<CR>", "Telescope Buffers"},
+        l = {"<cmd>Telescope current_buffer_fuzzy_find prompt_prefix=🔍<CR>", "Telescope Buffer Search"},
+        f = {"<cmd>Telescope find_files hidden=true prompt_prefix=🔍<CR>", "Telescope Find Files"},
+        g = {"<cmd>Telescope git_commits prompt_prefix=🔍<CR>", "Telescope Git Commits"},
+        h = {"<cmd>Telescope help_tags prompt_prefix=🔍<CR>", "Telescope Help"},
+        j = {"<cmd>Telescope jumplist prompt_prefix=🔍<CR>", "Telescope Jump List"},
+        k = {"<cmd>Telescope keymaps prompt_prefix=🔍<CR>", "Telescope Keymaps"},
         e = {"<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", "Telescope File Browser"},
-        m = {"<cmd>Telescope man_pages<CR>", "Telescope Man Pages"},
-        s = {"<cmd>Telescope live_grep<CR>", "Telescope Live Grep"},
-        d = {"<cmd>Telescope diagnostics<CR>", "Telescope Diagonostics"}
+        s = {"<cmd>Telescope live_grep prompt_prefix=🔍<CR>", "Telescope Live Grep"},
+        d = {"<cmd>Telescope diagnostics prompt_prefix=🔍<CR>", "Telescope Diagonostics"},
+        m = {"<cmd>Telescope harpoon marks prompt_prefix=🔍<CR>", "Telescope Diagonostics"}
       }
     },
     {
