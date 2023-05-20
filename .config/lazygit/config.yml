@@ -20,11 +20,10 @@ gui:
       - bold
     inactiveBorderColor:
       - '#393A3D'
-      # - white
     optionsTextColor:
       - '#ccccff'
     selectedLineBgColor:
-      - default
+      - '#262626'
     selectedRangeBgColor:
       - '#ccccff'
 reporting: "off"
