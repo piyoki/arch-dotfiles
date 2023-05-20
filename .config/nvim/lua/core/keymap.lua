@@ -70,12 +70,24 @@ function M.setup()
   -- Window
   utils.map("", "s|", ":set splitright<CR>:vsplit<CR>") -- Split window horizontally
   utils.map("", "s-", ":set splitbelow<CR>:split<CR>") -- Split window vertically
-  utils.map("n", "<LEADER>h", "<C-w>h") -- (N) Move cursor to the left window
-  utils.map("n", "<LEADER>j", "<C-w>j") -- (N) Move cursor to the bottom window
-  utils.map("n", "<LEADER>k", "<C-w>k") -- (N) Move cursor to the up window
-  utils.map("n", "<LEADER>l", "<C-w>l") -- (N) Move cursor to the righ window
   utils.map("n", "<S-Left>", ":vertical resize +2<CR>") -- (N) Resize vertical split window -2 to the right
   utils.map("n", "<S-Right>", ":vertical resize -2<CR>") -- (N) Resize vertical split window +2 to the left
+  utils.map("n", "<S-Down>", ":horizontal resize -2<CR>") -- (N) Resize horizontal split window +2 to the bottom
+  utils.map("n", "<S-Up>", ":horizontal resize +2<CR>") -- (N) Resize horizontal split window -2 to the top
+  wk.register(
+    {
+      w = {
+        name = "Window",
+        h = {"<C-w>h", "FocusLeftWindow"}, -- (N) Move cursor to the left window
+        j = {"<C-w>j", "FocusBottomWindow"}, -- (N) Move cursor to the bottom window
+        k = {"<C-w>k", "FocusTopWindow"}, -- (N) Move cursor to the top window
+        l = {"<C-w>l", "FocusRightWindow"} -- (N) Move cursor to the righ window
+      }
+    },
+    {
+      prefix = "<Leader>"
+    }
+  )
 
   ----------------------------------------------
 
