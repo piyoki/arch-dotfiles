@@ -136,7 +136,7 @@ sudo npm i -g yarn
 # go formatter (comes with the go binary)
 sudo pacman -S go
 # lua formatter
-sudo npm install -g lua-fmt
+sudo pacman -S stylua
 # shell script formatter
 sudo pacman -S shfmt
 # ctags
