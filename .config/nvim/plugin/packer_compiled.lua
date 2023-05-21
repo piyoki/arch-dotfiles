@@ -211,6 +211,11 @@ _G.packer_plugins = {
     path = "/home/kev/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
+  ["modicator.nvim"] = {
+    loaded = true,
+    path = "/home/kev/.local/share/nvim/site/pack/packer/start/modicator.nvim",
+    url = "https://github.com/mawkler/modicator.nvim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -231,10 +236,10 @@ _G.packer_plugins = {
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
-  ["nvim-cursorline"] = {
+  ["nvim-cursorword"] = {
     loaded = true,
-    path = "/home/kev/.local/share/nvim/site/pack/packer/start/nvim-cursorline",
-    url = "https://github.com/yamatsum/nvim-cursorline"
+    path = "/home/kev/.local/share/nvim/site/pack/packer/start/nvim-cursorword",
+    url = "https://github.com/xiyaowong/nvim-cursorword"
   },
   ["nvim-lsp-installer"] = {
     loaded = true,

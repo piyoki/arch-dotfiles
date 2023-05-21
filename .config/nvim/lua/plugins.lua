@@ -15,7 +15,8 @@ return require("packer").startup(
     use({"nvim-lualine/lualine.nvim", requires = {"kyazdani42/nvim-web-devicons", opt = true}})
     use({"kyazdani42/nvim-web-devicons"})
     use({"romgrk/barbar.nvim"})
-    use({"yamatsum/nvim-cursorline"})
+    use({"mawkler/modicator.nvim"})
+    use({"xiyaowong/nvim-cursorword"})
 
     -- lsp related
     use({"neovim/nvim-lspconfig"})

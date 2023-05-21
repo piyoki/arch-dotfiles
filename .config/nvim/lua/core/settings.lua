@@ -32,7 +32,6 @@ function settings.setup()
   utils.opt("o", "smartcase", true) -- enable smarcase
   utils.opt("o", "smarttab", true) -- enable smarttab
   utils.opt("o", "smartindent", true) -- enable smartindent
-  utils.opt("o", "termguicolors", true) -- enable termguicolors
   utils.opt("o", "splitbelow", true) -- horizontal splits will automatically be below
   utils.opt("o", "splitright", true) -- vertical splits will automatically be below
   utils.opt("o", "ruler", true) -- show the cursor position all the time
@@ -42,9 +41,10 @@ function settings.setup()
   utils.opt("o", "completeopt", "menuone,noselect") -- a comma separated list of options for Insert mode completion
 
   -- window scope options
-  utils.opt("w", "number", true)
+  utils.opt("o", "number", true)
+  utils.opt("o", "termguicolors", true) -- enable termguicolors
+  utils.opt("o", "cursorline", true) -- enable highlighting of the current line
   utils.opt("w", "relativenumber", true) -- enable relative linenumber
-  -- utils.opt("w", "cursorline", true) -- enable highlighting of the current line
   utils.opt("w", "foldmethod", "indent") -- The kind of folding used for the current window.
   utils.opt("w", "foldlevel", 99) -- the foldlevel of line
   utils.opt("w", "foldenable", false) -- disable open all fold
