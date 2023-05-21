@@ -43,6 +43,7 @@ local setup_lsp_installer = function()
       use("graphql")
       use("vimls")
       use("tflint")
+      use("sumneko_lua")
       use(
         "ansiblels",
         {
@@ -128,14 +129,6 @@ local setup_lsp_installer = function()
           }
         }
       )
-      -- use(
-      --   "lua_ls",
-      --   {},
-      --   function(opts)
-      --     require("neodev").setup({})
-      --     lspconfig.lua_ls.setup(opts)
-      --   end
-      -- )
       use(
         "rust_analyzer",
         {
