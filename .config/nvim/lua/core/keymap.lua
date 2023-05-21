@@ -72,8 +72,8 @@ function M.setup()
 	-- Window
 	utils.map("", "s|", ":set splitright<CR>:vsplit<CR>") -- Split window horizontally
 	utils.map("", "s-", ":set splitbelow<CR>:split<CR>") -- Split window vertically
-	utils.map("n", "<S-Left>", ":vertical resize +2<CR>") -- (N) Resize vertical split window -2 to the right
-	utils.map("n", "<S-Right>", ":vertical resize -2<CR>") -- (N) Resize vertical split window +2 to the left
+	utils.map("n", "<S-Left>", ":vertical resize -2<CR>") -- (N) Resize vertical split window -2 to the right
+	utils.map("n", "<S-Right>", ":vertical resize +2<CR>") -- (N) Resize vertical split window +2 to the left
 	utils.map("n", "<S-Down>", ":horizontal resize -2<CR>") -- (N) Resize horizontal split window +2 to the below
 	utils.map("n", "<S-Up>", ":horizontal resize +2<CR>") -- (N) Resize horizontal split window -2 to the above
 	wk.register({
