@@ -1,18 +1,31 @@
 local interface = {}
 
-function interface.shade_setup()
-end
-
-function interface.barbar_setup()
-  -- barbar
-  vim.g.bufferline = {
-    animation = false,
-    auto_hide = true,
-    icons = true
-  }
-end
-
 function interface.setup()
+  -- barbar
+  require("barbar").setup(
+    {
+      animation = false,
+      auto_hide = false,
+      focus_on_close = "left"
+    }
+  )
+
+  -- cursorline
+  require("nvim-cursorline").setup(
+    {
+      cursorline = {
+        enable = true,
+        timeout = 500,
+        number = false
+      },
+      cursorword = {
+        enable = true,
+        min_length = 3,
+        hl = {underline = true}
+      }
+    }
+  )
+
   -- colorizer
   require("colorizer").setup(
     nil,
@@ -82,6 +95,7 @@ function interface.setup()
   vim.cmd(string.format("hi TelescopeBorder guifg=%s guibg=none", colors.darkgray))
   vim.cmd(string.format("hi FloatBorder guifg=%s guibg=none", colors.darkgray))
   vim.cmd(string.format("hi LazygitBorder guifg=%s guibg=none", colors.darkgray))
+  vim.cmd(string.format("hi BufferCurrent guibg=colors.darkgray", colors.lightpurple))
   -- diagnostic
   vim.cmd("hi DiagnosticSignWarn guibg=none")
   vim.cmd("hi DiagnosticSignError guibg=none")

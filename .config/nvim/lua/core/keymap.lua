@@ -200,7 +200,7 @@ function M.setup()
         l = {"<cmd>Telescope current_buffer_fuzzy_find prompt_prefix=🔍<CR>", "Telescope Buffer Search"},
         f = {"<cmd>Telescope find_files hidden=true prompt_prefix=🔍<CR>", "Telescope Find Files"},
         g = {"<cmd>Telescope git_commits prompt_prefix=🔍<CR>", "Telescope Git Commits"},
-        h = {"<cmd>Telescope help_tags prompt_prefix=🔍<CR>", "Telescope Help"},
+        H = {"<cmd>Telescope help_tags prompt_prefix=🔍<CR>", "Telescope Help"},
         j = {"<cmd>Telescope jumplist prompt_prefix=🔍<CR>", "Telescope Jump List"},
         k = {"<cmd>Telescope keymaps prompt_prefix=🔍<CR>", "Telescope Keymaps"},
         e = {"<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", "Telescope File Browser"},
@@ -208,7 +208,8 @@ function M.setup()
         d = {"<cmd>Telescope diagnostics prompt_prefix=🔍<CR>", "Telescope Diagonostics"},
         h = {"<cmd>Telescope harpoon marks prompt_prefix=🔍<CR>", "Telescope Diagonostics"},
         m = {"<cmd>Telescope marks prompt_prefix=🔍<CR>", "Telescope Diagonostics"},
-        p = {"<cmd>Telescope projects prompt_prefix=🔍<CR>", "Telescope Diagonostics"}
+        p = {"<cmd>Telescope projects prompt_prefix=🔍<CR>", "Telescope Diagonostics"},
+        h = {"<cmd>Telescope highlights prompt_prefix=🔍<CR>", "Telescope Diagonostics"}
       }
     },
     {
