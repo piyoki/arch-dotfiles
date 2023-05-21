@@ -31,7 +31,7 @@ return require("packer").startup(
     use({"lewis6991/gitsigns.nvim"})
     use({"f-person/git-blame.nvim"})
     use({"sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim"})
-    use({"yorik1984/lazygit.nvim"})
+    use({"kdheepak/lazygit.nvim"})
 
     -- IDE-like development
     use({"hrsh7th/cmp-buffer"})
@@ -65,7 +65,6 @@ return require("packer").startup(
     use({"numtostr/FTerm.nvim"})
     use({"folke/which-key.nvim"})
     use({"wakatime/vim-wakatime"})
-    use({"ahmedkhalf/project.nvim"})
     use(
       {
         "dinhhuy258/sfm.nvim",
