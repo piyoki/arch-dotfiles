@@ -11,7 +11,11 @@ function M.setup()
 				function()
 					return {
 						exe = "prettier",
-						args = { "--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)) },
+						args = {
+							"--stdin-filepath",
+							vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
+							"--double-quote",
+						},
 						stdin = true,
 					}
 				end,
@@ -143,8 +147,12 @@ function M.setup()
 			yaml = {
 				function()
 					return {
-						exe = "yamlfmt",
-						args = {},
+						exe = "prettier",
+						args = {
+							"--stdin-filepath",
+							vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
+							"--double-quote",
+						},
 						stdin = true,
 					}
 				end,
