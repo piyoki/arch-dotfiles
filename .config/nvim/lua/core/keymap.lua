@@ -23,6 +23,7 @@ function M.setup()
 	utils.map("n", "Q", "<nop>", opts) -- (N) Unbind quit
 	utils.map("n", "<A-w>", ":BufferClose<CR>", opts) -- (N) Close current buffer
 	utils.map("n", "R", ":source%<CR>", opts) -- (N) Reload
+	utils.map("n", "<C-r>", ":bufdo! e<CR>", opts) -- (N) Reload
 
 	-- Navigation
 	utils.map("v", "<C-e>", "$", opts) -- (V) Move current cursor to the end of line
