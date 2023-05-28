@@ -18,11 +18,11 @@ done &
 
 # define monitor order
 # refence: https://github.com/baskerville/bspwm/issues/1424
-bspc wm -O DisplayPort-2 DisplayPort-1 DisplayPort-3
+bspc wm -O DisplayPort-2 DisplayPort-1 DisplayPort-4
 # assign workspaces to monitors
 bspc monitor DisplayPort-1 -d 4 5
 bspc monitor DisplayPort-2 -d 1 2 3
-bspc monitor DisplayPort-3 -d 6 7
+bspc monitor DisplayPort-4 -d 6 7
 
 # global settings
 bspc config border_width         4
