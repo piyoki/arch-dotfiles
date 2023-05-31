@@ -8,6 +8,7 @@ export GTK_THEME=Material-Black-Blueberry
 export GTK_CURSOR_THEME=Bibata-Modern-Ice
 export QT_STYLE_OVERRIDE=adwaita
 export QT_QPA_PLATFORMTHEME=gtk3
+export QT_SELECT=6
 
 # default application
 export EDITOR=nvim
