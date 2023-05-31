@@ -1,3 +1,6 @@
+# paths
+export XDG_DATA_DIRS=$HOME/.nix-profile/share:/usr/local/share:/usr/share
+
 # theme-related
 export XCURSOR_THEME="Bibata-Modern-Ice"
 export XCURSOR_SIZE=48
