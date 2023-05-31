@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo nmcli device disconnect enp2s0 && sudo nmcli device connect enp2s0
