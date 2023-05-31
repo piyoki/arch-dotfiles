@@ -14,9 +14,9 @@ function settings.setup()
 
 	-- buffer options
 	utils.opt("b", "expandtab", true) -- convert tabs to spaces
-	utils.opt("b", "tabstop", 2) -- insert the number of spaces for a tab
-	utils.opt("b", "shiftwidth", 2) -- change the number of space characters inserted for indentation
-	utils.opt("b", "softtabstop", 2) -- set the number of columns for a TAB
+	utils.opt("b", "tabstop", indent) -- insert the number of spaces for a tab
+	utils.opt("b", "shiftwidth", indent) -- change the number of space characters inserted for indentation
+	utils.opt("b", "softtabstop", indent) -- set the number of columns for a TAB
 	utils.opt("b", "smartindent", true)
 	utils.opt("b", "spelllang", "en_us") -- set spell check languages
 
