@@ -4,9 +4,6 @@ local nvim_exec = vim.api.nvim_exec
 
 function autocmd.setup()
   -- set tab display format ==> (moved to ide/indent.lua)
-  nvim_cmd([[
-    set listchars=tab:\|\ ,trail:▫
-  ]])
 
   -- return to the previous edit position
   nvim_cmd([[

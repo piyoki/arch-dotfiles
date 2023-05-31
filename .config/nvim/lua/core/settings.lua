@@ -5,69 +5,66 @@ local settings = {}
 -- `utils.opt`              --> Helper functions are used to set various Vim options in global, buffer, and window scope.
 
 function settings.setup()
-  local utils = require('utils')
   local cmd = vim.cmd
   local indent = 2 -- set indent number
 
   cmd('syntax on') -- enable sytnax highlighting
   cmd('filetype plugin indent on')
 
-  -- buffer options
-  utils.opt('b', 'expandtab', true) -- convert tabs to spaces
-  utils.opt('b', 'tabstop', indent) -- insert the number of spaces for a tab
-  utils.opt('b', 'shiftwidth', indent) -- change the number of space characters inserted for indentation
-  utils.opt('b', 'softtabstop', indent) -- set the number of columns for a TAB
-  utils.opt('b', 'smartindent', true)
-  utils.opt('b', 'spelllang', 'en_us') -- set spell check languages
-
   -- global options
-  utils.opt('o', 'showtabline', indent) -- always show tabline
-  utils.opt('o', 'autochdir', true) -- change the current working directory whenever opening a file
-  utils.opt('o', 'autoindent', true) -- enable auto indent
-  utils.opt('o', 'wrap', true) -- wrap text
-  utils.opt('o', 'signcolumn', 'yes') -- always show the signcolumn, or it would shift the text each time
-  -- utils.opt("o", "hidden", true) -- when off a buffer is unloaded when it is abandoned
-  utils.opt('o', 'scrolloff', indent) -- minimal number of screen lines to keep above and below the cursor
-  utils.opt('o', 'shiftround', true) -- round indent to multiple of 'shiftwidth', apply to >, <
-  utils.opt('o', 'smartcase', true) -- enable smarcase
-  utils.opt('o', 'smarttab', true) -- enable smarttab
-  utils.opt('o', 'smartindent', true) -- enable smartindent
-  utils.opt('o', 'splitbelow', true) -- horizontal splits will automatically be below
-  utils.opt('o', 'splitright', true) -- vertical splits will automatically be below
-  utils.opt('o', 'ruler', true) -- show the cursor position all the time
-  utils.opt('o', 'updatetime', 100) -- faster completion
-  utils.opt('o', 'timeoutlen', 300) -- time in milliseconds to wait for a mapped sequence to complete
-  utils.opt('o', 'cmdheight', 1) -- more space for displaying messages, default 1
-  utils.opt('o', 'completeopt', 'menuone,noselect') -- a comma separated list of options for Insert mode completion
+  vim.opt.expandtab = true -- convert tabs to spaces
+  vim.opt.tabstop = indent -- insert the number of spaces for a tab
+  vim.opt.shiftwidth = indent -- change the number of space characters inserted for indentation
+  vim.opt.softtabstop = indent -- set the number of columns for a tab
+  vim.opt.showtabline = indent -- always show tabline
+  vim.opt.scrolloff = indent -- minimal number of screen lines to keep above and below the cursor
+  vim.opt.spelllang = 'en_us' -- set spell check languages
+  vim.opt.autochdir = true -- change the current working directory whenever opening a file
+  vim.opt.autoindent = true -- enable auto indent
+  vim.opt.wrap = true -- wrap text
+  vim.opt.signcolumn = 'yes' -- always show the signcolumn, or it would shift the text each time
+  -- vim.opt.hidden = true -- when off a buffer is unloaded when it is abandoned
+  vim.opt.shiftround = true -- round indent to multiple of 'shiftwidth', apply to >, <
+  vim.opt.smartcase = true -- enable smartcase
+  vim.opt.smarttab = true -- enable smarttab
+  vim.opt.smartindent = true -- enable smartindent
+  vim.opt.splitbelow = true -- horizontal splits will automatically be below
+  vim.opt.splitright = true -- vertical splits will automatically be right
+  vim.opt.ruler = true -- show the cursor position all the time
+  vim.opt.updatetime = 100 -- faster completion
+  vim.opt.timeoutlen = 300 -- time in milliseconds to wait for a mapped sequence to complete
+  vim.opt.cmdheight = 1 -- more space for displaying messages, default 1
+  vim.opt.completeopt = 'menuone,noselect' -- a comma separated list of options for Insert mode completion
 
   -- window scope options
-  utils.opt('o', 'number', true)
-  utils.opt('o', 'termguicolors', true) -- enable termguicolors
-  utils.opt('o', 'cursorline', true) -- enable highlighting of the current line
-  utils.opt('w', 'relativenumber', true) -- enable relative linenumber
-  utils.opt('w', 'foldmethod', 'indent') -- The kind of folding used for the current window.
-  utils.opt('w', 'foldlevel', 99) -- the foldlevel of line
-  utils.opt('w', 'foldenable', false) -- disable open all fold
-  utils.opt('w', 'fillchars', 'eob: ') -- characters to fill the statuslines and vertical separators. eob: ~
-  utils.opt('w', 'spell', true) -- set spell check
+  vim.opt.number = true -- enable linenumber
+  vim.opt.relativenumber = true -- enable relative linenumber
+  vim.opt.termguicolors = true -- enable termguicolors
+  vim.opt.cursorline = true -- enable highlighting of the current line
+  vim.opt.foldmethod = 'indent' -- The kind of folding used for the current window
+  vim.opt.foldlevel = 99 -- the foldlevel of line
+  vim.opt.foldenable = false -- disable open all fold
+  vim.opt.fillchars = 'eob: ' -- characters to fill the statuslines and vertical separators. eob: ~
+  vim.opt.spell = true -- set spell check
 
   -- Searching
-  utils.opt('o', 'hlsearch', true) -- enable highlight search
-  utils.opt('o', 'incsearch', true) -- enable inline search
-  utils.opt('o', 'ignorecase', true) -- enable ignore case sensitivity
-  utils.opt('o', 'smartcase', true) -- enable smart casing
+  vim.opt.hlsearch = true -- enable highlight search
+  vim.opt.incsearch = true -- enable inline search
+  vim.opt.ignorecase = true -- enable ignore case sensitivity
+  vim.opt.smartcase = true -- enable smart casing
 
   -- Extras
-  utils.opt('o', 'list', true) -- enable highlighting of the current line
-  utils.opt('o', 'textwidth', 0) -- default textwidth
-  utils.opt('o', 'viewoptions', 'cursor,slash,folds,unix') -- default viewoptions
+  vim.opt.list = true -- enable highlighting of the current line
+  vim.opt.listchars:append('eol:↴') -- default eol symbol
+  vim.opt.textwidth = 0 -- default textwidth
+  vim.opt.viewoptions = 'cursor,slash,folds,unix' -- default viewoptions
 
   -- Highlight on yank
   cmd('au TextYankPost * lua vim.highlight.on_yank {on_visual = false}')
 
   -- Clipboard & Mouse
-  utils.opt('o', 'clipboard', 'unnamedplus')
-  utils.opt('o', 'mouse', 'a')
+  vim.opt.clipboard = 'unnamedplus'
+  vim.opt.mouse = 'a'
 end
 
 return settings
