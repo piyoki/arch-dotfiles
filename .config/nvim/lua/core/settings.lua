@@ -54,8 +54,6 @@ function settings.setup()
   vim.opt.smartcase = true -- enable smart casing
 
   -- Extras
-  vim.opt.list = true -- enable highlighting of the current line
-  vim.opt.listchars:append('eol:↴') -- default eol symbol
   vim.opt.textwidth = 0 -- default textwidth
   vim.opt.viewoptions = 'cursor,slash,folds,unix' -- default viewoptions
 

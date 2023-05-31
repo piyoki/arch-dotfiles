@@ -26,6 +26,13 @@ function autocmd.setup()
     autocmd FileType apache setlocal commentstring=#\ %s
   ]])
 
+  -- filetype-based indent
+  -- vim.cmd([[
+  --   augroup cmp
+  --     autocmd FileType markdown setlocal shiftwidth=2 softtabstop=2 expandtab
+  --   augroup end
+  -- ]])
+
   -- TelescopePrompt setup
   vim.cmd([[
     augroup cmp
