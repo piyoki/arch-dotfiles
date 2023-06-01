@@ -13,18 +13,13 @@ env:
 
 # Window
 window:
-  opacity: 0.9
+  # opacity: 0.9
   dimensions:
     columns: 150
     lines: 60
   padding:
     x: 5
     y: 5
-  class:
-    # Application instance name
-    instance: alacritty
-    # General application class
-    general: alacritty
 
 # Behavior
 scrolling:
