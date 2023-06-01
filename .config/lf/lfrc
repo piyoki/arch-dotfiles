@@ -132,7 +132,6 @@ map md mkdir
 map bg setwallpaper
 map C clear
 map <c-c> quit
-map <enter> shell
 
 # Search
 map <c-f> :fzf_jump
