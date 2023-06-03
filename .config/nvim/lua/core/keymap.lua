@@ -44,9 +44,6 @@ function M.setup()
   -- Spell Check
   utils.map('n', 'sc', '<cmd>set spell!<CR>') -- Enable spellcheck
 
-  -- Sorting
-  utils.map('v', '<LEADER>s', '<cmd>sort<CR>') -- Enable spellcheck
-
   -- Highlight Search
   utils.map('n', '<LEADER><CR>', ':nohlsearch<CR>', opts) -- (N) Clear all highlight
 
