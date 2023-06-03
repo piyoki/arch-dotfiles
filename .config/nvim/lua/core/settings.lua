@@ -5,11 +5,10 @@ local settings = {}
 -- `utils.opt`              --> Helper functions are used to set various Vim options in global, buffer, and window scope.
 
 function settings.setup()
-  local cmd = vim.cmd
   local indent = 2 -- set indent number
 
-  cmd('syntax on') -- enable sytnax highlighting
-  cmd('filetype plugin indent on')
+  vim.cmd('syntax on') -- enable sytnax highlighting
+  vim.cmd('filetype plugin indent on') -- enable auto indent
 
   -- global options
   vim.opt.expandtab = true -- convert tabs to spaces
@@ -20,14 +19,14 @@ function settings.setup()
   vim.opt.scrolloff = indent -- minimal number of screen lines to keep above and below the cursor
   vim.opt.spelllang = 'en_us' -- set spell check languages
   vim.opt.autochdir = true -- change the current working directory whenever opening a file
-  vim.opt.autoindent = true -- enable auto indent
+  vim.opt.autoindent = false -- enable auto indent
   vim.opt.wrap = true -- wrap text
   vim.opt.signcolumn = 'yes' -- always show the signcolumn, or it would shift the text each time
   -- vim.opt.hidden = true -- when off a buffer is unloaded when it is abandoned
   vim.opt.shiftround = true -- round indent to multiple of 'shiftwidth', apply to >, <
   vim.opt.smartcase = true -- enable smartcase
   vim.opt.smarttab = true -- enable smarttab
-  vim.opt.smartindent = true -- enable smartindent
+  vim.opt.smartindent = false -- enable smartindent
   vim.opt.splitbelow = true -- horizontal splits will automatically be below
   vim.opt.splitright = true -- vertical splits will automatically be right
   vim.opt.ruler = true -- show the cursor position all the time
@@ -58,7 +57,7 @@ function settings.setup()
   vim.opt.viewoptions = 'cursor,slash,folds,unix' -- default viewoptions
 
   -- Highlight on yank
-  cmd('au TextYankPost * lua vim.highlight.on_yank {on_visual = false}')
+  vim.cmd('au TextYankPost * lua vim.highlight.on_yank {on_visual = false}')
 
   -- Clipboard & Mouse
   vim.opt.clipboard = 'unnamedplus'

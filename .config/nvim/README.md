@@ -130,6 +130,15 @@ Then we can run `:PackerSync` which will download/install the list of defined pl
 sudo npm i -g yarn
 ```
 
+#### LSP Addons
+
+```bash
+# gopls
+go install golang.org/x/tools/gopls@latest
+# golangci-lint
+go install github.com/golangci/golangci-lint/cmd/golangci-lint@lastet
+```
+
 #### Formatter Addons
 
 ```bash

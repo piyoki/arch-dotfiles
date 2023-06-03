@@ -14,7 +14,7 @@ function autocmd.setup()
     [[
     augroup FormatAutogroup
       autocmd!
-      autocmd BufWritePost *.yaml,*.json,*.go,*.lua,*.sh,*.js,*.ts,*.py,*.rb,*.hcl,*.tf FormatWrite
+      autocmd BufWritePost *.md,*.yaml,*.json,*.go,*.lua,*.sh,*.js,*.ts,*.py,*.rb,*.hcl,*.tf FormatWrite
       autocmd BufNewFile,BufRead *.hcl set filetype=terraform syntax=terraform
     augroup END
   ]],
@@ -25,13 +25,6 @@ function autocmd.setup()
   nvim_cmd([[
     autocmd FileType apache setlocal commentstring=#\ %s
   ]])
-
-  -- filetype-based indent
-  -- vim.cmd([[
-  --   augroup cmp
-  --     autocmd FileType markdown setlocal shiftwidth=2 softtabstop=2 expandtab
-  --   augroup end
-  -- ]])
 
   -- TelescopePrompt setup
   vim.cmd([[

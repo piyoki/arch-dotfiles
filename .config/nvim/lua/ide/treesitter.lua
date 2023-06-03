@@ -8,7 +8,7 @@ function M.setup()
     ignore_install = { 'swift', 'phpdoc', 'beancount' },
     autopairs = { enable = true },
     highlight = { enable = true },
-    indent = { enable = true },
+    -- indent = { enable = true },
     rainbow = { enable = true, extended_mode = true },
     context_commentstring = { enable = true },
     textobjects = {
