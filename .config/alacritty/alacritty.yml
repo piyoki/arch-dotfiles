@@ -30,8 +30,8 @@ scrolling:
 font:
   size: 16.0
   normal:
-    # family: "FiraCode Nerd Font Mono"
-    family: "ComicCodeLigatures Nerd Font"
+    family: "FiraCode Nerd Font Mono"
+    # family: "ComicCodeLigatures Nerd Font"
     style: Regular
   bold:
     # family: "FiraCode Nerd Font Mono"
