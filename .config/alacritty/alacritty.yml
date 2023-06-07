@@ -28,7 +28,7 @@ scrolling:
 
 # Font
 font:
-  size: 16.0
+  size: 17.0
   normal:
     family: "FiraCode Nerd Font Mono"
     # family: "ComicCodeLigatures Nerd Font"
