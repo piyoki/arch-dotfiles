@@ -1,0 +1,41 @@
+[user]
+  name = Kevin YU
+  email = yqlbu@bu.edu
+  signingkey = B94F394B72884017
+[credential]
+  helper = store --file ~/.git-credentials
+[core]
+  editor = vim
+  pager = delta
+[commit]
+  gpgsign = true
+[diff]
+  colorMoved = default
+[merge]
+  conflictstyle = diff3
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+[delta]
+  tabs = 2
+  navigate = true
+  light = false
+  line-numbers = true
+  syntax-theme = "Visual Studio Dark+"
+  side-by-side = true
+  features = decorations
+  true-color = always
+[delta "interactive"]
+  keep-plus-minus-markers = false
+[delta "decorations"]
+  commit-decoration-style = blue ol
+  commit-style = raw
+  file-style = omit
+  hunk-header-decoration-style = "#ccccff box"
+  ; hunk-header-file-style = white
+  hunk-header-file-style = "#ccccff"
+  hunk-header-style = file line-number syntax
+  grep-line-number-style = "#ccccff"
+  line-numbers-left-style = "#404040"
+  line-numbers-right-style = "#404040"
+  line-numbers-plus-style = bold green 22
+  line-numbers-minus-style = bold red 52
