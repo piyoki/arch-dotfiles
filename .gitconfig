@@ -16,6 +16,7 @@
 [interactive]
     diffFilter = delta --color-only --features=interactive
 [delta]
+  ; (cmd to check current config) delta --diff-so-fancy --show-config
   tabs = 2
   navigate = true
   light = false
