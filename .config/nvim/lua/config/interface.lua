@@ -4,7 +4,7 @@ function interface.setup()
   -- color palette
   local colors = {
     black = '#1F2335',
-    red = '#F07178',
+    red = '#CC0000',
     blue = '#82AAFF',
     green = '#6FFF68',
     lightgreen = '#DAFDBA',
@@ -97,13 +97,13 @@ function interface.setup()
           foreground = '#82aaff',
         },
         ['v'] = {
-          foreground = '#b392f0',
+          foreground = '#ffffba',
         },
         ['V'] = {
-          foreground = '#b392f0',
+          foreground = '#ffffba',
         },
         [''] = {
-          foreground = '#b392f0',
+          foreground = '#ffffba',
         },
       },
     },
