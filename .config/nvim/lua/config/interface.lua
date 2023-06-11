@@ -4,7 +4,7 @@ function interface.setup()
   -- color palette
   local colors = {
     black = '#1F2335',
-    red = '#CC0000',
+    red = '#f97583',
     blue = '#82AAFF',
     green = '#6FFF68',
     lightgreen = '#DAFDBA',
