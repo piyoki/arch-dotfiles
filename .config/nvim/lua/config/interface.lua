@@ -80,35 +80,6 @@ function interface.setup()
   vim.cmd(string.format('hi DiffChange guifg=%s guibg=none gui=bold', colors.yellow))
   vim.cmd(string.format('hi DiffDelete guifg=%s guibg=none gui=bold', colors.red))
 
-  -- modificator (cursorLineNr mod)
-  require('modicator').setup({
-    highlights = {
-      defaults = {
-        foreground = '#d9d9d9',
-        background = 'none',
-        bold = true,
-        italic = false,
-      },
-      modes = {
-        ['n'] = {
-          foreground = '#d9d9d9',
-        },
-        ['i'] = {
-          foreground = '#82aaff',
-        },
-        ['v'] = {
-          foreground = '#ffffba',
-        },
-        ['V'] = {
-          foreground = '#ffffba',
-        },
-        [''] = {
-          foreground = '#ffffba',
-        },
-      },
-    },
-  })
-
   -- cursor-word
   vim.cmd('hi default CursorWord cterm=underline gui=bold')
 end
