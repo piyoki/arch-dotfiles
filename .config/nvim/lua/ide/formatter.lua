@@ -14,7 +14,7 @@ function M.setup()
             args = {
               '--stdin-filepath',
               vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-              '--double-quote',
+              '--single-quote false',
             },
             stdin = true,
           }
@@ -28,7 +28,7 @@ function M.setup()
             args = {
               '--stdin-filepath',
               vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-              '--double-quote',
+              '--single-quote false',
             },
             stdin = true,
           }
@@ -41,7 +41,7 @@ function M.setup()
             args = {
               '--stdin-filepath',
               vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-              '--double-quote',
+              '--single-quote false',
             },
             stdin = true,
           }
@@ -110,7 +110,7 @@ function M.setup()
             args = {
               '--stdin-filepath',
               vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-              '--double-quote',
+              '--single-quote false',
             },
             stdin = true,
           }
@@ -123,7 +123,7 @@ function M.setup()
             args = {
               '--stdin-filepath',
               vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-              '--double-quote',
+              '--single-quote false',
             },
             stdin = true,
           }
@@ -164,7 +164,7 @@ function M.setup()
             args = {
               '--stdin-filepath',
               vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-              '--double-quote',
+              '--single-quote false',
             },
             stdin = true,
           }
