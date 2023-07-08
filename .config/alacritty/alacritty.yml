@@ -34,12 +34,10 @@ font:
     # family: "ComicCodeLigatures Nerd Font"
     style: Regular
   bold:
-    # family: "FiraCode Nerd Font Mono"
     family: "ComicCodeLigatures Nerd Font"
     style: Bold
   italic:
-    # family: "FiraCode Nerd Font Mono"
-    family: "ComicCodeLigatures Nerd Font"
+    family: "FiraCode Nerd Font Mono"
     style: Italic
 
 # Cursor

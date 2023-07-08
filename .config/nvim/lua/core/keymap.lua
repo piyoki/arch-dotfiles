@@ -51,7 +51,7 @@ function M.setup()
   utils.map('n', '<C-z>', 'za', opts) -- (N) Fold current function
 
   --- Undo
-  utils.map('n', '<C-c>', ':q<Esc>', opts)
+  -- utils.map('n', '<C-c>', ':q<Esc>', opts)
 
   --- Paste *(no delete on register)
   utils.map('n', '<LEADER>p', '"_dP', opts)

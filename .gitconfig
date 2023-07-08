@@ -1,5 +1,5 @@
 [user]
-  name = Kevin YU
+  name = kev
   email = yqlbu@bu.edu
   signingkey = B94F394B72884017
 [credential]
@@ -13,8 +13,9 @@
   colorMoved = default
 [merge]
   conflictstyle = diff3
+  tool = vimdiff
 [interactive]
-    diffFilter = delta --color-only --features=interactive
+  diffFilter = delta --color-only --features=interactive
 [delta]
   ; (cmd to check current config) delta --diff-so-fancy --show-config
   tabs = 2
@@ -40,3 +41,10 @@
   line-numbers-right-style = "#404040"
   line-numbers-plus-style = bold green 22
   line-numbers-minus-style = bold red 52
+# +-----------------------+
+# | LOCAL | BASE | REMOTE |
+# +-----------------------+
+# |        MERGED         |
+# +-----------------------+
+; [mergetool "vimdiff"]
+;   cmd = nvim -d $LOCAL $BASE $REMOTE $MERGED '$wincmd w' 'wincmd J'
