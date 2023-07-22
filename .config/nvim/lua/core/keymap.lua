@@ -56,8 +56,15 @@ function M.setup()
   --- Paste *(no delete on register)
   utils.map('n', '<LEADER>p', '"_dP', opts)
   utils.map('v', '<LEADER>p', '"_dP', opts)
-  utils.map('n', '<LEADER>y', '"*y :let @+=@*<CR>', opts)
-  utils.map('v', '<LEADER>y', '"*y :let @+=@*<CR>', opts)
+
+  -- System Clipboar [Copy/Paste/Cut]
+  -- Ref: https://vi.stackexchange.com/questions/84/how-can-i-copy-text-to-the-system-clipboard-from-vim
+  utils.map('n', '<LEADER>y', '"+yy', opts)
+  utils.map('v', '<LEADER>y', '"+y', opts)
+  utils.map('n', '<LEADER>p', '"+gP<esc>', opts)
+  utils.map('v', '<LEADER>p', 'd"+gP<esc>', opts)
+  utils.map('n', '<LEADER>x', '"+d', opts)
+  utils.map('v', '<LEADER>x', '"+dd', opts)
 
   ----------------------------------------------
   -- Explorer

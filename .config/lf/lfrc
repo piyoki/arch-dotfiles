@@ -121,6 +121,7 @@ map n $nvim .
 map . set hidden!
 map dd trash
 map dr restore_trash
+map dp delete
 map p paste
 map x cut
 map y copy

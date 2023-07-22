@@ -49,9 +49,11 @@ super + shift + p
 
 # copy paste
 super + c
-	echo -n | copyq copy
+	# echo -n | copyq copy
+	echo -n | xclip -in
 super + v
-	copyq paste
+	# copyq paste
+	xclip -out
 
 #
 # bspwm hotkeys
