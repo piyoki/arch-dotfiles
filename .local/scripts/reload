@@ -5,6 +5,7 @@ notify-send 'System' 'reload configs and sound'
 
 # mouse wheel
 xinput --set-prop "Logitech USB Receiver" "libinput Natural Scrolling Enabled" 1
+xinput --set-prop "Logitech USB Receiver" "libinput Natural Scrolling Enabled Default" 1
 
 # keyboard key repeat rate
 xset r rate 200 25
