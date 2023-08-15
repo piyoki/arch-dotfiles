@@ -60,6 +60,7 @@ mc mirror --overwrite ~/.config/sxhkd/ minio/server-configurations/arch-desktop/
 mc mirror --overwrite ~/.config/tmux/ minio/server-configurations/arch-desktop/.config/tmux/
 mc mirror --overwrite ~/.config/flameshot/ minio/server-configurations/arch-desktop/.config/flameshot/
 mc mirror --overwrite ~/.config/rclone/ minio/server-configurations/arch-desktop/.config/rclone/
+mc mirror --overwrite ~/.config/bat/ minio/server-configurations/arch-desktop/.config/bat/
 
 # systemd
 sudo mc cp /etc/systemd/system/rclone.service minio/server-configurations/arch-desktop/systemd/rclone.service
