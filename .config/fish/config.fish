@@ -98,6 +98,8 @@ abbr set-vol "wpctl set-volume @DEFAULT_AUDIO_SINK@"
 # abbr set-vol "pamixer --set-volume"
 # pb
 alias pb="curl -F 'c=@-' https://fars.ee/"
+# snips
+alias snips="ssh snips.sh"
 # streamdeck
 alias streamdeck="$HOME/.virtualenvs/streamdeck/bin/streamdeck"
 
