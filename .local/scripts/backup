@@ -64,10 +64,3 @@ mc mirror --overwrite ~/.config/bat/ minio/server-configurations/arch-desktop/.c
 
 # systemd
 sudo mc cp /etc/systemd/system/rclone.service minio/server-configurations/arch-desktop/systemd/rclone.service
-
-# dns-related
-sudo mc cp /etc/resolv.conf minio/server-configurations/arch-desktop/dns-config/resolv.conf
-sudo mc cp /etc/resolvconf.conf minio/server-configurations/arch-desktop/dns-config/resolvconf.conf
-sudo mc cp /etc/dnsmasq.conf minio/server-configurations/arch-desktop/dns-config/dnsmasq.conf
-sudo mc cp /etc/dnsmasq-conf.conf minio/server-configurations/arch-desktop/dns-config/dnsmasq-conf.conf
-sudo mc cp /etc/dnsmasq-resolv.conf minio/server-configurations/arch-desktop/dns-config/dnsmasq-resolv.conf

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo systemctl stop rclone.service
+sudo umount ~/Pikpak
