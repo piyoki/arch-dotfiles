@@ -15,7 +15,6 @@ mc cp ~/.Xresources minio/server-configurations/arch-desktop/
 mc cp ~/.xprofile minio/server-configurations/arch-desktop/
 mc cp ~/.profile minio/server-configurations/arch-desktop/
 mc cp ~/.streamdeck_ui_export.json minio/server-configurations/arch-desktop/
-mc cp ~/.qnap_credentials minio/server-configurations/arch-desktop/
 mc mirror --overwrite ~/.ssh/ minio/server-configurations/arch-desktop/.ssh/
 mc mirror --overwrite ~/.screenlayout/ minio/server-configurations/arch-desktop/.screenlayout/
 mc mirror --overwrite ~/.assets/ minio/server-configurations/arch-desktop/.assets/
@@ -64,3 +63,6 @@ mc mirror --overwrite ~/.config/bat/ minio/server-configurations/arch-desktop/.c
 
 # systemd
 sudo mc cp /etc/systemd/system/rclone.service minio/server-configurations/arch-desktop/systemd/rclone.service
+
+# smb
+mc cp ~/.smbcredentials minio/server-configurations/arch-desktop/.smbcredentials
