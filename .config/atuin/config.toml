@@ -11,10 +11,13 @@ key_path = "~/.atuinkey"
 ## where to store your auth session token, default is your system data directory
 ## linux/mac: ~/.local/share/atuin/session
 ## windows: %USERPROFILE%/.local/share/atuin/session
-session_path = "~/.session"
+# session_path = "~/.session"
 
 ## date format used, either "us" or "uk"
 dialect = "us"
+
+## put the search bar at the top
+invert = true
 
 ## enable or disable automatic sync
 auto_sync = true
@@ -36,7 +39,7 @@ sync_frequency = "12h"
 
 ## which filter mode to use
 ## possible values: global, host, session, directory
-# filter_mode = "global"
+filter_mode = "global"
 
 ## which filter mode to use when atuin is invoked from a shell up-key binding
 ## the accepted values are identical to those of "filter_mode"
@@ -66,7 +69,7 @@ show_preview = true
 # word_chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
 ## number of context lines to show when scrolling by pages
-# scroll_context_lines = 1
+scroll_context_lines = 1
 
 ## use ctrl instead of alt as the shortcut modifier key for numerical UI shortcuts
 ## alt-0 .. alt-9
