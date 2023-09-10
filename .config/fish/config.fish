@@ -26,6 +26,8 @@ set EDITOR "nvim" # Sets the $EDITOR to vim
 export CLICOLOR=1
 export LS_COLORS=(vivid generate nord)
 
+export SOPS_PGP_FP="B08FE2644F9FC450AF425FF5B94F394B72884017"
+
 ### Fish Alias ###
 abbr unset "set --erase"
 
