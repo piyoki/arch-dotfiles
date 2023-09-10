@@ -116,3 +116,7 @@ bind \co 'set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f 
 
 # zoxide
 zoxide init fish | source
+
+# atuin
+atuin init fish --disable-up-arrow | source
+bind \cr _atuin_search
