@@ -1,5 +1,5 @@
 #!/bin/bash
 
 sudo systemctl restart tailscaled
-notify-send 'Tailscale' 'link up.'
 sudo tailscale up --accept-routes=true --accept-dns=false
+notify-send 'Tailscale' 'link up.'
