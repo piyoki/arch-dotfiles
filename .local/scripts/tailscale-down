@@ -1,0 +1,5 @@
+#!/bin/bash
+
+notify-send 'Tailscale' 'link down.'
+sudo tailscale down
+sudo systemctl stop tailscaled

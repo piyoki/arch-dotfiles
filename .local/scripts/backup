@@ -7,6 +7,7 @@ sudo mc cp /usr/local/bin/restart-scdaemon minio/server-configurations/arch-desk
 sudo mc cp /etc/pacman.conf minio/server-configurations/arch-desktop/pacman.conf
 sudo mc mirror --overwrite /etc/pacman.d/ minio/server-configurations/arch-desktop/pacman.d/
 sudo mc cp /etc/crontab minio/server-configurations/arch-desktop/crontab
+sudo mc mirror --overwrite /etc/mosdns minio/server-configurations/arch-desktop/mosdns/
 mc cp ~/.wakatime.cfg minio/server-configurations/arch-desktop/
 mc cp ~/.gitconfig minio/server-configurations/arch-desktop/
 mc cp ~/.git-credentials minio/server-configurations/arch-desktop/
