@@ -11,8 +11,7 @@ function tools.setup()
   })
 
   -- sfm
-  local sfm_explorer = require('sfm').setup({})
-  sfm_explorer:load_extension('sfm-fs', {
+  local sfm_explorer = require('sfm').setup({
     mappings = {
       list = {
         {
@@ -22,8 +21,14 @@ function tools.setup()
       },
     },
   })
-  sfm_explorer:load_extension('sfm-git')
-  sfm_explorer:load_extension('sfm-telescope')
+  sfm_explorer:load_extension('sfm-git', {
+    debounce_interval_ms = 100,
+  })
+  sfm_explorer:load_extension('sfm-telescope', {
+    mappings = {
+      search = { '/' },
+    },
+  })
 
   -- telescope
   require('telescope').setup({

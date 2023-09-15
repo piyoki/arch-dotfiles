@@ -100,4 +100,5 @@ return require('packer').startup(function()
     end,
     ft = { 'markdown' },
   })
+  use({ 'mzlogin/vim-markdown-toc' })
 end)
