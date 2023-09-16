@@ -148,6 +148,20 @@ function M.setup()
     prefix = '<Leader>',
   })
 
+  -- Overwrite default settings
+  wk.register({
+    Ss = {
+      name = 'Set',
+      r = { '<cmd>set relativenumber<CR>', 'Set relativenumber' },
+    },
+    Su = {
+      name = 'Unset',
+      r = { '<cmd>set norelativenumber<CR>', 'Unset norelativenumber' },
+    },
+  }, {
+    prefix = '<Leader>',
+  })
+
   -- CodeRunner
   wk.register({
     r = {
