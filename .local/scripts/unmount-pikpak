@@ -1,4 +1,5 @@
 #!/bin/bash
 
 sudo systemctl stop rclone.service
-sudo umount ~/Pikpak
+fusermount -uz /home/kev/Pikpak
+# The -z forces the unmount

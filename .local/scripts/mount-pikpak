@@ -1,4 +1,3 @@
 #!/bin/bash
 
-sudo umount ~/Pikpak
 sudo systemctl restart rclone.service
