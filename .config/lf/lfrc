@@ -12,6 +12,7 @@ set sortby time
 set ratios 1:2:3
 set cleaner ~/.config/lf/cleaner
 set previewer ~/.config/lf/preview
+set lfub ~/.config/lf/lfub
 set autoquit true
 
 # Custom Functions
