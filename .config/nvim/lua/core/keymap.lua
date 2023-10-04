@@ -162,6 +162,16 @@ function M.setup()
     prefix = '<Leader>',
   })
 
+  -- Markdown toc
+  wk.register({
+    T = {
+      '<cmd>:GenTocGFM<CR>',
+      'Set Generate markdown toc',
+    },
+  }, {
+    prefix = '<Leader>',
+  })
+
   -- CodeRunner
   wk.register({
     r = {

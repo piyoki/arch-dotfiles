@@ -11,11 +11,10 @@ local highlight = {
 local hooks = require('ibl.hooks')
 
 function M.setup()
+  -- vim.opt.list = true
   -- vim.api.nvim_command([[
   --   set listchars=tab:\|\ ,trail:▫
   -- ]])
-  -- vim.opt.list = true
-  -- vim.opt.listchars:append('trail:▫')
   -- vim.opt.listchars:append('eol:↴')
 
   -- create the highlight groups in the highlight setup hook, so they are reset

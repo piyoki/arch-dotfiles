@@ -1,5 +1,26 @@
 # Neovim Setup
 
+<!-- vim-markdown-toc GFM -->
+
+* [Neovim 0.5.0+ New Features](#neovim-050-new-features)
+* [Reference](#reference)
+* [Installation](#installation)
+  * [Install Dependency Packages](#install-dependency-packages)
+* [Getting Started with Lua-Based Neovim config](#getting-started-with-lua-based-neovim-config)
+  * [Benefits](#benefits)
+  * [Lua Keybings](#lua-keybings)
+  * [Package Management](#package-management)
+* [Plugins](#plugins)
+    * [Core](#core)
+    * [Lua Native](#lua-native)
+    * [Editing Addons](#editing-addons)
+    * [Prerequisite:](#prerequisite)
+    * [LSP Addons](#lsp-addons)
+    * [Formatter Addons](#formatter-addons)
+    * [Extra Addons](#extra-addons)
+
+<!-- vim-markdown-toc -->
+
 ## Neovim 0.5.0+ New Features
 
 - all the IDE-like goodies:
