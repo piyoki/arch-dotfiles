@@ -9,13 +9,26 @@ local highlight = {
 }
 
 local hooks = require('ibl.hooks')
+local listchars = require('nvim-listchars')
 
 function M.setup()
   -- vim.opt.list = true
   -- vim.api.nvim_command([[
   --   set listchars=tab:\|\ ,trail:▫
   -- ]])
+  -- vim.opt.listchars:append('trail:▫')
   -- vim.opt.listchars:append('eol:↴')
+
+  listchars.setup({
+    save_state = true, -- If enabled, save toggled state in a cache file. Will overwrite current `vim.opt.list` value.
+    listchars = {
+      trail = '▫',
+      eol = '↴',
+      tab = '» ',
+    },
+    exclude_filetypes = {}, -- List of filetypes where `listchars` is disabled
+    lighten_step = 10, -- Amount to add/remove from base color
+  })
 
   -- create the highlight groups in the highlight setup hook, so they are reset
   -- every time the colorscheme changes

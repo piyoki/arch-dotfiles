@@ -236,6 +236,11 @@ _G.packer_plugins = {
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/nvim-cursorword",
     url = "https://github.com/xiyaowong/nvim-cursorword"
   },
+  ["nvim-listchars"] = {
+    loaded = true,
+    path = "/home/kev/.local/share/nvim/site/pack/packer/start/nvim-listchars",
+    url = "https://github.com/fraso-dev/nvim-listchars"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
