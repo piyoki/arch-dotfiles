@@ -19,6 +19,7 @@ function M.setup()
   -- vim.opt.listchars:append('trail:▫')
   -- vim.opt.listchars:append('eol:↴')
 
+  vim.opt.list = true
   listchars.setup({
     save_state = true, -- If enabled, save toggled state in a cache file. Will overwrite current `vim.opt.list` value.
     listchars = {
