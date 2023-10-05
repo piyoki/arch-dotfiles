@@ -60,8 +60,6 @@ function interface.setup()
   require('github-theme').setup({ transparent = true })
   -- general
   vim.cmd('hi Normal guibg=none') -- enable transparent background
-  -- vim.cmd(string.format("hi CursorLineNr guifg=%s guibg=none gui=bold", colors.lightpurple))
-  -- vim.cmd(string.format("hi CursorLine guibg=%s", colors.black))
   vim.cmd(string.format('hi PmenuSel guibg=%s guifg=%s gui=bold', colors.lightpurple, colors.black))
   vim.cmd(string.format('hi PmenuSbar guibg=%s guifg=%s', colors.lightpurle, colors.black))
   vim.cmd(string.format('hi LineNr guifg=%s guibg=none', colors.darkgray))

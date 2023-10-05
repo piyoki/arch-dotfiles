@@ -8,6 +8,7 @@ return require('packer').startup(function()
 
   -- colorscheme
   use({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' })
+  use({ 'sam4llis/nvim-tundra' })
 
   -- interface
   use({ 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } })
