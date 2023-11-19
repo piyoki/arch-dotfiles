@@ -1,9 +1,0 @@
-[user]
-  name = sumire
-  email = sumire88@proton.me
-
-[core]
-  sshCommand = "ssh -i ~/.ssh/sumire88_git_rsa"
-
-[credential]
-  helper = store --file ~/.git-credentials.work
