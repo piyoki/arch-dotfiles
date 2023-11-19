@@ -1,21 +1,24 @@
-[user]
-  name = kev
-  email = yqlbu@bu.edu
-  signingkey = B94F394B72884017
-[credential]
-  helper = store --file ~/.git-credentials
+[includeIf "gitdir:~/Workspace/personal/"] # include for all .git projects under personal/
+  path = ~/.gitconfig.personal
+
+[includeIf "gitdir:~/Workspace/work/"] # include for all .git projects under work/
+  path = ~/.gitconfig.work
+
 [core]
   editor = vim
   pager = delta
-[commit]
-  gpgsign = true
+  excludesfile = ~/.gitignore # valid everywhere
+
 [diff]
   colorMoved = default
+
 [merge]
   conflictstyle = diff3
   tool = vimdiff
+
 [interactive]
   diffFilter = delta --color-only --features=interactive
+
 [delta]
   ; (cmd to check current config) delta --diff-so-fancy --show-config
   tabs = 2
@@ -26,8 +29,10 @@
   side-by-side = true
   features = decorations
   true-color = always
+
 [delta "interactive"]
   keep-plus-minus-markers = false
+
 [delta "decorations"]
   commit-decoration-style = blue ol
   commit-style = raw
@@ -41,10 +46,6 @@
   line-numbers-right-style = "#404040"
   line-numbers-plus-style = bold green 22
   line-numbers-minus-style = bold red 52
-# +-----------------------+
-# | LOCAL | BASE | REMOTE |
-# +-----------------------+
-# |        MERGED         |
-# +-----------------------+
-; [mergetool "vimdiff"]
-;   cmd = nvim -d $LOCAL $BASE $REMOTE $MERGED '$wincmd w' 'wincmd J'
+[user]
+	email = yqlbu@bu.edu
+	name = yqlbu

@@ -27,6 +27,8 @@ export CLICOLOR=1
 export LS_COLORS=(vivid generate nord)
 
 export SOPS_PGP_FP="B08FE2644F9FC450AF425FF5B94F394B72884017"
+export SOPS_AGE_RECIPIENTS=(cat $HOME/.age/age.pub)
+export SOPS_AGE_KEY_FILE=$HOME/.age/age.key
 
 ### Fish Alias ###
 abbr unset "set --erase"

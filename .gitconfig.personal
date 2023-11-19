@@ -1,0 +1,14 @@
+[user]
+  name = kev
+  email = yqlbu@bu.edu
+  signingkey = B94F394B72884017
+
+[core]
+  sshCommand = "ssh -i ~/.ssh/id_rsa_yubikey.pub"
+
+[commit]
+  gpgsign = true
+
+[credential]
+  helper = store --file ~/.git-credentials.personal
+
