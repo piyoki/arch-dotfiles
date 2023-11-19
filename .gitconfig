@@ -1,8 +1,8 @@
 [includeIf "gitdir:~/Workspace/personal/"] # include for all .git projects under personal/
-  path = ~/.git/.gitconfig.personal
+  path = ~/.gitconfigs/.gitconfig.personal
 
 [includeIf "gitdir:~/Workspace/work/"] # include for all .git projects under work/
-  path = ~/.git/.gitconfig.work
+  path = ~/.gitconfigs/.gitconfig.work
 
 [core]
   editor = vim
