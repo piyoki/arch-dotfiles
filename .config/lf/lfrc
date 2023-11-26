@@ -116,7 +116,8 @@ map <enter>
 # map c $vscodium "$f"
 
 map au unarchive
-map n $nvim .
+map n $nvim $f
+map e $nvim $f
 
 # Basic Functions
 map . set hidden!
