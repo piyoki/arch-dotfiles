@@ -1,11 +1,14 @@
+[includeIf "gitdir:~/.local/share/yadm/"] # include for all .git projects under yadm/
+  path = ~/.gitconfigs/.gitconfig.personal
+
+[includeIf "gitdir:~/.local/share/gopass/"] # include for all .git projects under gopass/
+  path = ~/.gitconfigs/.gitconfig.personal
+
 [includeIf "gitdir:~/Workspace/personal/"] # include for all .git projects under personal/
   path = ~/.gitconfigs/.gitconfig.personal
 
 [includeIf "gitdir:~/Workspace/work/"] # include for all .git projects under work/
   path = ~/.gitconfigs/.gitconfig.work
-
-[includeIf "gitdir:~/.local/share/yadm/"] # include for all .git projects under yadm/
-  path = ~/.gitconfigs/.gitconfig.personal
 
 [core]
   editor = vim
