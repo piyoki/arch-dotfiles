@@ -3,6 +3,8 @@ local M = {}
 local nvim_treesitter_configs = require('nvim-treesitter.configs')
 
 function M.setup()
+  vim.g.skip_ts_context_commentstring_module = true
+  require('ts_context_commentstring').setup({})
   nvim_treesitter_configs.setup({
     ensure_installed = 'all',
     ignore_install = { 'swift', 'phpdoc', 'beancount' },
@@ -10,7 +12,6 @@ function M.setup()
     highlight = { enable = true },
     -- indent = { enable = true },
     rainbow = { enable = true, extended_mode = true },
-    context_commentstring = { enable = true },
     textobjects = {
       select = {
         enable = true,

@@ -36,7 +36,6 @@ local setup_lsp_installer = function()
       use('pyright')
       use('terraformls')
       use('vimls')
-      use('actionlint')
       use('golangci_lint_ls')
       use('ansiblels', {
         autostart = true,
