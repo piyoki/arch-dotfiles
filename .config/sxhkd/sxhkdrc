@@ -38,10 +38,10 @@ super + ctrl + l
 super + b
 	brave-browser-stable
 
-super + p 
+super + p
 	powermenu
 
-super + ctrl + t 
+super + ctrl + t
 	tailscalemenu
 
 super + shift + p

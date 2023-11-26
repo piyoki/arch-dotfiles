@@ -7,7 +7,6 @@
 ## My fish shell config. Nothing fancy, but I like it
 
 ### PATH ###
-fish_add_path $HOME/.linuxbrew/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.npm-global/bin
 fish_add_path $HOME/.local/scripts
@@ -59,8 +58,6 @@ abbr k "kubectl"
 abbr kz "kubectl kustomize"
 # journalctl
 abbr journal "journalctl -xefu"
-# brew
-abbr brew-cleanup "brew cleanup --prune=all"
 # tmux
 abbr t "tmux"
 # neofetch
@@ -111,9 +108,6 @@ alias snips="ssh snips.sh"
 alias streamdeck="$HOME/.virtualenvs/streamdeck/bin/streamdeck"
 
 ### Dev ENV ###
-
-# Homebrew env
-[ -d $HOME/.linuxbrew ] && eval ($HOME/.linuxbrew/bin/brew shellenv)
 
 # fzf key-remaps
 fzf_configure_bindings --git_status --history=\ch --variables=\cv --directory=\cx --git_log=\cg
