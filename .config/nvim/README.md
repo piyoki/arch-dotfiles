@@ -41,10 +41,10 @@
 
 ```bash
 # MacOS
-brew install --HEAD tree-sitter luajit neovim
+brew install --HEAD tree-sitter luajit neovim fzf fd
 
 # Archlinux
-sudo pacman -S tree-sitter luajit neovim
+sudo pacman -S tree-sitter luajit neovim fzf fd
 ```
 
 <details><summary>Install nvim-lspconfig</summary>
