@@ -12,12 +12,10 @@ configuration {
   display-window: "Windows:";
   drun-display-format: "{name}";
   font: "FiraCode Nerd Font 14";
-  modi: "window,run,drun,emoji";
-  dpi: 144;
+  modi: "window,run,drun";
+  dpi: 1;
   display-drun: " ";
   display-window: " ";
-  display-emoji: "󰞅 ";
-  display-calc: " ";
 }
 
 /*****----- Global Properties -----*****/
