@@ -5,9 +5,9 @@
     "icon": "/usr/share/nwg-bar/images/system-lock-screen.svg"
   },
   {
-    "label": "Logout",
-    "exec": "swaymsg exit -c 000000",
-    "icon": "/usr/share/nwg-bar/images/system-log-out.svg"
+    "label": "Sleep",
+    "exec": "$HOME/.config/hypr/scripts/sleep.sh",
+    "icon": "/usr/share/nwg-bar/images/system-suspend.svg"
   },
   {
     "label": "Reboot",

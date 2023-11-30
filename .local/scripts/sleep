@@ -1,4 +1,6 @@
 #!/bin/bash
 
-# sleep
-xset dpms force suspend
+swayidle -w timeout 1 'swaylock -f -c 000000' \
+  timeout 10 'systemctl suspend' \
+  after-resume 'hyprctl dispatch dpms on' \
+  before-sleep 'swaylock -f -c 000000 && hyprctl dispatch dpms off'
