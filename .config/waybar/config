@@ -1,8 +1,12 @@
 {
     "layer": "top",
     "position": "top",
-    "spacing": 0,
+    "spacing": 5,
     "height": 34,
+    "margin-top": 10,
+    "margin-bottom": 0,
+    "margin-left": 25,
+    "margin-right": 25,
     "modules-left": [
         "custom/logo",
         "hyprland/workspaces"
@@ -48,7 +52,9 @@
             "2": [],
             "3": [],
             "4": [],
-            "5": []
+            "5": [],
+            "6": [],
+            "7": [],
         }
     },
     "memory": {
@@ -57,7 +63,7 @@
         "max-length": 10
     },
     "tray": {
-        "spacing": 10
+        "spacing": 15
     },
     "clock": {
         "tooltip-format": "<tt>{calendar}</tt>",
@@ -94,47 +100,10 @@
     "custom/logo": {
         "format": "  ",
         "tooltip": false,
-        "on-click": "~/.config/rofi/launchers/misc/launcher.sh &"
-    },
-    "battery": {
-        "format": "{capacity}% {icon}",
-        "format-icons": {
-            "charging": [
-                "󰢜",
-                "󰂆",
-                "󰂇",
-                "󰂈",
-                "󰢝",
-                "󰂉",
-                "󰢞",
-                "󰂊",
-                "󰂋",
-                "󰂅"
-            ],
-            "default": [
-                "󰁺",
-                "󰁻",
-                "󰁼",
-                "󰁽",
-                "󰁾",
-                "󰁿",
-                "󰂀",
-                "󰂁",
-                "󰂂",
-                "󰁹"
-            ]
-        },
-        "format-full": "Charged ",
-        "interval": 5,
-        "states": {
-            "warning": 20,
-            "critical": 10
-        },
-        "tooltip": false
     },
     "custom/power": {
         "format": "󰤆",
         "tooltip": false,
-        "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh &"
+        "on-click": "nwg-bar"
     }
 }

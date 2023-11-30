@@ -1,13 +1,13 @@
 * {
   border: none;
-  border-radius: 0;
+  border-radius: 20;
   min-height: 0;
   font-family: Material Design Icons, JetBrainsMono Nerd Font;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 window#waybar {
-  background-color: #181825;
+  background-color: #1f2226;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -27,7 +27,7 @@ window#waybar.hidden {
   padding: 6px 18px;
   margin: 6px 3px;
   border-radius: 4px;
-  background-color: #1e1e2e;
+  background-color: #1f2226;
   color: #cdd6f4;
 }
 
@@ -58,7 +58,7 @@ window#waybar.hidden {
   border-radius: 4px;
   margin: 6px 3px;
   padding: 6px 12px;
-  background-color: #1e1e2e;
+  background-color: #1f2226;
   color: #181825;
 }
 
@@ -70,9 +70,9 @@ window#waybar.hidden {
   padding-right: 7px;
   padding-left: 7px;
   margin-left: 5px;
-  font-size: 15px;
+  font-size: 18px;
   border-radius: 8px 0px 0px 8px;
-  color: #1793d1;
+  color: #e3dcf2;
 }
 
 #memory {
