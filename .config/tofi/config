@@ -18,7 +18,7 @@ multi-instance = false
 ascii-input = true
 
 # STYLE OPTIONS
-font = "FiraCode Nerd Font Mono"
+font = "ComicCodeLigatures Nerd Font"
 font-size = 14
 font-features = ""
 font-variations = ""
