@@ -1,4 +1,3 @@
 # arch-dotfiles
 
-![image](https://github.com/yqlbu/arch-dotfiles/assets/31861128/7f3d4894-ec11-43c8-9ef4-e870d719200d)
-
+![image_2023-12-01_15-12-25](https://github.com/yqlbu/arch-dotfiles/assets/31861128/34e4aa39-4e77-42ab-8918-7c328183cf39)
