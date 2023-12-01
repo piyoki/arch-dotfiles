@@ -1,8 +1,8 @@
 [global]
     monitor = 1
     follow = none
-    width = 300
-    height = 145
+    width = 320
+    height = 150
     origin = top-right
     alignment = "left"
     vertical_alignment = "center"
@@ -32,7 +32,7 @@
     history_length = 20 
     show_age_threshold = 60 
     markup = "full" 
-    font = "monospace 10" 
+    font = "FiraCode Nerd Font Mono 10" 
     format = "<b>%s</b>\n%b: 
     word_wrap = "yes" 
     sort = "yes" 
