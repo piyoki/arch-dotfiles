@@ -80,7 +80,10 @@ abbr gl "git log --all --decorate --oneline --graph"
 abbr gcc "git fetch -p && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D"
 abbr gcb "git checkout -b"
 abbr gd "git diff"
+abbr ys "yadm status"
+abbr ya "yadm add"
 abbr yp "yadm pull"
+abbr ypp "yadm push"
 # program
 alias vlc "org.videolan.VLC"
 
