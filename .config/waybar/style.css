@@ -1,3 +1,12 @@
+@define-color bg #0d0d0d;
+@define-color darkgrey #131822;
+@define-color lightgrey #343a40;
+@define-color red #e30b44;
+@define-color white #f2efeb;
+@define-color green #85ff99;
+@define-color lightyellow #f6eac4;
+@define-color tray #181825;
+
 * {
   border: none;
   border-radius: 10px;
@@ -11,7 +20,7 @@ window#waybar {
 }
 
 #workspaces {
-  background-color: #0d0d0d;
+  background-color: @bg;
   margin-left: 6px;
 }
 
@@ -22,20 +31,20 @@ window#waybar {
   padding: 6px 18px;
   margin: 6px 3px;
   border-radius: 4px;
-  background-color: #0d0d0d;
-  color: #343a40;
+  background-color: @bg;
+  color: @lightgrey;
   font-size: 10px;
 }
 
 #workspaces button.active {
-  color: #f2efeb;
+  color: @white;
 }
 
 #workspaces button:hover {
  box-shadow: inherit;
  text-shadow: inherit;
- color: #f2efeb;
- background-color: #343a40;
+ color: @white;
+ background-color: @lightgrey;
 }
 
 #temperature,
@@ -54,8 +63,8 @@ window#waybar {
   border-radius: 4px;
   margin: 6px 3px;
   padding: 6px 12px;
-  background-color: #0d0d0d;
-  color: #181825;
+  background-color: @bg;
+  color: @tray;
 }
 
 #temperature,
@@ -65,13 +74,13 @@ window#waybar {
 #pulseaudio,
 #network,
 #bluetooth{
-  color: #f6eac4;
-  background-color: #0d0d0d;
+  color: @lightyellow;
+  background-color: @bg;
 }
 
 #clock{
   font-family: JetBrainsMono Nerd Font;
-  background-color: #85ff99;
+  background-color: @green;
 }
 
 #network,
@@ -82,21 +91,21 @@ window#waybar {
 #custom-weather,
 #custom-power {
   margin-right: 6px;
-  background-color: #0d0d0d;
-  color: #ffffff
+  background-color: @bg;
+  color: @white;
 }
 
 #custom-pacman {
-  color: #e30b44;
+  color: @red;
 }
 
 tooltip {
 border-radius: 8px;
 padding: 15px;
-background-color: #131822;
+background-color: @darkgrey;
 }
 
 tooltip label {
 padding: 5px;
-background-color: #131822;
+background-color: @darkgrey;
 }
