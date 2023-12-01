@@ -1,6 +1,6 @@
 * {
   border: none;
-  border-radius: 20;
+  border-radius: 10px;
   min-height: 0;
   font-family: Material Design Icons, JetBrainsMono Nerd Font;
   font-size: 14px;
@@ -12,6 +12,7 @@ window#waybar {
 
 #workspaces {
   background-color: #1f2226;
+  margin-left: 6px;
 }
 
 #workspaces button {
