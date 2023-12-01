@@ -57,12 +57,12 @@
         }
     },
     "cpu": {
-        "interval": 5,
-        "format": " {}%",
+        "interval": 2,
+        "format": " {}%",
         "max-length": 10
     },
     "memory": {
-        "interval": 5,
+        "interval": 2,
         "format": "󰍛 {}%",
         "max-length": 10
     },
