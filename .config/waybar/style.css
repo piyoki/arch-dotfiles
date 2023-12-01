@@ -38,13 +38,17 @@ window#waybar {
  background-color: #343a40;
 }
 
+#temperature,
 #cpu,
 #memory,
 #custom-power,
+#custom-weather,
+#custom-pacman,
 #battery,
 #backlight,
 #pulseaudio,
 #network,
+#bluetooth,
 #clock,
 #tray {
   border-radius: 4px;
@@ -54,11 +58,13 @@ window#waybar {
   color: #181825;
 }
 
+#temperature,
 #cpu,
 #memory,
 #backlight,
 #pulseaudio,
-#network{
+#network,
+#bluetooth{
   color: #f6eac4;
   background-color: #0d0d0d;
 }
@@ -68,16 +74,21 @@ window#waybar {
   background-color: #85ff99;
 }
 
-#network {
+#network,
+#bluetooth{
   padding-right: 17px;
 }
 
+#custom-weather,
 #custom-power {
   margin-right: 6px;
-  background-color: #262626;
+  background-color: #0d0d0d;
   color: #ffffff
 }
 
+#custom-pacman {
+  color: #e30b44;
+}
 
 tooltip {
 border-radius: 8px;
