@@ -1,8 +1,8 @@
 #!/bin/bash
 
-pkill swayidle
+# pkill swayidle
 
-swayidle -w timeout 1 'swaylock -f -c 000000' \
-  timeout 5 'systemctl suspend' \
-  after-resume 'hyprctl dispatch dpms on' \
-  before-sleep 'swaylock && hyprctl dispatch dpms off' &
+# swayidle -w timeout 1 'swaylock -f -c 000000' \
+#   timeout 5 'systemctl suspend' \
+#   after-resume 'hyprctl dispatch dpms on' \
+#   before-sleep 'swaylock && hyprctl dispatch dpms off' &
