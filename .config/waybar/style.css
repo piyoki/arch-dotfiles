@@ -40,10 +40,6 @@ window#waybar {
  background-color: #343a40;
 }
 
-#workspaces button.urgent {
-  background-color: #f38ba8;
-}
-
 #cpu,
 #memory,
 #custom-power,
@@ -60,61 +56,30 @@ window#waybar {
   color: #181825;
 }
 
-#custom-power {
-  margin-right: 6px;
+#cpu,
+#memory,
+#backlight,
+#pulseaudio,
+#network{
+  color: #f6eac4;
+  background-color: #0d0d0d;
 }
 
-#cpu {
-  background-color: #91c4d9;
-}
-#memory {
-  background-color: #fab387;
-}
-#battery {
-  background-color: #f38ba8;
-}
-@keyframes blink {
-  to {
-    background-color: #f38ba8;
-    color: #181825;
-  }
-}
-
-#battery.warning,
-#battery.critical,
-#battery.urgent {
-  background-color: #ff0048;
-  color: #181825;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-#battery.charging {
-  background-color: #a6e3a1;
-}
-
-#backlight {
-  background-color: #fab387;
-}
-
-#pulseaudio {
-  background-color: #f9e2af;
+#clock{
+  background-color: #f2efeb;
 }
 
 #network {
-  background-color: #94e2d5;
   padding-right: 17px;
 }
 
 #clock {
   font-family: JetBrainsMono Nerd Font;
-  background-color: #ccccff;
 }
 
 #custom-power {
-  background-color: #404040;
+  margin-right: 6px;
+  background-color: #262626;
   color: #ffffff
 }
 
