@@ -1,0 +1,29 @@
+{
+  "output": "HDMI-A-3",
+    "layer": "top",
+    "position": "top",
+    "spacing": 5,
+    "height": 34,
+    "margin-top": 10,
+    "margin-bottom": 0,
+    "margin-left": 25,
+    "margin-right": 25,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "6": "",
+            "7": "",
+            "default": "",
+            "active": "",
+        },
+        "persistent_workspaces": {
+            "6": [],
+            "7": [],
+        }
+    },
+}
