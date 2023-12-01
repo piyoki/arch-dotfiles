@@ -16,9 +16,10 @@
     ],
     "modules-right": [
         "tray",
+        "cpu",
         "memory",
-        "network",
         "pulseaudio",
+        "network",
         "battery",
         "custom/power"
     ],
@@ -55,6 +56,11 @@
             "7": [],
         }
     },
+    "cpu": {
+        "interval": 5,
+        "format": " {}%",
+        "max-length": 10
+    },
     "memory": {
         "interval": 5,
         "format": "󰍛 {}%",
@@ -66,7 +72,7 @@
     "clock": {
         "tooltip-format": "<tt>{calendar}</tt>",
         "format-alt": "  {:%a, %d %b %Y}",
-        "format": "  {:%I:%M %p}"
+        "format": "  {:%m/%d %I:%M %p}"
     },
     "network": {
         "format-wifi" : "{icon}",
@@ -83,7 +89,7 @@
 	"nospacing": 1,
     },
     "pulseaudio": {
-        "format": "{icon}",
+        "format": "{icon} {volume}%",
         "format-bluetooth": "󰂰",
         "nospacing": 1,
         "tooltip-format": "Volume : {volume}%",

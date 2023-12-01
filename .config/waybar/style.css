@@ -43,6 +43,7 @@ window#waybar {
   background-color: #f38ba8;
 }
 
+#cpu,
 #memory,
 #custom-power,
 #battery,
@@ -62,6 +63,9 @@ window#waybar {
   margin-right: 6px;
 }
 
+#cpu {
+  background-color: #91c4d9;
+}
 #memory {
   background-color: #fab387;
 }
