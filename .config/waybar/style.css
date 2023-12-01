@@ -13,7 +13,6 @@ window#waybar {
 #workspaces {
   background-color: #0d0d0d;
   margin-left: 6px;
-  opacity: 0.8;
 }
 
 #workspaces button {
@@ -29,14 +28,13 @@ window#waybar {
 }
 
 #workspaces button.active {
-  color: #cdd6f4;
-  opacity: 1;
+  color: #f2efeb;
 }
 
 #workspaces button:hover {
  box-shadow: inherit;
  text-shadow: inherit;
- color: #cdd6f4;
+ color: #f2efeb;
  background-color: #343a40;
 }
 
@@ -66,15 +64,12 @@ window#waybar {
 }
 
 #clock{
-  background-color: #f2efeb;
+  font-family: JetBrainsMono Nerd Font;
+  background-color: #85ff99;
 }
 
 #network {
   padding-right: 17px;
-}
-
-#clock {
-  font-family: JetBrainsMono Nerd Font;
 }
 
 #custom-power {
