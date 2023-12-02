@@ -82,7 +82,7 @@ abbr gcb "git checkout -b"
 abbr gd "git diff"
 abbr ys "yadm status"
 abbr ya "yadm add"
-abbr ym "yadm commit -m"
+abbr ycm "yadm commit -m"
 abbr yp "yadm pull"
 abbr ypp "yadm push"
 # program
