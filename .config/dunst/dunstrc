@@ -38,7 +38,7 @@
     show_age_threshold = 60 
     markup = "full" 
     font = "FiraCode Nerd Font Mono 10"
-    format = "%s\n%b"
+    format = "<b>%s</b>\n%b"
     word_wrap = "yes" 
     sort = "yes" 
     shrink = "no" 
