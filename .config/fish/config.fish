@@ -81,10 +81,14 @@ abbr gcc "git fetch -p && git branch -vv | grep ': gone]' | awk '{print $1}' | x
 abbr gcb "git checkout -b"
 abbr gd "git diff"
 abbr ys "yadm status"
-abbr ya "yadm add"
+abbr yadd "yadm add"
 abbr ycm "yadm commit -m"
 abbr yp "yadm pull"
 abbr ypp "yadm push"
+
+# ripgrep
+abbr rgf "rg --files | rg"
+
 # program
 alias vlc "org.videolan.VLC"
 
