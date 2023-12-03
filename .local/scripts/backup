@@ -3,66 +3,73 @@
 echo "Backup on $(date)" > $HOME/backup_log.txt
 
 # system
-sudo mc cp /usr/local/bin/restart-scdaemon minio/server-configurations/arch-desktop/restart-scdaemon
+sudo mc mirror --overwrite --remove /etc/pacman.d/ minio/server-configurations/arch-desktop/pacman.d/
 sudo mc cp /etc/pacman.conf minio/server-configurations/arch-desktop/pacman.conf
-sudo mc mirror --overwrite /etc/pacman.d/ minio/server-configurations/arch-desktop/pacman.d/
 sudo mc cp /etc/crontab minio/server-configurations/arch-desktop/crontab
-sudo mc mirror --overwrite /etc/mosdns minio/server-configurations/arch-desktop/mosdns/
+mc cp ~/.local/scripts/restart-scdaemon minio/server-configurations/arch-desktop/restart-scdaemon
 mc cp ~/.wakatime.cfg minio/server-configurations/arch-desktop/
 mc cp ~/.gitconfig minio/server-configurations/arch-desktop/
-mc cp ~/.git-credentials minio/server-configurations/arch-desktop/
 mc cp ~/.owm-key minio/server-configurations/arch-desktop/
 mc cp ~/.Xresources minio/server-configurations/arch-desktop/
 mc cp ~/.xprofile minio/server-configurations/arch-desktop/
 mc cp ~/.profile minio/server-configurations/arch-desktop/
 mc cp ~/.streamdeck_ui_export.json minio/server-configurations/arch-desktop/
-mc mirror --overwrite ~/.ssh/ minio/server-configurations/arch-desktop/.ssh/
-mc mirror --overwrite ~/.screenlayout/ minio/server-configurations/arch-desktop/.screenlayout/
-mc mirror --overwrite ~/.assets/ minio/server-configurations/arch-desktop/.assets/
-mc mirror --overwrite ~/.docker/ minio/server-configurations/arch-desktop/.docker/
-mc mirror --overwrite ~/.gnupg/ minio/server-configurations/arch-desktop/.gnupg/
-mc mirror --overwrite ~/.mc/ minio/server-configurations/arch-desktop/.mc/
-mc mirror --overwrite ~/.aws/ minio/server-configurations/arch-desktop/.aws/
-mc mirror --overwrite ~/.sops/ minio/server-configurations/arch-desktop/.sops/
+mc mirror --overwrite --remove ~/.gitconfigs minio/server-configurations/arch-desktop/.gitconfigs/
+mc mirror --overwrite --remove ~/.ssh/ minio/server-configurations/arch-desktop/.ssh/
+mc mirror --overwrite --remove ~/.screenlayout/ minio/server-configurations/arch-desktop/.screenlayout/
+mc mirror --overwrite --remove ~/.assets/ minio/server-configurations/arch-desktop/.assets/
+mc mirror --overwrite --remove ~/.docker/ minio/server-configurations/arch-desktop/.docker/
+mc mirror --overwrite --remove ~/.gnupg/ minio/server-configurations/arch-desktop/.gnupg/
+mc mirror --overwrite --remove ~/.mc/ minio/server-configurations/arch-desktop/.mc/
+mc mirror --overwrite --remove ~/.aws/ minio/server-configurations/arch-desktop/.aws/
+mc mirror --overwrite --remove ~/.sops/ minio/server-configurations/arch-desktop/.sops/
+mc mirror --overwrite --remove ~/.age/ minio/server-configurations/arch-desktop/.age/
+mc mirror --overwrite --remove ~/.kube/ minio/server-configurations/arch-desktop/.kube/
 
 # icons/themes
-mc mirror --overwrite ~/.icons/ minio/server-configurations/arch-desktop/.icons/
-mc mirror --overwrite ~/.themes/ minio/server-configurations/arch-desktop/.themes/
+mc mirror --overwrite --remove ~/.icons/ minio/server-configurations/arch-desktop/.icons/
+mc mirror --overwrite --remove ~/.themes/ minio/server-configurations/arch-desktop/.themes/
 
 # home
-mc mirror --overwrite ~/Pictures/ minio/server-configurations/arch-desktop/Pictures/
-mc mirror --overwrite ~/Desktop/ minio/server-configurations/arch-desktop/Desktop/
-mc mirror --overwrite ~/Documents/ minio/server-configurations/arch-desktop/Documents/
+mc mirror --overwrite --remove ~/Pictures/ minio/server-configurations/arch-desktop/Pictures/
+mc mirror --overwrite --remove ~/Desktop/ minio/server-configurations/arch-desktop/Desktop/
+mc mirror --overwrite --remove ~/Documents/ minio/server-configurations/arch-desktop/Documents/
 
 # scripts
-mc mirror --overwrite ~/.local/scripts/ minio/server-configurations/arch-desktop/.local/scripts/
-mc mirror --overwrite ~/.local/bin/ minio/server-configurations/arch-desktop/.local/bin/
+mc mirror --overwrite --remove ~/.local/scripts/ minio/server-configurations/arch-desktop/.local/scripts/
+mc mirror --overwrite --remove ~/.local/bin/ minio/server-configurations/arch-desktop/.local/bin/
 
 # configs
-mc mirror --overwrite ~/.config/bspwm/ minio/server-configurations/arch-desktop/.config/bspwm/
-mc mirror --overwrite ~/.config/alacritty/ minio/server-configurations/arch-desktop/.config/alacritty/
-mc mirror --overwrite ~/.config/betterlockscreen/ minio/server-configurations/arch-desktop/.config/betterlockscreen/
-mc mirror --overwrite ~/.config/colorscheme/ minio/server-configurations/arch-desktop/.config/colorscheme/
-mc mirror --overwrite ~/.config/dunst/ minio/server-configurations/arch-desktop/.config/dunst/
-mc mirror --overwrite ~/.config/fish/ minio/server-configurations/arch-desktop/.config/fish/
-mc mirror --overwrite ~/.config/gtk-2.0/ minio/server-configurations/arch-desktop/.config/gtk-2.0/
-mc mirror --overwrite ~/.config/gtk-3.0/ minio/server-configurations/arch-desktop/.config/gtk-3.0/
-mc mirror --overwrite ~/.config/lazygit/ minio/server-configurations/arch-desktop/.config/lazygit/
-mc mirror --overwrite ~/.config/lazydocker/ minio/server-configurations/arch-desktop/.config/lazydocker/
-mc mirror --overwrite ~/.config/lf/ minio/server-configurations/arch-desktop/.config/lf/
-mc mirror --overwrite ~/.config/lightdm/ minio/server-configurations/arch-desktop/.config/lightdm/
-mc mirror --overwrite ~/.config/neofetch/ minio/server-configurations/arch-desktop/.config/neofetch/
-mc mirror --overwrite ~/.config/nvim/ minio/server-configurations/arch-desktop/.config/nvim/
-mc mirror --overwrite ~/.config/picom/ minio/server-configurations/arch-desktop/.config/picom/
-mc mirror --overwrite ~/.config/polybar/ minio/server-configurations/arch-desktop/.config/polybar/
-mc mirror --overwrite ~/.config/rofi/ minio/server-configurations/arch-desktop/.config/rofi/
-mc mirror --overwrite ~/.config/sxhkd/ minio/server-configurations/arch-desktop/.config/sxhkd/
-mc mirror --overwrite ~/.config/tmux/ minio/server-configurations/arch-desktop/.config/tmux/
-mc mirror --overwrite ~/.config/flameshot/ minio/server-configurations/arch-desktop/.config/flameshot/
-mc mirror --overwrite ~/.config/rclone/ minio/server-configurations/arch-desktop/.config/rclone/
-mc mirror --overwrite ~/.config/bat/ minio/server-configurations/arch-desktop/.config/bat/
-mc mirror --overwrite ~/.local/share/atuin/ minio/server-configurations/arch-desktop/.local/share/atuin/
-mc mirror --overwrite ~/.local/share/fish/ minio/server-configurations/arch-desktop/.local/share/fish/
+mc mirror --overwrite --remove ~/.config/fcitx5/ minio/server-configurations/arch-desktop/.config/fcitx5/
+mc mirror --overwrite --remove ~/.config/bspwm/ minio/server-configurations/arch-desktop/.config/bspwm/
+mc mirror --overwrite --remove ~/.config/alacritty/ minio/server-configurations/arch-desktop/.config/alacritty/
+mc mirror --overwrite --remove ~/.config/betterlockscreen/ minio/server-configurations/arch-desktop/.config/betterlockscreen/
+mc mirror --overwrite --remove ~/.config/colorscheme/ minio/server-configurations/arch-desktop/.config/colorscheme/
+mc mirror --overwrite --remove ~/.config/dunst/ minio/server-configurations/arch-desktop/.config/dunst/
+mc mirror --overwrite --remove ~/.config/fish/ minio/server-configurations/arch-desktop/.config/fish/
+mc mirror --overwrite --remove ~/.config/gtk/ minio/server-configurations/arch-desktop/.config/gtk/
+mc mirror --overwrite --remove ~/.config/gtk-2.0/ minio/server-configurations/arch-desktop/.config/gtk-2.0/
+mc mirror --overwrite --remove ~/.config/gtk-3.0/ minio/server-configurations/arch-desktop/.config/gtk-3.0/
+mc mirror --overwrite --remove ~/.config/gtk-4.0/ minio/server-configurations/arch-desktop/.config/gtk-4.0/
+mc mirror --overwrite --remove ~/.config/lazygit/ minio/server-configurations/arch-desktop/.config/lazygit/
+mc mirror --overwrite --remove ~/.config/lazydocker/ minio/server-configurations/arch-desktop/.config/lazydocker/
+mc mirror --overwrite --remove ~/.config/lf/ minio/server-configurations/arch-desktop/.config/lf/
+mc mirror --overwrite --remove ~/.config/lightdm/ minio/server-configurations/arch-desktop/.config/lightdm/
+mc mirror --overwrite --remove ~/.config/neofetch/ minio/server-configurations/arch-desktop/.config/neofetch/
+mc mirror --overwrite --remove ~/.config/nvim/ minio/server-configurations/arch-desktop/.config/nvim/
+mc mirror --overwrite --remove ~/.config/picom/ minio/server-configurations/arch-desktop/.config/picom/
+mc mirror --overwrite --remove ~/.config/polybar/ minio/server-configurations/arch-desktop/.config/polybar/
+mc mirror --overwrite --remove ~/.config/rofi/ minio/server-configurations/arch-desktop/.config/rofi/
+mc mirror --overwrite --remove ~/.config/sxhkd/ minio/server-configurations/arch-desktop/.config/sxhkd/
+mc mirror --overwrite --remove ~/.config/tmux/ minio/server-configurations/arch-desktop/.config/tmux/
+mc mirror --overwrite --remove ~/.config/flameshot/ minio/server-configurations/arch-desktop/.config/flameshot/
+mc mirror --overwrite --remove ~/.config/rclone/ minio/server-configurations/arch-desktop/.config/rclone/
+mc mirror --overwrite --remove ~/.config/bat/ minio/server-configurations/arch-desktop/.config/bat/
+mc mirror --overwrite --remove ~/.config/waybar/ minio/server-configurations/arch-desktop/.config/waybar/
+mc mirror --overwrite --remove ~/.config/hypr/ minio/server-configurations/arch-desktop/.config/hypr/
+mc mirror --overwrite --remove ~/.config/nwg-look/ minio/server-configurations/arch-desktop/.config/nwg-look/
+mc mirror --overwrite --remove ~/.local/share/atuin/ minio/server-configurations/arch-desktop/.local/share/atuin/
+mc mirror --overwrite --remove ~/.local/share/fish/ minio/server-configurations/arch-desktop/.local/share/fish/
 
 # systemd
 sudo mc cp /etc/systemd/system/rclone.service minio/server-configurations/arch-desktop/systemd/rclone.service

@@ -1,7 +1,11 @@
 #!/bin/bash
 
+icon=/usr/share/icons/Papirus-Dark/symbolic/actions/system-suspend-symbolic.svg
+
+notify-send -i $icon 'Swayidle' 'sleep in 5s';
+
 swayidle -w \
   timeout 5 'hyprctl dispatch dpms off' \
-  resume 'hyprctl dispatch dpms on && pkill swayidle' \
+  resume 'hyprctl dispatch dpms on && pkill swayidle && $HOME/.config/hypr/scripts/autosleep.sh' \
   after-resume 'waybar' \
   before-sleep 'pkill waybar' &
