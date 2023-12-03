@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+rofi_command="rofi -theme $HOME/.config/rofi/config/powermenu.rasi"
+
+uptime=$(uptime -p | sed -e 's/up //g')
+
+# Options
+sleep=""
+lock=""
+reload=""
+logout="󰗼"
+poweroff=""
+reboot="󰠠"
+ddir="$HOME/.config/rofi/config"
+
+# Variable passed to rofi
+options="$sleep\n$lock\n$reload\n$logout\n$poweroff\n$reboot"
+
+chosen="$(echo -e "$options" | $rofi_command -p "UP - $uptime" -dmenu -selected-row 0)"
+case $chosen in
+$sleep)
+    $HOME/.local/scripts/sleep ;;
+$lock)
+    swaylock -c 000000 ;;
+$reload)
+    hyprctl reload ;;
+$logout)
+    pkill -9 -u $USER ;;
+$poweroff)
+    systemctl -i poweroff ;;
+$reboot)
+    systemctl reboot ;;
+esac
