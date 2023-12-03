@@ -12,6 +12,9 @@
     offset = "15x15"
     padding = 15
     horizontal_padding = 15
+    icon_path = "/usr/share/icons/Papirus/symbolic/"
+    icon_theme = "Papirus-Dark"
+    enable_recursive_icon_lookup = true
     text_icon_padding = 15
     icon_position = "left"
     min_icon_size = 48
@@ -34,7 +37,7 @@
     history_length = 20 
     show_age_threshold = 60 
     markup = "full" 
-    font = "FiraCode Nerd Font Mono 10" 
+    font = "FiraCode Nerd Font Mono 10"
     format = "%s\n%b"
     word_wrap = "yes" 
     sort = "yes" 
