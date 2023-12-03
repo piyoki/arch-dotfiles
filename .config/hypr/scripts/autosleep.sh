@@ -2,7 +2,7 @@
 
 icon=system-suspend-symbolic
 
-notify-send -i $icon 'Swayidle' 'sleep in 5s' -t 5000
+notify-send -i $icon 'Swayidle' 'autosleep enabled' -t 10000
 
 swayidle -w \
   timeout 360 'hyprctl dispatch dpms off' \
