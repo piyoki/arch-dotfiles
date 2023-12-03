@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 iDIR="$HOME/.config/mako/icons"
+class="string:x-canonical-private-synchronous:sys-notify"
 
 # Get Volume
 get_volume() {
@@ -10,23 +11,23 @@ get_volume() {
 # Increase Volume
 volume_up() {
   pamixer -i 5
-  notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i audio-volume-high-symbolic "Volume Up" "Current Volume: $(get_volume) %"
+  notify-send -h $class -u low -i audio-volume-high-symbolic "Volume Up" "Current Volume: $(get_volume) %" -t 1000
 }
 
 # Decrease Volume
 volume_down() {
   pamixer -d 5
-  notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i audio-volume-low-symbolic "Volume Down" "Current Volume: $(get_volume) %"
+  notify-send -h $class -u low -i audio-volume-low-symbolic "Volume Down" "Current Volume: $(get_volume) %" -t 10000
 }
 
 # Toggle Mute
 toggle_mute() {
   if [ "$(pamixer --get-mute)" == "false" ]; then
     pamixer -m
-    notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i audio-volume-muted-symbolic "Volume Mute" "Volume Switched OFF"
+    notify-send -h $class -u low -i audio-volume-muted-symbolic "Volume Mute" "Volume Switched OFF" -t 10000
   elif [ "$(pamixer --get-mute)" == "true" ]; then
     pamixer -u
-    notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i audio-volume-high-symbolic "Volume Mute" "Volume Switched ON"
+    notify-send -h $class -u low -i audio-volume-high-symbolic "Volume Mute" "Volume Switched ON" -t 10000
   fi
 }
 

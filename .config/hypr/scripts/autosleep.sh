@@ -1,8 +1,8 @@
 #!/bin/bash
 
-icon=/usr/share/icons/Papirus-Dark/symbolic/actions/system-suspend-symbolic.svg
+icon=system-suspend-symbolic
 
-notify-send -i $icon 'Swayidle' 'sleep in 5s'
+notify-send -i $icon 'Swayidle' 'sleep in 5s' -t 5000
 
 swayidle -w \
   timeout 360 'hyprctl dispatch dpms off' \
