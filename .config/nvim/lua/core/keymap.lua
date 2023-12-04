@@ -211,6 +211,7 @@ function M.setup()
       b = { '<cmd>Telescope buffers prompt_prefix=🔍<CR>', 'Telescope Buffers' },
       l = { '<cmd>Telescope current_buffer_fuzzy_find prompt_prefix=🔍<CR>', 'Telescope Buffer Search' },
       f = { '<cmd>Telescope find_files hidden=true prompt_prefix=🔍<CR>', 'Telescope Find Files' },
+      F = { '<cmd>Telescope oldfiles hidden=true prompt_prefix=🔍<CR>', 'Telescope Find Recent Files' },
       g = { '<cmd>Telescope git_commits prompt_prefix=🔍<CR>', 'Telescope Git Commits' },
       H = { '<cmd>Telescope help_tags prompt_prefix=🔍<CR>', 'Telescope Help' },
       j = { '<cmd>Telescope jumplist prompt_prefix=🔍<CR>', 'Telescope Jump List' },
@@ -218,8 +219,12 @@ function M.setup()
       e = { '<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>', 'Telescope File Browser' },
       s = { '<cmd>Telescope live_grep prompt_prefix=🔍<CR>', 'Telescope Live Grep' },
       d = { '<cmd>Telescope diagnostics prompt_prefix=🔍<CR>', 'Telescope Diagonostics' },
-      m = { '<cmd>Telescope marks prompt_prefix=🔍<CR>', 'Telescope Diagonostics' },
-      p = { '<cmd>Telescope projects prompt_prefix=🔍<CR>', 'Telescope Diagonostics' },
+      m = { '<cmd>Telescope marks prompt_prefix=🔍<CR>', 'Telescope Marks' },
+      p = { '<cmd>Telescope projects prompt_prefix=🔍<CR>', 'Telescope Recent Projects' },
+      P = {
+        '<cmd>Telescope repo list search_dirs=~/Workspace hidden=true prompt_prefix=🔍<CR>',
+        'Telescope Find Projects',
+      },
       h = { '<cmd>Telescope highlights prompt_prefix=🔍<CR>', 'Telescope Diagonostics' },
     },
   }, {

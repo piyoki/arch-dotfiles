@@ -70,10 +70,13 @@ function tools.setup()
   require('telescope').load_extension('file_browser')
   require('telescope').load_extension('harpoon')
   require('telescope').load_extension('live_grep_args')
-  require('plenary.filetype').add_file('json')
   require('telescope').load_extension('sfm-telescope')
   require('telescope').load_extension('projects')
   require('telescope').load_extension('repo')
+
+  -- filetype
+  require('plenary.filetype').add_file('json')
+  require('plenary.filetype').add_file('nginx')
 
   -- Fterm
   require('FTerm').setup({
