@@ -85,6 +85,7 @@ return require('packer').startup(function()
       'dinhhuy258/sfm-telescope.nvim',
     },
   })
+  use({ 'ahmedkhalf/project.nvim' })
 
   -- searching & filtering
   use({ 'nvim-telescope/telescope.nvim' })

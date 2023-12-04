@@ -113,7 +113,7 @@ function M.setup()
   utils.map('n', '<C-h>', ":lua require('harpoon.ui').nav_next()<CR>") -- (N) Navigate to next harpoon mark
   utils.map('n', '<LEADER>m', ":lua require('harpoon.ui').toggle_quick_menu()<CR>") -- (N) Open up harpoon menu
 
-  -- TeleScope (Short)
+  -- Telescope (Short)
   utils.map(
     'n',
     '\\',

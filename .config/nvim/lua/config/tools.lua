@@ -30,6 +30,9 @@ function tools.setup()
     },
   })
 
+  -- project
+  require('project_nvim').setup({})
+
   -- telescope
   require('telescope').setup({
     defaults = {
@@ -54,6 +57,7 @@ function tools.setup()
   require('telescope').load_extension('live_grep_args')
   require('plenary.filetype').add_file('json')
   require('telescope').load_extension('sfm-telescope')
+  require('telescope').load_extension('projects')
 
   -- Fterm
   require('FTerm').setup({
