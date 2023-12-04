@@ -114,11 +114,6 @@ _G.packer_plugins = {
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/code_runner.nvim",
     url = "https://github.com/CRAG666/code_runner.nvim"
   },
-  ["diffview.nvim"] = {
-    loaded = true,
-    path = "/home/kev/.local/share/nvim/site/pack/packer/start/diffview.nvim",
-    url = "https://github.com/sindrets/diffview.nvim"
-  },
   ["emmet-vim"] = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/emmet-vim",
@@ -133,11 +128,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
-  },
-  ["git-blame.nvim"] = {
-    loaded = true,
-    path = "/home/kev/.local/share/nvim/site/pack/packer/start/git-blame.nvim",
-    url = "https://github.com/f-person/git-blame.nvim"
   },
   ["github-nvim-theme"] = {
     loaded = true,
@@ -311,15 +301,15 @@ _G.packer_plugins = {
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/sfm.nvim",
     url = "https://github.com/dinhhuy258/sfm.nvim"
   },
+  ["startup.nvim"] = {
+    loaded = true,
+    path = "/home/kev/.local/share/nvim/site/pack/packer/start/startup.nvim",
+    url = "https://github.com/startup-nvim/startup.nvim"
+  },
   tabular = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/tabular",
     url = "https://github.com/godlygeek/tabular"
-  },
-  tagbar = {
-    loaded = true,
-    path = "/home/kev/.local/share/nvim/site/pack/packer/start/tagbar",
-    url = "https://github.com/preservim/tagbar"
   },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
@@ -335,6 +325,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kev/.local/share/nvim/site/pack/packer/start/telescope-live-grep-args.nvim",
     url = "https://github.com/nvim-telescope/telescope-live-grep-args.nvim"
+  },
+  ["telescope-repo.nvim"] = {
+    loaded = true,
+    path = "/home/kev/.local/share/nvim/site/pack/packer/start/telescope-repo.nvim",
+    url = "https://github.com/cljoly/telescope-repo.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

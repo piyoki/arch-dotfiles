@@ -40,8 +40,6 @@ return require('packer').startup(function()
 
   -- git
   use({ 'lewis6991/gitsigns.nvim' })
-  use({ 'f-person/git-blame.nvim' })
-  use({ 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' })
   use({ 'kdheepak/lazygit.nvim' })
 
   -- IDE-like development
@@ -67,7 +65,6 @@ return require('packer').startup(function()
   use({ 'godlygeek/tabular' })
   use({ 'lukas-reineke/indent-blankline.nvim' })
   use({ 'fraso-dev/nvim-listchars' })
-  use({ 'preservim/tagbar' })
   use({ 'CRAG666/code_runner.nvim' })
   use({ 'kshenoy/vim-signature' })
 
@@ -86,12 +83,14 @@ return require('packer').startup(function()
     },
   })
   use({ 'ahmedkhalf/project.nvim' })
+  use({ 'startup-nvim/startup.nvim' })
 
   -- searching & filtering
   use({ 'nvim-telescope/telescope.nvim' })
   use({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' })
   use({ 'nvim-telescope/telescope-file-browser.nvim' })
   use({ 'nvim-telescope/telescope-live-grep-args.nvim' })
+  use({ 'cljoly/telescope-repo.nvim' })
   use({ 'haya14busa/incsearch.vim' })
 
   -- markdown support

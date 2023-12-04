@@ -33,6 +33,21 @@ function tools.setup()
   -- project
   require('project_nvim').setup({})
 
+  -- telescope.repo
+  require('telescope').setup({
+    extensions = {
+      repo = {
+        settings = {
+          auto_lcd = true,
+        },
+      },
+    },
+  })
+  vim.g.rooter_cd_cmd = 'lcd' -- change each buffer's dir
+
+  -- startup.nvim
+  require('startup').setup(require('config.dashboard'))
+
   -- telescope
   require('telescope').setup({
     defaults = {
@@ -58,6 +73,7 @@ function tools.setup()
   require('plenary.filetype').add_file('json')
   require('telescope').load_extension('sfm-telescope')
   require('telescope').load_extension('projects')
+  require('telescope').load_extension('repo')
 
   -- Fterm
   require('FTerm').setup({
