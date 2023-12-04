@@ -10,10 +10,12 @@ reload=""
 logout="󰗼"
 poweroff=""
 reboot="󰠠"
+idlestart=""
+idlestop="󱫫"
 ddir="$HOME/.config/rofi/config"
 
 # Variable passed to rofi
-options="$sleep\n$lock\n$reload\n$logout\n$poweroff\n$reboot"
+options="$sleep\n$lock\n$reload\n$logout\n$poweroff\n$reboot\n$idlestart\n$idlestop"
 
 chosen="$(echo -e "$options" | $rofi_command -p "UP - $uptime" -dmenu -selected-row 0)"
 case $chosen in
@@ -29,4 +31,8 @@ $poweroff)
     systemctl -i poweroff ;;
 $reboot)
     systemctl reboot ;;
+$idlestart)
+    $HOME/.config/hypr/scripts/autosleep.sh ;;
+$idlestop)
+    pkill swayidle ;;
 esac
