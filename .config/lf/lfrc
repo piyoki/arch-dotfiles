@@ -10,8 +10,8 @@ set icons true
 set drawbox true
 set sortby time
 set ratios 1:2:3
-set cleaner ~/.config/lf/cleaner
-set previewer ~/.config/lf/preview
+set cleaner ~/.config/lf/lf_kitty_clean
+set previewer ~/.config/lf/lf_kitty_preview
 set autoquit true
 set reverse true
 
@@ -153,3 +153,4 @@ map gm cd ~/Media
 map gM cd ~/Minio
 map gp cd ~/Pikpak
 
+map - $~/.config/lf/draw_img.sh "$f"
