@@ -43,7 +43,7 @@ abbr ra "ranger"
 abbr edit "notepadqq"
 abbr top "btop"
 abbr weather "curl wttr.in/"
-abbr lf "lfrun"
+# abbr lf "lfrun"
 # abbr go_async_run "when-changed -r -v -1 . go run"
 # abbr python_async_run "when-changed -r -v -1 . python"
 # # programs and system
@@ -91,6 +91,7 @@ abbr rgf "rg --files | rg"
 
 # program
 alias vlc "org.videolan.VLC"
+abbr icat "viu"
 
 ### Device Control ###
 # system
