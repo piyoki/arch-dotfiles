@@ -40,7 +40,6 @@ mc mirror --overwrite --remove ~/.local/scripts/ minio/server-configurations/arc
 mc mirror --overwrite --remove ~/.local/bin/ minio/server-configurations/arch-desktop/.local/bin/
 
 # configs
-mc mirror --overwrite --remove ~/.config/fcitx5/ minio/server-configurations/arch-desktop/.config/fcitx5/
 mc mirror --overwrite --remove ~/.config/bspwm/ minio/server-configurations/arch-desktop/.config/bspwm/
 mc mirror --overwrite --remove ~/.config/alacritty/ minio/server-configurations/arch-desktop/.config/alacritty/
 mc mirror --overwrite --remove ~/.config/betterlockscreen/ minio/server-configurations/arch-desktop/.config/betterlockscreen/
@@ -68,8 +67,14 @@ mc mirror --overwrite --remove ~/.config/bat/ minio/server-configurations/arch-d
 mc mirror --overwrite --remove ~/.config/waybar/ minio/server-configurations/arch-desktop/.config/waybar/
 mc mirror --overwrite --remove ~/.config/hypr/ minio/server-configurations/arch-desktop/.config/hypr/
 mc mirror --overwrite --remove ~/.config/nwg-look/ minio/server-configurations/arch-desktop/.config/nwg-look/
+mc mirror --overwrite --remove ~/.config/zathura/ minio/server-configurations/arch-desktop/.config/zathura/
+mc mirror --overwrite --remove ~/.config/kitty/ minio/server-configurations/arch-desktop/.config/kitty/
+mc mirror --overwrite --remove ~/.config/fcitx5/ minio/server-configurations/arch-desktop/.config/fcitx5/
+
+# local
 mc mirror --overwrite --remove ~/.local/share/atuin/ minio/server-configurations/arch-desktop/.local/share/atuin/
 mc mirror --overwrite --remove ~/.local/share/fish/ minio/server-configurations/arch-desktop/.local/share/fish/
+mc mirror --overwrite --remove ~/.local/share/fcitx5/ minio/server-configurations/arch-desktop/.local/share/fcitx5/
 
 # systemd
 sudo mc cp /etc/systemd/system/rclone.service minio/server-configurations/arch-desktop/systemd/rclone.service
