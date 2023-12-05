@@ -2,7 +2,7 @@
 
 class="string:x-canonical-private-synchronous:sys-notify"
 volume_up_icon="/usr/share/icons/Papirus-Dark/48x48/devices/audio-speaker-left-side-testing.svg"
-volume_down_icon="/usr/share/icons/Papirus-Dark/48x48/status/notification-audio-volume-low.svg"
+volume_down_icon="/usr/share/icons/Papirus-Dark/48x48/status/notification-audio-volume-medium.svg"
 mute_icon="/usr/share/icons/Papirus-Dark/48x48/status/notification-audio-volume-muted.svg"
 volume_high_icon="/usr/share/icons/Papirus-Dark/48x48/status/notification-audio-volume-high.svg"
 
