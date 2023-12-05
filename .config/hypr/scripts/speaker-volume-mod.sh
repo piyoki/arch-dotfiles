@@ -14,23 +14,23 @@ get_volume() {
 # Increase Volume
 volume_up() {
   pamixer -i 5
-  notify-send -h $class -u low -i $volume_up_icon "Volume Up" "Current Volume: $(get_volume) %"
+  notify-send -h $class -u low -i $volume_up_icon "Volume Up" "\nCurrent Volume: $(get_volume) %"
 }
 
 # Decrease Volume
 volume_down() {
   pamixer -d 5
-  notify-send -h $class -u low -i $volume_down_icon "Volume Down" "Current Volume: $(get_volume) %"
+  notify-send -h $class -u low -i $volume_down_icon "Volume Down" "\nCurrent Volume: $(get_volume) %"
 }
 
 # Toggle Mute
 toggle_mute() {
   if [ "$(pamixer --get-mute)" == "false" ]; then
     pamixer -m
-    notify-send -h $class -u low -i $mute_icon "Speaker Volume Mute" "Volume Switched OFF"
+    notify-send -h $class -u low -i $mute_icon "Speaker Volume Mute" "\nVolume switched off"
   elif [ "$(pamixer --get-mute)" == "true" ]; then
     pamixer -u
-    notify-send -h $class -u low -i $volume_high_icon "Speaker Volume Mute" "Volume Switched ON"
+    notify-send -h $class -u low -i $volume_high_icon "Speaker Volume Mute" "\nVolume switched on"
   fi
 }
 
