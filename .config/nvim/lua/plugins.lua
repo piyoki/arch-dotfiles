@@ -39,6 +39,7 @@ return require('packer').startup(function()
   })
 
   -- git
+  use({ 'f-person/git-blame.nvim' })
   use({ 'lewis6991/gitsigns.nvim' })
   use({ 'kdheepak/lazygit.nvim' })
 
