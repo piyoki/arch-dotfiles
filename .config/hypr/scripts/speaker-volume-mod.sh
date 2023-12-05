@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-iDIR="$HOME/.config/mako/icons"
 class="string:x-canonical-private-synchronous:sys-notify"
+volume_up_icon="/usr/share/icons/Papirus-Dark/48x48/devices/audio-speaker-left-side-testing.svg"
+volume_down_icon="/usr/share/icons/Papirus-Dark/48x48/status/notification-audio-volume-low.svg"
+mute_icon="/usr/share/icons/Papirus-Dark/48x48/status/notification-audio-volume-muted.svg"
+volume_high_icon="/usr/share/icons/Papirus-Dark/48x48/status/notification-audio-volume-high.svg"
 
 # Get Volume
 get_volume() {
@@ -11,23 +14,23 @@ get_volume() {
 # Increase Volume
 volume_up() {
   pamixer -i 5
-  notify-send -h $class -u low -i audio-volume-high-symbolic "Volume Up" "Current Volume: $(get_volume) %" -t 1000
+  notify-send -h $class -u low -i $volume_up_icon "Volume Up" "Current Volume: $(get_volume) %"
 }
 
 # Decrease Volume
 volume_down() {
   pamixer -d 5
-  notify-send -h $class -u low -i audio-volume-low-symbolic "Volume Down" "Current Volume: $(get_volume) %" -t 10000
+  notify-send -h $class -u low -i $volume_down_icon "Volume Down" "Current Volume: $(get_volume) %"
 }
 
 # Toggle Mute
 toggle_mute() {
   if [ "$(pamixer --get-mute)" == "false" ]; then
     pamixer -m
-    notify-send -h $class -u low -i audio-volume-muted-symbolic "Volume Mute" "Volume Switched OFF" -t 10000
+    notify-send -h $class -u low -i $mute_icon "Speaker Volume Mute" "Volume Switched OFF"
   elif [ "$(pamixer --get-mute)" == "true" ]; then
     pamixer -u
-    notify-send -h $class -u low -i audio-volume-high-symbolic "Volume Mute" "Volume Switched ON" -t 10000
+    notify-send -h $class -u low -i $volume_high_icon "Speaker Volume Mute" "Volume Switched ON"
   fi
 }
 
