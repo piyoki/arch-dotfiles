@@ -1,0 +1,3 @@
+[submodule "modules/nvim"]
+	path = modules/nvim
+	url = git@github.com:yqlbu/dot-nvim.git
