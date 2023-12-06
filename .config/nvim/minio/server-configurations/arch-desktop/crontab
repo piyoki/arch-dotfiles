@@ -1,2 +1,0 @@
-# run every 20 minutes to restart scdaemon
-*/20 * * * * kev /home/kev/.local/scripts/restart-scdaemon
