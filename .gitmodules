@@ -1,0 +1,3 @@
+[submodule "nvim"]
+	path = /home/kev/.config/nvim
+	url = git@github.com:yqlbu/dot-nvim
