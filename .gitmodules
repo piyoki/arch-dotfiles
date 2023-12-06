@@ -1,6 +1,0 @@
-[submodule "nvim"]
-	path = ~/.config/nvim
-	url = git@github.com:yqlbu/dot-nvim.git
-[submodule ".config/nvim/dot-nvim"]
-	path = .config/nvim/dot-nvim
-	url = git@github.com:yqlbu/dot-nvim.git
