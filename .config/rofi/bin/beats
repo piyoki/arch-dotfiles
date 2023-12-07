@@ -4,7 +4,7 @@ rofi_command="rofi -p "beats" -dmenu -theme $HOME/.config/rofi/conf/launcher.ras
 ARGS="--volume=50 -ao=pulse"
 
 notification() {
-    notify-send "Playing now" "\n$@" --icon=media-tape
+    notify-send "Playing Now" "\n$@" --icon=media-tape
 }
 
 menu() {

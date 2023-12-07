@@ -119,7 +119,7 @@
     "custom/power": {
         "format": "󰤆",
         "tooltip": false,
-        "on-click": "nwg-bar"
+        "on-click": "$HOME/.config/rofi/bin/powermenu"
     },
     "custom/weather": {
         "exec": "curl 'https://wttr.in/HongKong?format=1'",
