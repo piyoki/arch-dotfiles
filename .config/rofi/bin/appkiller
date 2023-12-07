@@ -1,21 +1,13 @@
 #!/usr/bin/env bash
-rofi_command="rofi -theme $HOME/.config/rofi/conf/launcher.rasi"
+rofi_command="rofi -theme $HOME/.config/rofi/launcher.rasi"
 
 # Options
-sleep="  Sleep"
-lock="  Lock"
-reload="  Reload"
-logout="󰗼  Logout"
-poweroff="  Power Off"
-reboot="󰠠  Reboot"
-idlestart="  Swayidle Start"
-idlestop="󱫫  Swayidle stop"
 ddir="$HOME/.config/rofi/config"
 
 # Variable passed to rofi
 options="$sleep\n$lock\n$reload\n$logout\n$poweroff\n$reboot\n$idlestart\n$idlestop"
 
-chosen="$(echo -e "$options" | $rofi_command -p "Powermenu" -dmenu -selected-row 0)"
+chosen="$(echo -e "$options" | $rofi_command -p "UP - $uptime" -dmenu -selected-row 0)"
 case $chosen in
 $sleep)
     $HOME/.local/scripts/sleep ;;
@@ -34,3 +26,4 @@ $idlestart)
 $idlestop)
     pkill swayidle ;;
 esac
+

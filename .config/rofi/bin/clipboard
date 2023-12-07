@@ -1,0 +1,6 @@
+#!/bin/bash
+
+theme="$HOME/.config/rofi/conf/launcher.rasi"
+
+
+cliphist list | rofi -p "Clipboard history" -dmenu -theme ${theme} | cliphist decode | wl-copy
