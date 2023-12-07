@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+theme="$HOME/.config/rofi/conf/launcher.rasi"
+
+pname=$(pgrep -u $USER -l | rofi -p "pkill" -dmenu -theme ${theme} -selected-row 0 | awk '{print $2}')
+
+pkill $pname
