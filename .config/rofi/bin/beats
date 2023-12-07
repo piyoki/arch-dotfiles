@@ -4,16 +4,17 @@ rofi_command="rofi -p "beats" -dmenu -theme $HOME/.config/rofi/conf/launcher.ras
 ARGS="--volume=50 -ao=pulse"
 
 notification() {
-    notify-send "Playing now: " "$@" --icon=media-tape
+    notify-send "Playing now" "\n$@" --icon=media-tape
 }
 
 menu() {
-    printf "1. Lofi Girl\n"
-    printf "2. Chillhop\n"
-    printf "3. Box Lofi\n"
-    printf "4. The Bootleg Boy\n"
-    printf "5. Radio Spinner\n"
-    printf "6. SmoothChill"
+    printf "1. jazz/lofi hip hop radio🌱chill beats to relax/study to [LIVE 24/7]\n"
+    printf "2. Lofi Playlist for Programming / Relax / Chill\n"
+    printf "3. 2-HOUR STUDY WITH ME🌦️ / calm piano / A Rainy Day in Shibuya, Tokyo / with countdown+alarm\n"
+    printf "4. Lofi Girl\n"
+    printf "5. Chillhop\n"
+    printf "6. Box Lofi\n"
+    printf "7. SmoothChill"
 }
 
 main() {
@@ -21,31 +22,39 @@ main() {
 
     case $choice in
     1)
+        notification "jazz/lofi hip hop radio🌱chill beats to relax/study to [LIVE 24/7] ☕️🎶"
+        URL="https://www.youtube.com/watch?v=8JvvKMwPa_Y"
+        EXTRA_ARGS="--no-video"
+        break
+        ;;
+    2)
+        notification "Lofi Playlist for Programming / Relax / Chill ☕️🎶"
+        URL="https://www.youtube.com/watch?v=v9XyIGXcRck"
+        EXTRA_ARGS="--no-video"
+        break
+        ;;
+    3)
+        notification "2-HOUR STUDY WITH ME🌦️ / calm piano / A Rainy Day in Shibuya, Tokyo / with countdown+alarm ☕️🎶"
+        URL="https://www.youtube.com/watch?v=5Q2Pc-e-8Qc"
+        EXTRA_ARGS="--no-video"
+        break
+        ;;
+    4)
         notification "Lofi Girl ☕️🎶"
         URL="https://play.streamafrica.net/lofiradio"
         break
         ;;
-    2)
+    5)
         notification "Chillhop ☕️🎶"
         URL="http://stream.zeno.fm/fyn8eh3h5f8uv"
         break
         ;;
-    3)
+    6)
         notification "Box Lofi ☕️🎶"
         URL="http://stream.zeno.fm/f3wvbbqmdg8uv"
         break
         ;;
-    4)
-        notification "The Bootleg Boy ☕️🎶"
-        URL="http://stream.zeno.fm/0r0xa792kwzuv"
-        break
-        ;;
-    5)
-        notification "Radio Spinner ☕️🎶"
-        URL="https://live.radiospinner.com/lofi-hip-hop-64"
-        break
-        ;;
-    6)
+    7)
         notification "SmoothChill ☕️🎶"
         URL="https://media-ssl.musicradio.com/SmoothChill"
         break
@@ -54,7 +63,7 @@ main() {
 
     # run mpv with args and selected url
     # added title arg to make sure the pkill command kills only this instance of mpv
-    mpv $ARGS --title="radio-mpv" $URL
+    mpv $ARGS --title="radio-mpv" $URL $EXTRA_ARGS
 }
 
 pkill -f radio-mpv || main
