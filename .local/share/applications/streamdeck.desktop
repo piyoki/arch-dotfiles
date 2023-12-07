@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=/usr/local/bin/streamdeck
+Type=Application
+Categories=Development
+Name=StreamDeck UI
+Icon=/home/kev/.local/share/applications/streamdeck.png
