@@ -4,7 +4,7 @@ wallpaper_dir="$HOME/Pictures/wallpapers/"
 theme="$HOME/.config/rofi/conf/launcher.rasi"
 
 find_wallpapers(){
-  rg -g "*.jpg" -g "*.png" --files $HOME/Pictures/wallpapers/ | xargs -n 1 basename
+  rg -g "*.jpg" -g "*.png" --files $wallpaper_dir | xargs -n 1 basename
 }
 
 find_wallpapers
