@@ -11,10 +11,9 @@ menu() {
     printf "1. jazz/lofi hip hop radio🌱chill beats to relax/study to [LIVE 24/7]\n"
     printf "2. Lofi Playlist for Programming / Relax / Chill\n"
     printf "3. 2-HOUR STUDY WITH ME🌦️ / calm piano / A Rainy Day in Shibuya, Tokyo / with countdown+alarm\n"
-    printf "4. Lofi Girl\n"
-    printf "5. Chillhop\n"
-    printf "6. Box Lofi\n"
-    printf "7. SmoothChill"
+    printf "4. lofi hip hop radio 📚 - beats to relax/study to\n"
+    printf "5. 90's Lofi City 🌃 Rainy Lofi Hip Hop [ Chill Beats To Relax / Study To ]\n"
+    printf "6. 4-HOUR STUDY WITH ME🌦️ / calm piano / A Rainy Day in Shinjuku, Tokyo / with countdown+alarm\n"
 }
 
 main() {
@@ -40,23 +39,21 @@ main() {
         break
         ;;
     4)
-        notification "Lofi Girl ☕️🎶"
-        URL="https://play.streamafrica.net/lofiradio"
+        notification "lofi hip hop radio 📚 - beats to relax/study to ☕️🎶"
+        URL="https://www.youtube.com/watch?v=jfKfPfyJRdk"
+        EXTRA_ARGS="--no-video"
         break
         ;;
     5)
-        notification "Chillhop ☕️🎶"
-        URL="http://stream.zeno.fm/fyn8eh3h5f8uv"
+        notification "90's Lofi City 🌃 Rainy Lofi Hip Hop [ Chill Beats To Relax / Study To ] ☕️🎶"
+        URL="https://www.youtube.com/watch?v=q1pBwQl6zZ0"
+        EXTRA_ARGS="--no-video"
         break
         ;;
     6)
-        notification "Box Lofi ☕️🎶"
-        URL="http://stream.zeno.fm/f3wvbbqmdg8uv"
-        break
-        ;;
-    7)
-        notification "SmoothChill ☕️🎶"
-        URL="https://media-ssl.musicradio.com/SmoothChill"
+        notification "4-HOUR STUDY WITH ME🌦️ / calm piano / A Rainy Day in Shinjuku, Tokyo / with countdown+alarm ☕️🎶"
+        URL="https://www.youtube.com/watch?v=DXT9dF-WK-I"
+        EXTRA_ARGS="--no-video"
         break
         ;;
     esac
