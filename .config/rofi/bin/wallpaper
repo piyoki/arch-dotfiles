@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+wallpaper_dir="$HOME/Pictures/wallpapers/"
+theme="$HOME/.config/rofi/conf/launcher.rasi"
+
+find_wallpapers(){
+  rg -g "*.jpg" -g "*.png" --files $HOME/Pictures/wallpapers/ | xargs -n 1 basename
+}
+
+find_wallpapers
+
+wallpaper=$(find_wallpapers | rofi -p "wallpaper" -dmenu -theme ${theme} -selected-row 0)
+
+cd $wallpaper_dir; swww img -o DP-6 $wallpaper
+
