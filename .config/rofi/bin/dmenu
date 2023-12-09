@@ -2,5 +2,5 @@
 
 theme="$HOME/.config/rofi/conf/launcher.rasi"
 
-rofi -dmenu \
+rofi -dmenu -i \
   -theme ${theme}

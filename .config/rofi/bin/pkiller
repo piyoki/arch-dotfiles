@@ -2,6 +2,6 @@
 
 theme="$HOME/.config/rofi/conf/launcher.rasi"
 
-pname=$(pgrep -u $USER -l | rofi -p "pkill" -dmenu -theme ${theme} -selected-row 0 | awk '{print $2}')
+pname=$(pgrep -u $USER -l | rofi -p "pkill" -theme $theme -dmenu -i -selected-row 0 | awk '{print $2}')
 
 pkill $pname

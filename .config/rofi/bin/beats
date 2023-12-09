@@ -1,6 +1,7 @@
 #!/bin/sh
 
-rofi_command="rofi -p "beats" -dmenu -theme $HOME/.config/rofi/conf/launcher.rasi"
+theme="$HOME/.config/rofi/conf/launcher.rasi"
+rofi_command="rofi -p "beats" -theme $theme -dmenu -i"
 ARGS="--volume=50 -ao=pulse"
 
 notification() {
@@ -14,6 +15,7 @@ menu() {
     printf "4. lofi hip hop radio 📚 - beats to relax/study to\n"
     printf "5. 90's Lofi City 🌃 Rainy Lofi Hip Hop [ Chill Beats To Relax / Study To ]\n"
     printf "6. 4-HOUR STUDY WITH ME🌦️ / calm piano / A Rainy Day in Shinjuku, Tokyo / with countdown+alarm\n"
+    printf "7. 🍃Harutya 春茶🍃 Collection 2023 - Best Cover Of Harutya 春茶 - Harutya 春茶 Best Song Of All Time 🍃🌿\n"
 }
 
 main() {
@@ -53,6 +55,12 @@ main() {
     6)
         notification "4-HOUR STUDY WITH ME🌦️ / calm piano / A Rainy Day in Shinjuku, Tokyo / with countdown+alarm ☕️🎶"
         URL="https://www.youtube.com/watch?v=DXT9dF-WK-I"
+        EXTRA_ARGS="--no-video"
+        break
+        ;;
+    7)
+        notification "🍃Harutya 春茶🍃 Collection 2023 - Best Cover Of Harutya 春茶 - Harutya 春茶 Best Song Of All Time 🍃🌿☕️🎶"
+        URL="https://www.youtube.com/watch?v=mnwj6KxAvFc"
         EXTRA_ARGS="--no-video"
         break
         ;;
