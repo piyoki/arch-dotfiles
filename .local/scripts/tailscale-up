@@ -1,5 +1,8 @@
 #!/bin/bash
 
+icon="/usr/share/icons/Papirus-Dark/48x48/status/notification-network-ethernet-connected.svg"
+
 sudo systemctl restart tailscaled
-sudo tailscale up --accept-routes=true --accept-dns=false
-notify-send 'Tailscale' 'link up.'
+sudo tailscale up --accept-routes --accept-dns=false
+sudo ip rule add to 10.178.0.0/24 priority 2500 lookup main
+notify-send --icon=$icon 'Tailscaled' '\nlink up'

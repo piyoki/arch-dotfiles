@@ -1,5 +1,8 @@
 #!/bin/bash
 
+icon="/usr/share/icons/Papirus-Dark/48x48/status/notification-network-ethernet-disconnected.svg"
+
 sudo tailscale down
 sudo systemctl stop tailscaled
-notify-send 'Tailscale' 'link down.'
+sudo ip rule delete to 10.178.0.0/24 priority 2500 lookup main
+notify-send --icon=$icon 'Tailscaled' '\nlink down'
