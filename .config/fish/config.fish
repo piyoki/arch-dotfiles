@@ -86,6 +86,10 @@ abbr ycm "yadm commit -m"
 abbr yp "yadm pull"
 abbr ypp "yadm push"
 
+# flux
+abbr fra "flux reconcile kustomization flux-system --with-source"
+abbr fga "flux get all -A"
+
 # ripgrep
 abbr rgf "rg --files | rg"
 
