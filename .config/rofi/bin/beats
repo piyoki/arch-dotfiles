@@ -9,7 +9,7 @@ notification() {
 }
 
 menu() {
-    printf "1. jazz/lofi hip hop radio🌱chill beats to relax/study to [LIVE 24/7]\n"
+    printf "1. Night City Lofi 🌕 Lofi Hip Hop Radio 💤 lofi beats to sleep / chill to\n"
     printf "2. Lofi Playlist for Programming / Relax / Chill\n"
     printf "3. 2-HOUR STUDY WITH ME🌦️ / calm piano / A Rainy Day in Shibuya, Tokyo / with countdown+alarm\n"
     printf "4. lofi hip hop radio 📚 - beats to relax/study to\n"
@@ -23,8 +23,8 @@ main() {
 
     case $choice in
     1)
-        notification "jazz/lofi hip hop radio🌱chill beats to relax/study to [LIVE 24/7] ☕️🎶"
-        URL="https://www.youtube.com/watch?v=8JvvKMwPa_Y"
+        notification "Night City Lofi 🌕 Lofi Hip Hop Radio 💤 lofi beats to sleep / chill to ☕️🎶"
+        URL="https://www.youtube.com/watch?v=8ZeC-8klo_o"
         EXTRA_ARGS="--no-video"
         break
         ;;

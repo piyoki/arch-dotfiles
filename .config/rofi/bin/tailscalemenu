@@ -1,0 +1,19 @@
+#!/bin/bash
+
+theme="$HOME/.config/rofi/conf/launcher.rasi"
+
+# Options
+restart="  Restart"
+linkup="󰲝  Up"
+linkdown="󰲜  Down"
+
+options="$restart\n$linkup\n$linkdown"
+
+chosen=$(echo -e "$options" | rofi -p "tailscalemenu" -theme $theme -dmenu -i -selected-row 0)
+
+case "$chosen" in
+	"  Restart") sudo systemctl restart tailscaled;;
+	"󰲝  Up") $HOME/.local/scripts/tailscale-up;;
+	"󰲜  Down") $HOME/.local/scripts/tailscale-down;;
+	*) exit 1 ;;
+esac
