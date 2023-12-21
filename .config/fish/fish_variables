@@ -54,6 +54,6 @@ SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
 SETUVAR fish_user_path:/home/kev/\x2elinuxbrew/bin
-SETUVAR fish_user_paths:/home/kev/\x2enix\x2dprofile/bin\x1e/nix/var/nix/profiles/per\x2duser/kev/profile/bin\x1e/nix/var/nix/profiles/default/bin\x1e/home/kev/go/bin\x1e/home/kev/\x2enpm\x2dglobal/bin\x1e/home/kev/\x2elocal/scripts\x1e/home/kev/\x2elocal/bin\x1e/home/kev/\x2elinuxbrew/bin
+SETUVAR fish_user_paths:/usr/lib/jvm/default\x2druntime/bin\x1e/home/kev/\x2enix\x2dprofile/bin\x1e/nix/var/nix/profiles/per\x2duser/kev/profile/bin\x1e/nix/var/nix/profiles/default/bin\x1e/home/kev/go/bin\x1e/home/kev/\x2enpm\x2dglobal/bin\x1e/home/kev/\x2elocal/scripts\x1e/home/kev/\x2elocal/bin\x1e/home/kev/\x2elinuxbrew/bin
 SETUVAR nvm_data:/home/kev/\x2elocal/share/nvm
 SETUVAR nvm_mirror:https\x3a//nodejs\x2eorg/dist

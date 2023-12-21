@@ -12,6 +12,7 @@ fish_add_path $HOME/.npm-global/bin
 fish_add_path $HOME/.local/scripts
 fish_add_path $HOME/go/bin
 fish_add_path $HOME/.nix-profile/bin
+fish_add_path /usr/lib/jvm/default-runtime/bin
 
 ### Link Sources ###
 source $HOME/.config/fish/themes/cool-beans.fish
@@ -29,6 +30,9 @@ export SOPS_PGP_FP="B08FE2644F9FC450AF425FF5B94F394B72884017"
 export SOPS_AGE_RECIPIENTS=(cat $HOME/.age/age.pub)
 export SOPS_AGE_KEY_FILE=$HOME/.age/age.key
 
+## Java
+export JAVA_HOME=/usr/lib/jvm/default
+
 ### Fish Alias ###
 abbr unset "set --erase"
 
@@ -43,9 +47,6 @@ abbr ra "ranger"
 abbr edit "notepadqq"
 abbr top "btop"
 abbr weather "curl wttr.in/"
-# abbr lf "lfrun"
-# abbr go_async_run "when-changed -r -v -1 . go run"
-# abbr python_async_run "when-changed -r -v -1 . python"
 # # programs and system
 abbr ls "ls -ltrh"
 abbr du "du -d 1 -h"
