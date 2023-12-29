@@ -23,6 +23,7 @@ source $HOME/.config/fish/gnupg.fish
 set fish_greeting # Turns off the intro message when pulling up fish shell
 set EDITOR "nvim" # Sets the $EDITOR to vim
 
+export TERM=xterm-256color
 export CLICOLOR=1
 export LS_COLORS=(vivid generate nord)
 
