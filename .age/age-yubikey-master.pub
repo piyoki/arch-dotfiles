@@ -1,7 +1,1 @@
-#       Serial: 17117053, Slot: 1
-#         Name: age-yubikey-master
-#      Created: Sat, 30 Dec 2023 06:08:17 +0000
-#   PIN policy: Always (A PIN is required for every decryption, if set)
-# Touch policy: Never  (A physical touch is NOT required to decrypt)
-#    Recipient: age1yubikey1qt8xnm3ldv2vzn9g47ctaj90fzl8h698hlkzqwg8pj83ptsmz8986vw609f
-AGE-PLUGIN-YUBIKEY-105HS2QVZHADATEG08CQNM
+age1yubikey1qt8xnm3ldv2vzn9g47ctaj90fzl8h698hlkzqwg8pj83ptsmz8986vw609f
