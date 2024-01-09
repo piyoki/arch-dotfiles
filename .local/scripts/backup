@@ -9,6 +9,7 @@ sudo mc cp /etc/crontab minio/server-configurations/arch-desktop/crontab
 mc cp ~/.local/scripts/restart-scdaemon minio/server-configurations/arch-desktop/restart-scdaemon
 mc cp ~/.wakatime.cfg minio/server-configurations/arch-desktop/
 mc cp ~/.gitconfig minio/server-configurations/arch-desktop/
+mc cp ~/.gitmodules minio/server-configurations/arch-desktop/
 mc cp ~/.owm-key minio/server-configurations/arch-desktop/
 mc cp ~/.Xresources minio/server-configurations/arch-desktop/
 mc cp ~/.xprofile minio/server-configurations/arch-desktop/

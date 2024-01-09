@@ -23,13 +23,13 @@ source $HOME/.config/fish/gnupg.fish
 set fish_greeting # Turns off the intro message when pulling up fish shell
 set EDITOR "nvim" # Sets the $EDITOR to vim
 
-export TERM=xterm-256color
 export CLICOLOR=1
 export LS_COLORS=(vivid generate nord)
 
 export SOPS_PGP_FP="B08FE2644F9FC450AF425FF5B94F394B72884017"
+# export SOPS_AGE_KEY=(age -i $HOME/.age/age-yubikey-identity.txt -d $HOME/.age/age-yubikey-master.enc.key)
 export SOPS_AGE_RECIPIENTS=(cat $HOME/.age/age-yubikey-master.pub)
-export SOPS_AGE_KEY_FILE=$HOME/.age/age.key
+export SOPS_AGE_KEY_FILE=$HOME/.age/age-yubikey-master.key
 
 ## Java
 export JAVA_HOME=/usr/lib/jvm/default
@@ -48,10 +48,9 @@ abbr ra "ranger"
 abbr edit "notepadqq"
 abbr top "btop"
 abbr weather "curl wttr.in/"
-# # programs and system
+# programs and system
 abbr ls "ls -ltrh"
 abbr du "du -d 1 -h"
-abbr kill "killall"
 abbr rm "trash -v"
 # tmux
 abbr t "tmux"
@@ -94,6 +93,9 @@ abbr fga "flux get all -A"
 
 # ripgrep
 abbr rgf "rg --files | rg"
+
+# ssh (kitty +kitten)
+# alias ssh="kitty +kitten ssh"
 
 # program
 alias vlc "org.videolan.VLC"
