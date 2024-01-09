@@ -2,7 +2,7 @@
 
 sleep_icon="/usr/share/icons/Papirus-Dark/48x48/status/state_shutoff.svg"
 
-notify-send -i $sleep_icon 'Swayidle' '\nSleep in 5s';
+notify-send -i $sleep_icon 'Swayidle' 'Sleep in 5s';
 
 swayidle -w \
   timeout 5 'hyprctl dispatch dpms off' \

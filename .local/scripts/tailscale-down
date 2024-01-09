@@ -5,4 +5,4 @@ icon="/usr/share/icons/Papirus-Dark/48x48/status/notification-network-ethernet-d
 sudo tailscale down
 sudo systemctl stop tailscaled
 sudo ip rule delete to 10.178.0.0/24 priority 2500 lookup main
-notify-send --icon=$icon 'Tailscaled' '\nlink down'
+notify-send --icon=$icon 'Tailscaled' 'link down'
