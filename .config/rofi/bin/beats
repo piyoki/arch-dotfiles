@@ -18,6 +18,7 @@ menu() {
     printf "7. 🍃Harutya 春茶🍃 Collection 2023 - Best Cover Of Harutya 春茶 - Harutya 春茶 Best Song Of All Time 🍃🌿\n"
     printf "8. 【洋楽playlist】 寒い冬の日に聴きたい心温まる洋楽メドレー 作業用_おしゃれな音楽で部屋を彩りましょう ~ 聴いたら絶対にハマってしまう洋楽 | Cozy Winter 🎵【作業用 BGM】"
     printf "9. 【作業用BGM】今日も素敵な一日があなたを待っています | Peaceful Day - 洋楽playlist"
+    printf "10. 【洋楽playlist】 帰り道にゆったり聴きたい心地いい洋楽 | musics make you feel happy🎵【作業用 BGM】"
 }
 
 main() {
@@ -75,6 +76,12 @@ main() {
     9)
         notification "【作業用BGM】今日も素敵な一日があなたを待っています | Peaceful Day - 洋楽playlist ☕️🎶"
         URL="https://www.youtube.com/watch?v=D3wwNaPx0OI"
+        EXTRA_ARGS="--no-video"
+        break
+        ;;
+    10)
+        notification "【洋楽playlist】 帰り道にゆったり聴きたい心地いい洋楽 | musics make you feel happy🎵【作業用 BGM】 ☕️🎶"
+        URL="https://www.youtube.com/watch?v=rYkpy52Bb3o"
         EXTRA_ARGS="--no-video"
         break
         ;;
