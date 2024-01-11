@@ -13,6 +13,9 @@
 [includeIf "gitdir:~/Workspace/work/"] # include for all .git projects under work/
   path = ~/.gitconfigs/.gitconfig.work
 
+[includeIf "gitdir:~/Workspace/extras/"] # include for all .git projects under extras/
+  path = ~/.gitconfigs/.gitconfig.extras
+
 [core]
   editor = vim
   pager = delta
