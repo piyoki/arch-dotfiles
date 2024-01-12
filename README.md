@@ -18,8 +18,14 @@ yadm submodule add git@github.com:<owner/repo>.git modules/<module_name>
 # yadm submodule add git@github.com:yqlbu/dot-nvim.git ~/.config/nvim
 ```
 
-Sync submodules
+Sync submodules from local
 
 ```bash
 yadm submodule update --init --recursive
+```
+
+Sync submodules from remote
+
+```bash
+yadm submodule update --recursive --remote
 ```
