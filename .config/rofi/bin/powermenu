@@ -3,7 +3,7 @@
 theme="$HOME/.config/rofi/conf/launcher.rasi"
 
 # Options
-sleep="  Sleep"
+screenoff="  Screenoff"
 lock="  Lock"
 reload="  Reload"
 logout="󰗼  Logout"
@@ -14,12 +14,12 @@ idlestop="󱫫  Swayidle stop"
 cleantrash="  Clean Trash"
 
 # Variable passed to rofi
-options="$sleep\n$lock\n$reload\n$logout\n$poweroff\n$reboot\n$idlestart\n$idlestop\n$cleantrash"
+options="$screenoff\n$lock\n$reload\n$logout\n$poweroff\n$reboot\n$idlestart\n$idlestop\n$cleantrash"
 
 chosen="$(echo -e "$options" | rofi -p "powermenu" -theme $theme -dmenu -i -selected-row 0)"
 case $chosen in
-$sleep)
-    $HOME/.local/scripts/sleep ;;
+$screenoff)
+    $HOME/.local/scripts/dpmsoff ;;
 $lock)
     swaylock -c 000000 ;;
 $reload)
