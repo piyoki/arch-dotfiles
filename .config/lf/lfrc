@@ -28,13 +28,27 @@ cmd mkfile ${{
   $EDITOR $ans
 }}
 
-cmd setwallpaper ${{
-    cp "$f" ~/.config/wall.jpg
-    xwallpaper --zoom "$f"
-    betterlockscreen -u "$f" --fx
+# Archive bindings
+cmd archive ${{
+  printf "File Name (*.tar.gz): "
+  read ans
+  filenames=""
+  for path in $fx; do
+      filenames+="$(basename $path) "
+  done
+  tar -czvf $ans $filenames
 }}
 
-# Archive bindings
+cmd zip ${{
+  printf "File Name (*.zip): "
+  read ans
+  filenames=""
+  for path in $fx; do
+      filenames+="$(basename $path) "
+  done
+  zip $ans $filenames
+}}
+
 cmd unarchive ${{
   case "$f" in
       *.zip) unzip "$f" ;;
@@ -112,12 +126,7 @@ map "'"
 map '"'
 map d
 map <enter>
-
-# map c $vscodium "$f"
-
-map au unarchive
-map n $nvim $f
-map e $nvim $f
+map <space>
 
 # Basic Functions
 map . set hidden!
@@ -129,12 +138,17 @@ map x cut
 map y copy
 map r :rename; cmd-home
 map <enter> open
+map <space> toggle
 map R reload
 map mf mkfile
 map md mkdir
-map bg setwallpaper
 map C clear
 map <c-c> quit
+
+# Advanced Functions
+map au unarchive
+map aa :archive; unselect
+map e $nvim $f
 
 # Search
 map <c-f> :fzf_jump
