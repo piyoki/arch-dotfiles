@@ -148,6 +148,7 @@ map <c-c> quit
 # Advanced Functions
 map au unarchive
 map aa :archive; unselect
+map az :zip; unselect
 map e $nvim $f
 
 # Search

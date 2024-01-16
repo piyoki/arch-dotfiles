@@ -3,3 +3,7 @@ patch:
   "menu/page_size": 9 #候选词
   schema_list:
     - schema: rime_ice
+
+switches:
+  - name: simplification
+    reset: 0
