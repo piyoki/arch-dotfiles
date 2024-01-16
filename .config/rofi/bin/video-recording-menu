@@ -5,10 +5,6 @@ on_icon="/usr/share/icons/Papirus-Dark/48x48/status/camera-on.svg"
 off_icon="/usr/share/icons/Papirus-Dark/48x48/status/camera-off.svg"
 output="$HOME/Downloads/outputs_$(date +"%Y-%m-%d-%H:%M:%S").mp4"
 
-notification() {
-  notify-send "Screen recoding" "started" --icon=$@
-}
-
 # Options
 screen="Capture Screen"
 region="Capture Region"
@@ -20,15 +16,15 @@ chosen=$(echo -e "$options" | rofi -p "screen-recorder" -theme $theme -dmenu -i 
 
 case "$chosen" in
 $screen)
-  notification $on_icon
+  notify-send "Screen recoding" "started" --icon=$off_icon
   wl-screenrec -o DP-6 --codec hevc --encode-pixfmt vuyx -f $output
   ;;
 $region)
-  notification $off_icon
+  notify-send "Screen recoding" "started" --icon=$off_icon
   wl-screenrec -g "$(slurp)" -f $output
   ;;
 $stop)
-  notification $off_icon
+  notify-send "Screen recoding" "stopped" --icon=$off_icon
   pkill -f wl-screenrec
   ;;
 esac
