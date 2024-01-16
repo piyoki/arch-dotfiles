@@ -71,14 +71,19 @@ mc mirror --overwrite --remove ~/.config/nwg-look/ minio/server-configurations/a
 mc mirror --overwrite --remove ~/.config/zathura/ minio/server-configurations/arch-desktop/.config/zathura/
 mc mirror --overwrite --remove ~/.config/kitty/ minio/server-configurations/arch-desktop/.config/kitty/
 mc mirror --overwrite --remove ~/.config/fcitx5/ minio/server-configurations/arch-desktop/.config/fcitx5/
+mc mirror --overwrite --remove ~/.local/share/fcitx5/ minio/server-configurations/arch-desktop/.local/share/fcitx5/
+mc mirror --overwrite --remove ~/.config/Thunar/ minio/server-configurations/arch-desktop/.config/Thunar/
 
 # local
 mc mirror --overwrite --remove ~/.local/share/atuin/ minio/server-configurations/arch-desktop/.local/share/atuin/
 mc mirror --overwrite --remove ~/.local/share/fish/ minio/server-configurations/arch-desktop/.local/share/fish/
 mc mirror --overwrite --remove ~/.local/share/fcitx5/ minio/server-configurations/arch-desktop/.local/share/fcitx5/
 
+# aura state
+mc mirror --overwrite --remove /var/cache/aura/states/ minio/server-configurations/arch-desktop/var/cache/aura/states/
+
 # systemd
-sudo mc cp /etc/systemd/system/rclone.service minio/server-configurations/arch-desktop/systemd/rclone.service
+sudo mc cp /etc/systemd/system/rclone.service minio/server-configurations/arch-desktop/systemd/system/rclone.service
 
 # smb
 mc cp ~/.smbcredentials minio/server-configurations/arch-desktop/.smbcredentials
