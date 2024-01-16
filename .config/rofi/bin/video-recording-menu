@@ -1,0 +1,34 @@
+#!/bin/sh
+
+theme="$HOME/.config/rofi/conf/launcher.rasi"
+on_icon="/usr/share/icons/Papirus-Dark/48x48/status/camera-on.svg"
+off_icon="/usr/share/icons/Papirus-Dark/48x48/status/camera-off.svg"
+output="$HOME/Downloads/outputs_$(date +"%Y-%m-%d-%H:%M:%S").mp4"
+
+notification() {
+  notify-send "Screen recoding" "started" --icon=$@
+}
+
+# Options
+screen="Capture Screen"
+region="Capture Region"
+stop="Stop recording"
+
+options="$screen\n$region\n$stop"
+
+chosen=$(echo -e "$options" | rofi -p "screen-recorder" -theme $theme -dmenu -i -selected-row 0)
+
+case "$chosen" in
+$screen)
+  notification $on_icon
+  wl-screenrec -o DP-6 --codec hevc --encode-pixfmt vuyx -f $output
+  ;;
+$region)
+  notification $off_icon
+  wl-screenrec -g "$(slurp)" -f $output
+  ;;
+$stop)
+  notification $off_icon
+  pkill -f wl-screenrec
+  ;;
+esac
