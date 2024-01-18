@@ -18,8 +18,8 @@
     # enable_recursive_icon_lookup = true
     text_icon_padding = 15
     icon_position = "left"
-    min_icon_size = 64
-    max_icon_size = 64
+    min_icon_size = 42
+    max_icon_size = 42
     progress_bar = true
     progress_bar_height = 8
     progress_bar_frame_width = 1
