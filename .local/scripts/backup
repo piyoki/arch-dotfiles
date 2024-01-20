@@ -87,3 +87,6 @@ sudo mc cp /etc/systemd/system/rclone.service minio/server-configurations/arch-d
 
 # smb
 mc cp ~/.smbcredentials minio/server-configurations/arch-desktop/.smbcredentials
+
+# tmp
+mc mirror --overwrite --remove $HOME/tmp/ minio/server-configurations/arch-desktop/tmp/
