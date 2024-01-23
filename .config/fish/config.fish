@@ -12,6 +12,7 @@ fish_add_path $HOME/.npm-global/bin
 fish_add_path $HOME/.local/scripts
 fish_add_path $HOME/go/bin
 fish_add_path $HOME/.nix-profile/bin
+fish_add_path $HOME/.tmux/plugins/t-smart-tmux-session-manager/bin
 fish_add_path /usr/lib/jvm/default-runtime/bin
 
 ### Link Sources ###
@@ -52,15 +53,11 @@ abbr weather "curl wttr.in/"
 abbr ls "ls -ltrh"
 abbr du "du -d 1 -h"
 abbr rm "trash -v"
-# tmux
-abbr t "tmux"
 # kubernetes related
 abbr k "kubectl"
 abbr kz "kubectl kustomize"
 # journalctl
 abbr journal "journalctl -xefu"
-# tmux
-abbr t "tmux"
 # neofetch
 abbr logo "neofetch"
 # package manager related
