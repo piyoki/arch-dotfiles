@@ -26,6 +26,7 @@ set EDITOR "nvim" # Sets the $EDITOR to vim
 
 export CLICOLOR=1
 export LS_COLORS=(vivid generate nord)
+export LC_ALL=C.UTF-8
 
 export SOPS_PGP_FP="B08FE2644F9FC450AF425FF5B94F394B72884017"
 # export SOPS_AGE_KEY=(age -i $HOME/.age/age-yubikey-identity.txt -d $HOME/.age/age-yubikey-master.enc.key)
