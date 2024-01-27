@@ -5,15 +5,11 @@ icon="/usr/share/icons/Papirus-Dark/48x48/devices/hifi.svg"
 inventory="$HOME/.config/rofi/beats/inventory.json"
 ARGS="--volume=50 -ao=pulse"
 
-chosen=$(cat $inventory | jq '.[].name' | tr -d '"' | rofi -p "beats" -theme $theme -dmenu -i -selected-row 0)
-chosen_url=$(cat $inventory | jq -r --arg v "$chosen" '.[] | select(.name == $v) | .url')
-
-notification() {
-    notify-send "Playing Now" "$@" --icon=media-tape
-}
-
 play() {
-  notification "playing $chosen"
+  chosen=$(cat $inventory | jq '.[].name' | tr -d '"' | rofi -p "beats" -theme $theme -dmenu -i -selected-row 0)
+  chosen_url=$(cat $inventory | jq -r --arg v "$chosen" '.[] | select(.name == $v) | .url')
+
+  notify-send "Playing Now" "playing $chosen" --icon=media-tape
   URL="https://www.youtube.com/watch?v=8ZeC-8klo_o"
   EXTRA_ARGS="--no-video"
 
