@@ -13,10 +13,10 @@ export QT_SELECT=6
 # default application
 export EDITOR=nvim
 export VISUAL=nvim
-export TERMINAL=alacritty
-export BROWSER=microsoft-edge-stable
+export TERMINAL=kitty
+export BROWSER=microsoft-edge-dev
 export VIDEO=org.videolan.VLC
 export IMAGE=sxiv
 export PAGER=less
-export WM=bspwm
+export WM=hyprland
 export OPENER=xdg-open

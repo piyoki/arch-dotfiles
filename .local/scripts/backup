@@ -73,6 +73,7 @@ mc mirror --overwrite --remove ~/.config/kitty/ minio/server-configurations/arch
 mc mirror --overwrite --remove ~/.config/fcitx5/ minio/server-configurations/arch-desktop/.config/fcitx5/
 mc mirror --overwrite --remove ~/.local/share/fcitx5/ minio/server-configurations/arch-desktop/.local/share/fcitx5/
 mc mirror --overwrite --remove ~/.config/Thunar/ minio/server-configurations/arch-desktop/.config/Thunar/
+mc mirror --overwrite --remove ~/.config/swappy/ minio/server-configurations/arch-desktop/.config/swappy/
 
 # local
 mc mirror --overwrite --remove ~/.local/share/atuin/ minio/server-configurations/arch-desktop/.local/share/atuin/
