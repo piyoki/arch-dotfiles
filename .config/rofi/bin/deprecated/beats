@@ -1,0 +1,95 @@
+#!/bin/sh
+
+theme="$HOME/.config/rofi/conf/launcher.rasi"
+rofi_command="rofi -p "beats" -theme $theme -dmenu -i"
+ARGS="--volume=50 -ao=pulse"
+
+notification() {
+    notify-send "Playing Now" "$@" --icon=media-tape
+}
+
+menu() {
+    printf "1. Night City Lofi 🌕 Lofi Hip Hop Radio 💤 lofi beats to sleep / chill to\n"
+    printf "2. Lofi Playlist for Programming / Relax / Chill\n"
+    printf "3. 2-HOUR STUDY WITH ME🌦️ / calm piano / A Rainy Day in Shibuya, Tokyo / with countdown+alarm\n"
+    printf "4. lofi hip hop radio 📚 - beats to relax/study to\n"
+    printf "5. 90's Lofi City 🌃 Rainy Lofi Hip Hop [ Chill Beats To Relax / Study To ]\n"
+    printf "6. 4-HOUR STUDY WITH ME🌦️ / calm piano / A Rainy Day in Shinjuku, Tokyo / with countdown+alarm\n"
+    printf "7. 🍃Harutya 春茶🍃 Collection 2023 - Best Cover Of Harutya 春茶 - Harutya 春茶 Best Song Of All Time 🍃🌿\n"
+    printf "8. 【洋楽playlist】 寒い冬の日に聴きたい心温まる洋楽メドレー 作業用_おしゃれな音楽で部屋を彩りましょう ~ 聴いたら絶対にハマってしまう洋楽 | Cozy Winter 🎵【作業用 BGM】"
+    printf "9. 【作業用BGM】今日も素敵な一日があなたを待っています | Peaceful Day - 洋楽playlist"
+    printf "10. 【洋楽playlist】 帰り道にゆったり聴きたい心地いい洋楽 | musics make you feel happy🎵【作業用 BGM】"
+}
+
+main() {
+    choice=$(menu | $rofi_command | cut -d. -f1)
+
+    case $choice in
+    1)
+        notification "Night City Lofi 🌕 Lofi Hip Hop Radio 💤 lofi beats to sleep / chill to ☕️🎶"
+        URL="https://www.youtube.com/watch?v=8ZeC-8klo_o"
+        EXTRA_ARGS="--no-video"
+        break
+        ;;
+    2)
+        notification "Lofi Playlist for Programming / Relax / Chill ☕️🎶"
+        URL="https://www.youtube.com/watch?v=v9XyIGXcRck"
+        EXTRA_ARGS="--no-video"
+        break
+        ;;
+    3)
+        notification "2-HOUR STUDY WITH ME🌦️ / calm piano / A Rainy Day in Shibuya, Tokyo / with countdown+alarm ☕️🎶"
+        URL="https://www.youtube.com/watch?v=5Q2Pc-e-8Qc"
+        EXTRA_ARGS="--no-video"
+        break
+        ;;
+    4)
+        notification "lofi hip hop radio 📚 - beats to relax/study to ☕️🎶"
+        URL="https://www.youtube.com/watch?v=jfKfPfyJRdk"
+        EXTRA_ARGS="--no-video"
+        break
+        ;;
+    5)
+        notification "90's Lofi City 🌃 Rainy Lofi Hip Hop [ Chill Beats To Relax / Study To ] ☕️🎶"
+        URL="https://www.youtube.com/watch?v=q1pBwQl6zZ0"
+        EXTRA_ARGS="--no-video"
+        break
+        ;;
+    6)
+        notification "4-HOUR STUDY WITH ME🌦️ / calm piano / A Rainy Day in Shinjuku, Tokyo / with countdown+alarm ☕️🎶"
+        URL="https://www.youtube.com/watch?v=DXT9dF-WK-I"
+        EXTRA_ARGS="--no-video"
+        break
+        ;;
+    7)
+        notification "🍃Harutya 春茶🍃 Collection 2023 - Best Cover Of Harutya 春茶 - Harutya 春茶 Best Song Of All Time 🍃🌿☕️🎶"
+        URL="https://www.youtube.com/watch?v=mnwj6KxAvFc"
+        EXTRA_ARGS="--no-video"
+        break
+        ;;
+    8)
+        notification "【洋楽playlist】 寒い冬の日に聴きたい心温まる洋楽メドレー 作業用_おしゃれな音楽で部屋を彩りましょう ~ 聴いたら絶対にハマってしまう洋楽 | Cozy Winter 🎵【作業用 BGM】☕️🎶"
+        URL="https://www.youtube.com/watch?v=iFriGwRbnbo"
+        EXTRA_ARGS="--no-video"
+        break
+        ;;
+    9)
+        notification "【作業用BGM】今日も素敵な一日があなたを待っています | Peaceful Day - 洋楽playlist ☕️🎶"
+        URL="https://www.youtube.com/watch?v=D3wwNaPx0OI"
+        EXTRA_ARGS="--no-video"
+        break
+        ;;
+    10)
+        notification "【洋楽playlist】 帰り道にゆったり聴きたい心地いい洋楽 | musics make you feel happy🎵【作業用 BGM】 ☕️🎶"
+        URL="https://www.youtube.com/watch?v=rYkpy52Bb3o"
+        EXTRA_ARGS="--no-video"
+        break
+        ;;
+    esac
+
+    # run mpv with args and selected url
+    # added title arg to make sure the pkill command kills only this instance of mpv
+    mpv $ARGS --title="radio-mpv" $URL $EXTRA_ARGS
+}
+
+pkill -f radio-mpv || main
