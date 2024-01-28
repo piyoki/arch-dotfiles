@@ -89,11 +89,11 @@ abbr ypp "yadm push"
 abbr fra "flux reconcile kustomization flux-system --with-source"
 abbr fga "flux get all -A"
 
+# ssh
+abbr ssh "kitten ssh"
+
 # ripgrep
 abbr rgf "rg --files | rg"
-
-# ssh (kitty +kitten)
-# alias ssh="kitty +kitten ssh"
 
 # program
 alias vlc "org.videolan.VLC"
