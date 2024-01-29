@@ -3,7 +3,7 @@
 theme="$HOME/.config/rofi/conf/launcher.rasi"
 icon="/usr/share/icons/Papirus-Dark/48x48/devices/hifi.svg"
 inventory="$HOME/.config/rofi/beats/inventory.json"
-ARGS="--volume=50 -ao=pulse"
+ARGS="--volume=50 -ao=pulse --hwdec=auto --audio-device=auto"
 
 play() {
   chosen=$(cat $inventory | jq '.[].name' | tr -d '"' | rofi -p "beats" -theme $theme -dmenu -i -selected-row 0)
