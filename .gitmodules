@@ -5,5 +5,5 @@
 
 [submodule "modules/rofi"]
 	path = modules/rofi
-	url = git@github.com:yqlbu/dot-nvim.git
+	url = git@github.com:yqlbu/dot-rofi.git
 	branch = master
