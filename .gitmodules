@@ -7,3 +7,7 @@
 	path = modules/rofi
 	url = git@github.com:yqlbu/dot-rofi.git
 	branch = master
+
+[submodule "modules/waybar"]
+	path = modules/waybar
+	url = git@github.com:yqlbu/dot-waybar.git
