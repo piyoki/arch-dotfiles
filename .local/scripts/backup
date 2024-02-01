@@ -56,16 +56,13 @@ mc mirror --overwrite --remove ~/.config/lazydocker/ minio/server-configurations
 mc mirror --overwrite --remove ~/.config/lf/ minio/server-configurations/arch-desktop/.config/lf/
 mc mirror --overwrite --remove ~/.config/lightdm/ minio/server-configurations/arch-desktop/.config/lightdm/
 mc mirror --overwrite --remove ~/.config/neofetch/ minio/server-configurations/arch-desktop/.config/neofetch/
-mc mirror --overwrite --remove ~/.config/nvim/ minio/server-configurations/arch-desktop/.config/nvim/
 mc mirror --overwrite --remove ~/.config/picom/ minio/server-configurations/arch-desktop/.config/picom/
 mc mirror --overwrite --remove ~/.config/polybar/ minio/server-configurations/arch-desktop/.config/polybar/
-mc mirror --overwrite --remove ~/.config/rofi/ minio/server-configurations/arch-desktop/.config/rofi/
 mc mirror --overwrite --remove ~/.config/sxhkd/ minio/server-configurations/arch-desktop/.config/sxhkd/
 mc mirror --overwrite --remove ~/.config/tmux/ minio/server-configurations/arch-desktop/.config/tmux/
 mc mirror --overwrite --remove ~/.config/flameshot/ minio/server-configurations/arch-desktop/.config/flameshot/
 mc mirror --overwrite --remove ~/.config/rclone/ minio/server-configurations/arch-desktop/.config/rclone/
 mc mirror --overwrite --remove ~/.config/bat/ minio/server-configurations/arch-desktop/.config/bat/
-mc mirror --overwrite --remove ~/.config/waybar/ minio/server-configurations/arch-desktop/.config/waybar/
 mc mirror --overwrite --remove ~/.config/hypr/ minio/server-configurations/arch-desktop/.config/hypr/
 mc mirror --overwrite --remove ~/.config/nwg-look/ minio/server-configurations/arch-desktop/.config/nwg-look/
 mc mirror --overwrite --remove ~/.config/zathura/ minio/server-configurations/arch-desktop/.config/zathura/
@@ -74,6 +71,11 @@ mc mirror --overwrite --remove ~/.config/fcitx5/ minio/server-configurations/arc
 mc mirror --overwrite --remove ~/.local/share/fcitx5/ minio/server-configurations/arch-desktop/.local/share/fcitx5/
 mc mirror --overwrite --remove ~/.config/Thunar/ minio/server-configurations/arch-desktop/.config/Thunar/
 mc mirror --overwrite --remove ~/.config/swappy/ minio/server-configurations/arch-desktop/.config/swappy/
+
+# yadm submodules
+mc mirror --overwrite --remove ~/modules/nvim/ minio/server-configurations/arch-desktop/.config/nvim/
+mc mirror --overwrite --remove ~/modules/rofi/ minio/server-configurations/arch-desktop/.config/rofi/
+mc mirror --overwrite --remove ~/modules/waybar/ minio/server-configurations/arch-desktop/.config/waybar/
 
 # local
 mc mirror --overwrite --remove ~/.local/share/atuin/ minio/server-configurations/arch-desktop/.local/share/atuin/
