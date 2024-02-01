@@ -11,3 +11,7 @@
 [submodule "modules/waybar"]
 	path = modules/waybar
 	url = git@github.com:yqlbu/dot-waybar.git
+
+[submodule ".config/waybar"]
+	path = .config/waybar
+	url = git@github.com:yqlbu/dot-waybar.git
