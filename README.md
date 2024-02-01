@@ -15,7 +15,7 @@ Add new submodules
 ```bash
 yadm submodule add git@github.com:<owner/repo>.git modules/<module_name>
 # e.g
-# yadm submodule add git@github.com:yqlbu/dot-nvim.git ~/.config/nvim
+# yadm submodule add git@github.com:yqlbu/dot-nvim.git modules/nvim
 ```
 
 Sync submodules from local
