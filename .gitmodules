@@ -2,3 +2,8 @@
 	path = modules/nvim
 	url = git@github.com:yqlbu/dot-nvim.git
 	branch = master
+
+[submodule "modules/rofi"]
+	path = modules/rofi
+	url = git@github.com:yqlbu/dot-nvim.git
+	branch = master
