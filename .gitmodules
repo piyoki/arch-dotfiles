@@ -10,3 +10,6 @@
 [submodule "modules/swappy"]
 	path = modules/swappy
 	url = git@github.com:yqlbu/dot-swappy.git
+[submodule "modules/hypr"]
+	path = modules/hypr
+	url = git@github.com:yqlbu/dot-hypr.git
