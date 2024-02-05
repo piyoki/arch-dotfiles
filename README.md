@@ -27,5 +27,6 @@ yadm submodule update --recursive --remote
 Create smlink
 
 ```bash
+sudo rm -rf $HOME/.config/<module_name>
 ln -s $HOME/modules/<module_name> $HOME/.config/<module_name>
 ```

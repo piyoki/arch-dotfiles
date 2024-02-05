@@ -13,3 +13,6 @@
 [submodule "modules/hypr"]
 	path = modules/hypr
 	url = git@github.com:yqlbu/dot-hypr.git
+[submodule "modules/dunst"]
+	path = modules/dunst
+	url = git@github.com:yqlbu/dot-dunst.git
