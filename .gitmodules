@@ -19,3 +19,6 @@
 [submodule "modules/qutebrowser"]
 	path = modules/qutebrowser
 	url = git@github.com:yqlbu/dot-qutebrowser.git
+[submodule "modules/lf"]
+	path = modules/lf
+	url = git@github.com:yqlbu/dot-lf.git
