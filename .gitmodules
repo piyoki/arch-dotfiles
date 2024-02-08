@@ -16,3 +16,6 @@
 [submodule "modules/dunst"]
 	path = modules/dunst
 	url = git@github.com:yqlbu/dot-dunst.git
+[submodule "modules/qutebrowser"]
+	path = modules/qutebrowser
+	url = git@github.com:yqlbu/dot-qutebrowser.git
