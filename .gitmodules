@@ -22,3 +22,6 @@
 [submodule "modules/lf"]
 	path = modules/lf
 	url = git@github.com:yqlbu/dot-lf.git
+[submodule "modules/lazygit"]
+	path = modules/lazygit
+	url = git@github.com:yqlbu/dot-lazygit.git
