@@ -25,3 +25,6 @@
 [submodule "modules/lazygit"]
 	path = modules/lazygit
 	url = git@github.com:yqlbu/dot-lazygit.git
+[submodule "modules/tmux"]
+	path = modules/tmux
+	url = git@github.com:yqlbu/dot-tmux.git
