@@ -1,3 +1,0 @@
-#!/bin/bash
-
-goofys --endpoint http://10.178.0.81:9000/ --profile minio server-configurations:arch-desktop ~/Minio

@@ -28,3 +28,6 @@
 [submodule "modules/tmux"]
 	path = modules/tmux
 	url = git@github.com:yqlbu/dot-tmux.git
+[submodule "home-estate"]
+	path = home-estate
+	url = git@github.com:yqlbu/home-estate.git

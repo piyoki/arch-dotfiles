@@ -1,4 +1,0 @@
-#!/bin/bash
-
-sudo mount -t cifs -o credentials=$HOME/.smbcredentials,uid=$USER,iocharset=utf8, //10.178.0.81/Tank $HOME/Tank
-sudo mount -t cifs -o credentials=$HOME/.smbcredentials,uid=$USER,iocharset=utf8, //10.178.0.81/Media $HOME/Media

@@ -28,10 +28,10 @@ export CLICOLOR=1
 export LS_COLORS=(vivid generate nord)
 export LC_ALL=C.UTF-8
 
-export SOPS_PGP_FP="B08FE2644F9FC450AF425FF5B94F394B72884017"
+# export SOPS_PGP_FP=""
 # export SOPS_AGE_KEY=(age -i $HOME/.age/age-yubikey-identity.txt -d $HOME/.age/age-yubikey-master.enc.key)
-export SOPS_AGE_RECIPIENTS=(cat $HOME/.age/age-yubikey-master.pub)
-export SOPS_AGE_KEY_FILE=$HOME/.age/age-yubikey-master.key
+# export SOPS_AGE_RECIPIENTS=(cat $HOME/.age/age-yubikey-master.pub)
+# export SOPS_AGE_KEY_FILE=$HOME/.age/age-yubikey-master.key
 
 ## Java
 export JAVA_HOME=/usr/lib/jvm/default
