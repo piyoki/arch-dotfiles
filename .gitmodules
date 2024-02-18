@@ -31,3 +31,6 @@
 [submodule "home-estate"]
 	path = home-estate
 	url = git@github.com:yqlbu/home-estate.git
+[submodule "modules/swaync"]
+	path = modules/swaync
+	url = git@github.com:yqlbu/dot-swaync.git

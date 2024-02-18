@@ -19,6 +19,7 @@ fish_add_path /usr/lib/jvm/default-runtime/bin
 source $HOME/.config/fish/themes/cool-beans.fish
 source $HOME/.config/fish/functions/bangbang.fish
 source $HOME/.config/fish/functions/gnupg.fish
+source $HOME/.config/fish/functions/_fzf_gopass.fish
 
 ### General Settings ###
 set fish_greeting # Turns off the intro message when pulling up fish shell
@@ -90,7 +91,7 @@ abbr fra "flux reconcile kustomization flux-system --with-source"
 abbr fga "flux get all -A"
 
 # ssh
-abbr ssh "kitten ssh"
+# abbr ssh "kitten ssh"
 
 # ripgrep
 abbr rgf "rg --files | rg"
@@ -121,6 +122,8 @@ alias pb="curl -F 'c=@-' https://fars.ee/"
 alias snips="ssh snips.sh"
 # streamdeck
 alias streamdeck="$HOME/.virtualenvs/streamdeck/bin/streamdeck"
+# gopass
+alias p="_fzf_gopass"
 
 ### Dev ENV ###
 
